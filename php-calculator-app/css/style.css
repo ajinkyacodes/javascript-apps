@@ -540,3 +540,29 @@ main .display p {
 }
 
 .php-calc-form button[type="submit"]:hover { background-color: #66a21e; }
+
+
+/*#########################################################################################################
+    MEDIA QUERIES
+#########################################################################################################*/
+
+@media only screen and (max-width: 995px) {
+    main { padding: 50px; }
+
+    .container .title p {
+        padding: 10px;
+        border: 3px solid #98c563;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .container .title {
+        -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    }
+
+    .container .calculator {
+        -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    }
+  }
