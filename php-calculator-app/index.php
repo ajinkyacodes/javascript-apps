@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PHP Calculator</title>
+    <link rel="icon" href="calc-favicon.png" type="image/gif" sizes="16x16">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
