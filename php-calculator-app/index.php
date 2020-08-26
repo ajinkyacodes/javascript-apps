@@ -15,8 +15,8 @@
             </div>
             <div class="calculator">
                 <form name="php-calc-form" class="php-calc-form" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST">
-                    <input type="number" name="num1" id="num1" placeholder="Number 1">
-                    <input type="number" name="num2" id="num2" placeholder="Number 2">
+                    <input type="number" name="num1" id="num1" placeholder="Enter Number">
+                    <input type="number" name="num2" id="num2" placeholder="Enter Number">
                     <select name="operation" id="operation">
                         <option value="add">ADD</option>
                         <option value="sub">SUB</option>
