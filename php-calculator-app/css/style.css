@@ -373,9 +373,170 @@ textarea {
 /*#########################################################################################################
     CUSTOM STYLING
 #########################################################################################################*/
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* Firefox */
+input[type=number] { -moz-appearance: textfield; }
 
 
+::-webkit-input-placeholder { /* Edge */
+    color: #fff;
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #fff;
+  }
+  
+  ::placeholder {
+    color: #fff;
+  }
+
+  .blink_me {
+    animation: blinker 1.5s linear infinite;
+  }
+  
+  @keyframes blinker {
+    50% {
+        -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        transform: scale(1.1);
+    }
+  }
 
 /*#########################################################################################################
     WEBSITE STYLING
 #########################################################################################################*/
+
+body { background-color: #98c563; }
+
+main {
+    padding: 100px;
+    border-radius: 10px;
+    background-color: #565656;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform:translate(-50%,-50%);
+    -ms-transform:translate(-50%,-50%);
+    transform:translate(-50%,-50%);
+}
+
+.container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.container .title {
+    -ms-flex-preferred-size: 30%;
+    flex-basis: 30%;
+}
+
+.container .title p { 
+    padding-left: 10px;
+    border-left: 3px solid #98c563;
+    color: #98c563; 
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+.container .calculator {
+    -ms-flex-preferred-size: 30%;
+    flex-basis: 30%;
+}
+
+main .display { margin-top: 40px; }
+
+main .display span.type {
+    max-width: 120px;
+    padding: 5px 10px;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    margin: 0 auto 10px;
+    display: block;
+    background-color: transparent;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.4;    
+    text-align: center; 
+} 
+
+main .display p { 
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.4;    
+    text-align: center; 
+}
+
+.php-calc-form input[type="number"] { 
+    box-sizing: border-box;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 10px;
+    display: block;
+    background-color: transparent;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.4;
+    text-align: center;
+}
+
+.php-calc-form select { 
+    width: 100%; 
+    padding: 5px;
+    margin-bottom: 10px;
+    display: block;
+    color: #000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+.php-calc-form select option {
+    color: #000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.4;
+} 
+
+.php-calc-form button[type="submit"] { 
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 5px;
+    outline: none;
+    background-color: #98c563;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.4;
+    -webkit-transition: 0.2s linear all;
+    -o-transition: 0.2s linear all;
+    transition: 0.2s linear all;
+}
+
+.php-calc-form button[type="submit"]:hover { background-color: #66a21e; }
