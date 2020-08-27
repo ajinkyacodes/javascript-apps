@@ -1,3 +1,0 @@
-#random-jokes
-
-##Random Jokes
