@@ -14,9 +14,9 @@ $(document).ready(function () {
             success: function (data) {                                        
             var $loademorebtn = document.createElement("button");
             $loademorebtn.classList.add('loadmorebutton');
-            $loademorebtn.innerHTML='Random Joke';
-            var $main = $("main");
-            $main.append($loademorebtn);
+            $loademorebtn.innerHTML='Shuffle';
+            var $container = $(".container");
+            $container.append($loademorebtn);
                         
             jokesdetails();
             
