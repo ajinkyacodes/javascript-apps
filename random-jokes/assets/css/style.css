@@ -122,6 +122,7 @@ figure.random-jokes-icon img {
   width: 80%;
   max-width: 1000px;
   padding: 50px 5%;
+  border-radius: 15px;
   margin: 50px auto;
   background-color: #fffef0;
 }
