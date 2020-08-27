@@ -1,0 +1,252 @@
+@charset "utf-8";
+
+/* ==========================================================================
+   1. CSS Reset Code
+   ========================================================================== */
+
+/* 1.1. Eric Meyers Reset
+   http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+   ========================================================================== */
+   html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
+   blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img,
+   ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center,
+   dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody,
+   tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure,
+   figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,
+   time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+   }
+
+   /* HTML5 display-role reset for older browsers */
+   article, aside, details, figcaption, figure,
+   footer, header, hgroup, menu, nav, section {
+    display: block;
+   }
+
+   /* Force scrollbar */
+   html { overflow-y: scroll; }
+
+   /* Align radios and text inputs with their label */
+
+   input[type='radio'] { vertical-align: text-bottom; }
+
+   /* Hand cursor on clickable input elements */
+   label,
+   input[type='button'],
+   input[type='submit'],
+   button {
+    cursor: pointer;
+   }
+
+   strong {
+    font-weight: bold;
+    font-family: inherit;
+    font-size: inherit;
+   }
+
+   em { font-style: italic; }
+
+   img {
+    border: 0;
+    vertical-align: middle;
+   }
+
+   sub,
+   sup {
+    vertical-align: baseline;
+    position: relative;
+    font-size: 55%;
+    line-height: 0;
+   }
+
+   sup { top: -.7em; }
+
+   sub { bottom: -.25em; }
+
+/* 1.2. Clear Fix
+========================================================================== */
+
+.cf:before,
+.cf:after {
+  display: table;
+  content: " ";
+}
+
+.cf:after { clear: both; }
+
+.cf { *zoom: 1; }
+
+/* 1.3. Font class declaration
+========================================================================== */
+/*
+ * Mention the font property (eg: font-family, font-size, font-weight, font-style
+ * etc) that have been commonly used in the html document. Make a class of it and
+ * apply to the element wherever it is needed. If any single property in changed,
+ * then override only that property in the particular class which is used for the
+ * element.
+ * (NOTE: Remove this commented code once you start 
+ * developing the code. Remove the following font class and add your own
+ * as this is just and example to let you know. If there is only one font family
+ * followed throughout the site, then menstion the font property in body. No need
+ * of creating an extra class for it) */
+
+ .futura-bold-font {
+  font-family: 'Futura Bold', 'Gill Sans', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+ }
+
+ /* ======= Your styling goes below ======= */
+.mainlist{
+  width: 90%;
+  margin: 0 auto;
+}
+
+
+.mainlist li {
+  padding: 10px 0;
+  border: 1px solid #ccc;
+  margin: 10px 0;
+  list-style-type: none;
+}
+
+.mainlist li:last-child {
+  margin-bottom: 30px;
+}
+
+.j_id, 
+.j_category,
+.j_joke {
+  display: inline-block;
+  vertical-align: top;
+  font-family: sans-serif;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+
+
+.j_id {
+  width: 5%;
+  font-weight: 700;
+  text-align: center;
+}
+
+.j_category {
+  width: 20%;
+  font-weight: 700;
+  text-align: center;
+}
+
+.j_joke {
+  width: 70%;
+}
+
+.t_id, 
+.t_category,
+.t_joke {
+  display: inline-block;
+  vertical-align: top;
+  color: #227b99;
+  font-family: sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.4;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.t_id { width: 5%; }
+.t_category { width: 20%; }
+.t_joke { width: 70%;}
+
+.loader {
+  position: fixed;
+  z-index: 100;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+  animation: fadeOut 1s infinite;
+}
+
+.loader img {
+  width: 50px;
+  height: auto;
+}
+
+.hidden { display: none!important; }
+
+@keyframes fadeOut {
+  100% {
+    opacity: 1;
+    visibility: hidden;
+  }
+}
+
+.loadmorebutton {
+  padding: 10px 20px;
+  border-radius: 25px;
+  outline: none;
+  margin-bottom: 30px;
+  display: block;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #999;
+  color: #111;
+  font-family: sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  transition: all .6s linear;
+}
+
+.loadmorebutton:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.show { display: block; }
+
+
+.bottomload {  
+  position: fixed;
+  z-index: 100;
+  bottom: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+  animation: fadeOut 1s infinite;
+}
+
+.bottomload img {
+  width: 50px;
+  height: auto;
+}
+
+.joketitlefull {
+  width: 100%;
+  color: #259921;
+}
+
+@media screen and (max-width: 768px){
+  .t_id, 
+  .t_category,
+  .j_id, 
+  .j_category { display: none; }
+
+  .t_joke, 
+  .j_joke { 
+    width: 90%;
+    padding: 0 5%;
+    text-align: center;
+  }
+  
+}
