@@ -1,0 +1,33 @@
+
+
+h2 {
+  padding: 20px 0;
+  color: #f00;
+  font-family: sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.inputdetails {
+  padding: 20px 0;
+  text-align: center;
+}
+
+.weatherdetails {
+  padding: 20px;
+  display: inline-block;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(255,255,255,0.5);
+}
+
+.weather-pts {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.wptsimg img {
+  width: 80px;
+  height: 80px;
+}

@@ -1,0 +1,94 @@
+<!doctype html>
+<!-- If multi-language site, reconsider usage of html lang declaration here. -->
+<html lang="en"> 
+<head>
+	<meta charset="utf-8">
+	<!-- Setting the viewport for Media Query -->
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>Framework</title>
+	<!-- Place favicon.ico in the root directory: mathiasbynens.be/notes/touch-icons -->
+	<link rel="shortcut icon" href="favicon.ico" />	
+	<!-- Adding jQuery Weather Animation Links  -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="https://www.tutorialspoint.com/jquery/src/weather/weather.css">
+	<!-- Adding reference to font awesome -->
+	<link rel="stylesheet" href="assets/vendor/font/fontawesome-all.css">
+	<!-- Default style-sheet is for 'media' type screen (color computer display).  -->
+	<link rel="stylesheet" media="screen" href="assets/css/style.css">
+</head>
+<body id="weather-background" class="default-weather">
+	<div class="container">
+		<!-- Start of the header -->
+		<header>
+		</header>
+		<!-- end of header -->
+		<!-- Start of main -->
+		<main>
+			<canvas id="rain-canvas">
+	        </canvas>
+
+	        <canvas id="cloud-canvas">
+	        </canvas>
+
+	        <canvas id="weather-canvas">
+	        </canvas>
+
+	        <canvas id="time-canvas">
+	        </canvas>
+	        <canvas id="lightning-canvas">
+	        </canvas>
+			
+			<!-- Main HTML Data -->
+			<div class="inputdetails">
+				<form action="#FIXME" method="GET">
+					<input type="search" id="inpcity" placeholder="City, Country">
+					<button type="submit" id="citytextbtn">Weather Info</button>
+				</form>
+			</div>
+
+			<div class="weatherdetails">
+				<div id="WeatherInfo">
+					<h2>Weather Information</h2>
+					<p id="location">City, Country</p>
+					<p id="weather">Cloudy</p>
+					<p id="temperature">31 &deg;</p>
+					<p id="desc">Description</p>
+				</div>			
+				<div id="WeatherForecast">
+					<h2>Weather Forecast</h2>
+					<div>
+						<span class="weather-pts" id="r1c1">XXX</span>
+						<span class="weather-pts wptsimg"><img id="r1c2"></span>
+						<span class="weather-pts" id="r1c3">XXX</span>
+						<span class="weather-pts" id="r1c4">XXX</span>
+					</div>
+					<div>
+						<span class="weather-pts" id="r2c1">XXX</span>
+						<span class="weather-pts wptsimg"><img id="r2c2"></span>
+						<span class="weather-pts" id="r2c3">XXX</span>
+						<span class="weather-pts" id="r2c4">XXX</span>
+					</div>
+					<div>
+						<span class="weather-pts" id="r3c1">XXX</span>
+						<span class="weather-pts wptsimg"><img id="r3c2"></span>
+						<span class="weather-pts" id="r3c3">XXX</span>
+						<span class="weather-pts" id="r3c4">XXX</span>
+					</div>
+				</div>
+			</div>
+					
+		</main>
+		<!-- End of main -->
+		<!-- start of footer -->
+		<footer>			
+		</footer>
+		<!-- end of footer -->
+	</div>
+	<!-- External Script for animated background -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://www.tutorialspoint.com/jquery/src/weather/weather.js"></script>
+	<script src="assets/js/script.js"></script>
+</body>
+</html>
