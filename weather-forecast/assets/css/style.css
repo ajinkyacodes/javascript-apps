@@ -1,16 +1,36 @@
-
-
 h2 {
   padding: 20px 0;
-  color: #f00;
+  color: #3d4c9e;
   font-family: sans-serif;
   font-size: 32px;
   font-weight: 700;
 }
 
 .inputdetails {
-  padding: 20px 0;
+  padding: 100px 0 20px;
   text-align: center;
+}
+
+.inputdetails input[type="search"] {
+  padding: 5px 10px;
+  border:none;
+  outline:none;
+}
+
+.inputdetails button[type="submit"] {
+  padding: 5px 10px;
+  border: none;
+  outline:none;
+  background-color: #005d5d;
+  color: #fff;
+  font-weight: 700;
+  -webkit-transition: 0.3 linear all;
+  -o-transition: 0.3 linear all;
+  transition: 0.3 linear all;
+}
+
+.inputdetails button[type="submit"]:hover {
+  background-color: #007777;
 }
 
 .weatherdetails {
@@ -30,4 +50,30 @@ h2 {
 .wptsimg img {
   width: 80px;
   height: 80px;
+}
+
+.weather-info { margin-bottom: 50px; }
+
+.weather-forecast h2 { text-align: center; }
+
+@media screen and (max-width: 767px) {
+  .inputdetails { padding-top: 20px; }
+}
+
+@media screen and (max-width: 540px) {
+  .inputdetails input[type="search"],
+  .inputdetails button[type="submit"] {
+    box-sizing: border-box;
+    width: 80%;
+    max-width: 200px;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  h2 { font-size: 24px; }
+
+  .weather-forecast span { 
+    display: block;
+    text-align: center;
+  }
 }
