@@ -24,7 +24,7 @@ $(document).ready(function () {
 
                 $($loademorebtn).addClass('hidden').removeClass('loademorebtn');    
                 $('.loader').removeClass('hidden loader').addClass('bottomload');
-                $('.t_id, .t_category').addClass('hidden');
+                $('.t_category').addClass('hidden');
                 $('.t_joke').addClass('joketitlefull').html('Joke loading...😀');                 
                 $('.jokedata').addClass('hidden');
                 setTimeout(function(){                    
@@ -43,19 +43,16 @@ $(document).ready(function () {
                   
                 if($randomnum.body!='')
                 {                  
-                  var $id = $randomnum.id;
                   var $category = $randomnum.category;
                   var $joke = $randomnum.body;
 
                   var $datalist = $('#datalist');
                   $datalist.html(`
                   <li class="joketitles">
-                      <div class="t_id"><span>ID</span></div>
                       <div class="t_category"><span>CATEGORY</span></div>
                       <div class="t_joke"><p>JOKE</p></div>
                   </li>
                   <li class="jokedata">
-                      <div class="j_id"><span>(${$id})</span></div>
                       <div class="j_category"><span>${$category}</span></div>
                       <div class="j_joke"><p>${$joke}</p></div>
                   </li>`);

@@ -144,7 +144,6 @@ figure.random-jokes-icon img {
   padding-right: 5%;
 }
 
-.j_id, 
 .j_category,
 .j_joke {
   display: inline-block;
@@ -153,14 +152,8 @@ figure.random-jokes-icon img {
   line-height: 1.4;
 }
 
-.j_id {
-  width: 5%;
-  font-weight: 700;
-  text-align: center;
-}
-
 .j_category {
-  width: 20%;
+  width: 25%;
   font-weight: 700;
   text-align: center;
 }
@@ -169,7 +162,6 @@ figure.random-jokes-icon img {
   width: 70%;
 }
 
-.t_id, 
 .t_category,
 .t_joke {
   display: inline-block;
@@ -182,8 +174,7 @@ figure.random-jokes-icon img {
   text-transform: uppercase;
 }
 
-.t_id { width: 5%; }
-.t_category { width: 20%; }
+.t_category { width: 25%; }
 .t_joke { width: 70%;}
 
 .loader {
@@ -256,9 +247,7 @@ figure.random-jokes-icon img {
 }
 
 @media screen and (max-width: 768px){
-  .t_id, 
   .t_category,
-  .j_id, 
   .j_category { display: none; }
 
   .t_joke, 
