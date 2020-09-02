@@ -13,13 +13,13 @@ PHP Calulator with basic arithmetic operations such as addition, subtraction, mu
 - HTML
 - CSS
 
-### Random Jokes
+## Random Jokes
 This is a random joke generator app. It shuffles jokes with different categories.
 - HTML
 - CSS
 - jQuery
 
-### Weather Forecast
+## Weather Forecast
 This app shows the current weather of the inputted city, country.
 - HTML
 - CSS
