@@ -121,7 +121,7 @@ figure.random-jokes-icon img {
 .container {
   width: 80%;
   max-width: 1000px;
-  padding: 50px 5%;
+  padding: 70px 5%;
   border-radius: 15px;
   margin: 50px auto;
   background-color: #fffef0;
@@ -226,12 +226,12 @@ figure.random-jokes-icon img {
 
 .show { display: block; }
 
-.bottomload {  
+.bottomload {
   position: fixed;
   z-index: 100;
-  bottom: 50%;
+  bottom: 39%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-39%,-50%);
   text-align: center;
   animation: fadeOut 1s infinite;
 }
@@ -261,6 +261,28 @@ figure.random-jokes-icon img {
 @media screen and (max-width: 540px){
   h1 { font-size: 28px; }
 
+  figure.random-jokes-icon img {
+    width: 240px;
+  }
+
+  .bottomload {
+    bottom: 46%;
+    transform: translate(-46%,-50%);
+  }
+}
+
+@media screen and (max-width: 400px){
+  figure.random-jokes-icon img {
+    width: 200px;
+  }
+
+  .bottomload {
+    bottom: 50%;
+    transform: translate(-50%,-50%);
+  }
+}
+
+@media screen and (max-width: 300px){
   figure.random-jokes-icon img {
     width: 70%;
   }
