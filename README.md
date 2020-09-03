@@ -20,7 +20,7 @@ This is a random joke generator app. It shuffles jokes with different categories
 - jQuery
 
 ## Weather Forecast
-This app shows the current weather of the inputted city, country.
+This app shows the current weather and weather forecast of the inputted city, country.
 - HTML
 - CSS
 - JavaScript
