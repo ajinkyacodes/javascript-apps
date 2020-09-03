@@ -20,7 +20,7 @@ citytextbtn.addEventListener("click", function(){
 
 function loadWeather(){
 //GET THE CONDITIONS
-weatherConditions.open("GET","http://api.openweathermap.org/data/2.5/weather?q="+inpcity+",in&appid=c4132be239a3abe3afd09029b5089c61&units=Metric",true);
+weatherConditions.open("GET","https://api.openweathermap.org/data/2.5/weather?q="+inpcity+",in&appid=c4132be239a3abe3afd09029b5089c61&units=Metric",true);
 weatherConditions.responseType='text';
 weatherConditions.send(null);
 
@@ -38,7 +38,7 @@ weatherConditions.onload = function() {
 
 
 //GET THE FORECAST
-weatherForecast.open("GET","http://api.openweathermap.org/data/2.5/forecast?q="+inpcity+",in&appid=c4132be239a3abe3afd09029b5089c61&units=Metric",true);
+weatherForecast.open("GET","https://api.openweathermap.org/data/2.5/forecast?q="+inpcity+",in&appid=c4132be239a3abe3afd09029b5089c61&units=Metric",true);
 weatherForecast.responseType='text';
 weatherForecast.send(null);
 
@@ -46,7 +46,7 @@ weatherForecast.send(null);
 weatherForecast.onload = function() {
 	if (weatherForecast.status===200) {
 		fObj = JSON.parse(weatherForecast.responseText);
-		console.log(fObj);
+		// console.log(fObj);
 		//Current Date
 		var date_raw=fObj.list[0].dt_txt;
 		date_raw=date_raw.substring(5,11);
@@ -59,7 +59,7 @@ weatherForecast.onload = function() {
 		}
 		else
 		{
-		var iconpath = "http://openweathermap.org/img/w/" +iconcode+ ".png";
+		var iconpath = "https://openweathermap.org/img/w/" +iconcode+ ".png";
 		document.getElementById("r1c2").src = iconpath;
 		}
 		// var iconpath = "http://openweathermap.org/img/w/" +iconcode+ ".png";
@@ -73,7 +73,7 @@ weatherForecast.onload = function() {
 		date_raw=date_raw.substring(5,11);
 		document.getElementById("r2c1").innerHTML="(Tomorrow) "+date_raw;
 		var iconcode = fObj.list[8].weather[0].icon;
-		var iconpath = "http://openweathermap.org/img/w/" +iconcode+ ".png";
+		var iconpath = "https://openweathermap.org/img/w/" +iconcode+ ".png";
 		document.getElementById("r2c2").src = iconpath;
 		document.getElementById("r2c3").innerHTML="Min: "+fObj.list[8].main.temp_min+"&deg;C";
 		document.getElementById("r2c4").innerHTML="Max: "+fObj.list[8].main.temp_max+"&deg;C";
@@ -83,7 +83,7 @@ weatherForecast.onload = function() {
 		date_raw=date_raw.substring(5,11);
 		document.getElementById("r3c1").innerHTML="(Day after tomorrow) "+date_raw;
 		var iconcode = fObj.list[16].weather[0].icon;
-		var iconpath = "http://openweathermap.org/img/w/" +iconcode+ ".png";
+		var iconpath = "https://openweathermap.org/img/w/" +iconcode+ ".png";
 		document.getElementById("r3c2").src = iconpath;
 		document.getElementById("r3c3").innerHTML="Min: "+fObj.list[16].main.temp_min+"&deg;C";
 		document.getElementById("r3c4").innerHTML="Max: "+fObj.list[16].main.temp_max+"&deg;C";

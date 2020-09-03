@@ -5,6 +5,7 @@
 	<meta charset="utf-8">
 	<!-- Setting the viewport for Media Query -->
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 	<title>Weather Forecast</title>
 	<!-- Place favicon.ico in the root directory: mathiasbynens.be/notes/touch-icons -->
 	<link rel="icon" href="weather-favicon.png" type="image/gif" sizes="16x16">
@@ -28,25 +29,20 @@
 		<main>
 			<canvas id="rain-canvas">
 	        </canvas>
-
 	        <canvas id="cloud-canvas">
 	        </canvas>
-
 	        <canvas id="weather-canvas">
 	        </canvas>
-
 	        <canvas id="time-canvas">
 	        </canvas>
 	        <canvas id="lightning-canvas">
-	        </canvas>
-			
+	        </canvas>			
 			<!-- Main HTML Data -->
 			<div class="inputdetails">
-				<form action="#FIXME" method="GET">
+				<form action="#WeatherInfo" method="GET">
 					<input type="search" id="inpcity" placeholder="City, Country"><button type="submit" id="citytextbtn">Weather Info</button>
 				</form>
 			</div>
-
 			<div class="weatherdetails">
 				<div id="WeatherInfo" class="weather-info">
 					<h2>Weather Information</h2>
@@ -76,8 +72,7 @@
 						<span class="weather-pts" id="r3c4">XXX</span>
 					</div>
 				</div>
-			</div>
-					
+			</div>					
 		</main>
 		<!-- End of main -->
 		<!-- start of footer -->

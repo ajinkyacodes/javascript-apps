@@ -29,9 +29,7 @@ h2 {
   transition: 0.3 linear all;
 }
 
-.inputdetails button[type="submit"]:hover {
-  background-color: #007777;
-}
+.inputdetails button[type="submit"]:hover { background-color: #007777; }
 
 .weatherdetails {
   padding: 20px;
@@ -53,21 +51,32 @@ h2 {
 }
 
 .weather-info { margin-bottom: 50px; }
-
 .weather-forecast h2 { text-align: center; }
+
+@media screen and (max-width: 995px) {
+  .inputdetails button[type="submit"]:hover {
+    background-color: #005d5d;
+  }
+}
 
 @media screen and (max-width: 767px) {
   .inputdetails { padding-top: 20px; }
 }
 
 @media screen and (max-width: 540px) {
+
+  .weatherdetails { 
+    width: 90%; 
+    margin-bottom: 100px;
+  }
+
   .inputdetails input[type="search"],
   .inputdetails button[type="submit"] {
     box-sizing: border-box;
-    width: 80%;
-    max-width: 200px;
+    width: 90%;
     display: block;
     margin: 0 auto;
+    text-align: center  ;
   }
   
   h2 { font-size: 24px; }
