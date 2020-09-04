@@ -227,11 +227,12 @@ figure.random-jokes-icon img {
 .show { display: block; }
 
 .bottomload {
+  display: none;
   position: fixed;
   z-index: 100;
-  bottom: 39%;
+  top: 50%;
   left: 50%;
-  transform: translate(-39%,-50%);
+  transform: translate(-50%,-50%);
   text-align: center;
   animation: fadeOut 1s infinite;
 }
@@ -266,8 +267,8 @@ figure.random-jokes-icon img {
   }
 
   .bottomload {
-    bottom: 46%;
-    transform: translate(-46%,-50%);
+    top: 54%;
+    transform: translate(-54%,-50%);
   }
 }
 
