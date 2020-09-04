@@ -2,7 +2,7 @@ var weatherConditions = new XMLHttpRequest();
 var weatherForecast = new XMLHttpRequest();
 var cObj;
 var fObj;
-var inpcity="Delhi, India";
+var inpcity="Mumbai, India";
 
 loadWeather();
 
