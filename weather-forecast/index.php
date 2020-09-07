@@ -17,7 +17,6 @@
 	<!-- Adding reference to font awesome -->
 	<link rel="stylesheet" href="assets/vendor/font/fontawesome-all.css">
 	<!-- Default style-sheet is for 'media' type screen (color computer display).  -->
-	<!-- <link rel="stylesheet" media="screen" href="assets/css/style.css"> -->
 	<link rel="stylesheet" media="screen" href=<?php 
 	$cssfile = "assets/css/style.css";
 	$timestamp = "?".time();
