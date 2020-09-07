@@ -13,11 +13,16 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="https://www.tutorialspoint.com/jquery/src/weather/weather.css">
 	<!-- Adding reference to font awesome -->
 	<link rel="stylesheet" href="assets/vendor/font/fontawesome-all.css">
-	<link rel="stylesheet" media="screen" href="assets/css/weather.css">
 	<!-- Default style-sheet is for 'media' type screen (color computer display).  -->
-	<link rel="stylesheet" media="screen" href="assets/css/style.css">
+	<!-- <link rel="stylesheet" media="screen" href="assets/css/style.css"> -->
+	<link rel="stylesheet" media="screen" href=<?php 
+	$cssfile = "assets/css/style.css";
+	$timestamp = "?".time();
+	echo $cssfile.$timestamp;
+	?>>
 </head>
 <body id="weather-background" class="default-weather">
 	<div class="container">
@@ -83,6 +88,10 @@
 	<!-- External Script for animated background -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="https://www.tutorialspoint.com/jquery/src/weather/weather.js"></script>
-	<script src="assets/js/script.js"></script>
+	<script src=<?php 
+	$jsfile = "assets/js/script.js";
+	$timestamp = "?".time();
+	echo $jsfile.$timestamp;
+	?>></script>
 </body>
 </html>
