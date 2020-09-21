@@ -81,6 +81,10 @@ h2 {
   
   h2 { font-size: 24px; }
 
+  .weather-forecast div {
+    margin-bottom: 50px;
+  }
+
   .weather-forecast span { 
     display: block;
     text-align: center;
