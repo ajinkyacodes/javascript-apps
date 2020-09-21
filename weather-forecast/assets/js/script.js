@@ -13,7 +13,7 @@ temptxt.addEventListener("keyup",function(){
 var citytextbtn=document.getElementById("citytextbtn");
 citytextbtn.addEventListener("click", function(){
 	if(inpcity!=''){
-	loadWeather();	
+	loadWeather();
 	}
 	else { alert("Please enter a valid city name"); }
 });
@@ -49,8 +49,10 @@ weatherForecast.onload = function() {
 		// console.log(fObj);
 		//Current Date
 		var date_raw=fObj.list[0].dt_txt;
-		date_raw=date_raw.substring(5,11);
-		document.getElementById("r1c1").innerHTML="(Today) "+date_raw;
+		var date =  new Date(date_raw);
+      	var formatted_date = date.toDateString();
+		date_raw=formatted_date;
+		document.getElementById("r1c1").innerHTML="(Today)<br/>"+date_raw;
 		var iconcode = fObj.list[0].weather[0].icon;
 		if(iconcode=="10n")
 		{
@@ -70,8 +72,10 @@ weatherForecast.onload = function() {
 		
 		//After One Day 
 		var date_raw=fObj.list[8].dt_txt;
-		date_raw=date_raw.substring(5,11);
-		document.getElementById("r2c1").innerHTML="(Tomorrow) "+date_raw;
+		var date =  new Date(date_raw);
+      	var formatted_date = date.toDateString();
+		date_raw=formatted_date;
+		document.getElementById("r2c1").innerHTML="(Tomorrow)<br/>"+date_raw;
 		var iconcode = fObj.list[8].weather[0].icon;
 		var iconpath = "https://openweathermap.org/img/w/" +iconcode+ ".png";
 		document.getElementById("r2c2").src = iconpath;
@@ -80,8 +84,10 @@ weatherForecast.onload = function() {
 		
 		//After Two Days 
 		var date_raw=fObj.list[16].dt_txt;
-		date_raw=date_raw.substring(5,11);
-		document.getElementById("r3c1").innerHTML="(Day after tomorrow) "+date_raw;
+		var date =  new Date(date_raw);
+      	var formatted_date = date.toDateString();
+		date_raw=formatted_date;
+		document.getElementById("r3c1").innerHTML="(Day after tomorrow)<br/>"+date_raw;
 		var iconcode = fObj.list[16].weather[0].icon;
 		var iconpath = "https://openweathermap.org/img/w/" +iconcode+ ".png";
 		document.getElementById("r3c2").src = iconpath;
