@@ -64,6 +64,12 @@ h2 {
 }
 
 @media screen and (max-width: 540px) {
+  body { 
+    overflow-x: hidden; 
+    overflow-y: auto; 
+    margin: 0;
+    padding: 0;
+  }
 
   .weatherdetails { 
     width: 90%; 
@@ -81,9 +87,7 @@ h2 {
   
   h2 { font-size: 24px; }
 
-  .weather-forecast div {
-    margin-bottom: 50px;
-  }
+  .weather-forecast div { margin-bottom: 50px; }
 
   .weather-forecast span { 
     display: block;
