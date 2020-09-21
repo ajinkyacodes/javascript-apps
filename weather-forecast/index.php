@@ -14,7 +14,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="assets/vendor/font/fontawesome-all.css">
-	<link rel="stylesheet" media="screen" href="assets/css/weather.css">
 	<!-- Default style-sheet is for 'media' type screen (color computer display).  -->
 	<link rel="stylesheet" media="screen" href=<?php 
 	$cssfile = "assets/css/style.css";
@@ -29,18 +28,7 @@
 		</header>
 		<!-- end of header -->
 		<!-- Start of main -->
-		<main>
-			<canvas id="rain-canvas">
-	        </canvas>
-	        <canvas id="cloud-canvas">
-	        </canvas>
-	        <canvas id="weather-canvas">
-	        </canvas>
-	        <canvas id="time-canvas">
-	        </canvas>
-	        <canvas id="lightning-canvas">
-	        </canvas>			
-			<!-- Main HTML Data -->
+		<main>			
 			<div class="inputdetails">
 				<form action="#WeatherInfo" method="GET">
 					<input type="search" id="inpcity" placeholder="City, Country"><button type="submit" id="citytextbtn">Weather Info</button>
@@ -85,7 +73,6 @@
 	</div>
 	<!-- External Script for animated background -->
 	<script src="assets/vendor/jquery-1.8.3.min.js"></script>
-    <script src="assets/js/weather.js"></script>
 	<script src=<?php 
 	$jsfile = "assets/js/script.js";
 	$timestamp = "?".time();
