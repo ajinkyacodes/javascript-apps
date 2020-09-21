@@ -84,8 +84,8 @@
 		<!-- end of footer -->
 	</div>
 	<!-- External Script for animated background -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script src="https://www.tutorialspoint.com/jquery/src/weather/weather.js"></script>
+	<script src="assets/vendor/jquery-1.8.3.min.js"></script>
+    <script src="assets/js/weather.js"></script>
 	<script src=<?php 
 	$jsfile = "assets/js/script.js";
 	$timestamp = "?".time();
