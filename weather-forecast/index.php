@@ -22,13 +22,13 @@
 	?>>
 </head>
 <body id="weather-background" class="default-weather">
-	<div class="container">
-		<!-- Start of the header -->
-		<header>
-		</header>
-		<!-- end of header -->
-		<!-- Start of main -->
-		<main>			
+	<!-- Start of the header -->
+	<header>
+	</header>
+	<!-- end of header -->
+	<!-- Start of main -->
+	<main>
+		<div class="wrapper">
 			<div class="inputdetails">
 				<form action="#WeatherInfo" method="GET">
 					<input type="search" id="inpcity" placeholder="City, Country"><button type="submit" id="citytextbtn">Weather Info</button>
@@ -63,14 +63,14 @@
 						<span class="weather-pts" id="r3c4">XXX</span>
 					</div>
 				</div>
-			</div>					
-		</main>
-		<!-- End of main -->
-		<!-- start of footer -->
-		<footer>			
-		</footer>
-		<!-- end of footer -->
-	</div>
+			</div>
+		</div>
+	</main>
+	<!-- End of main -->
+	<!-- start of footer -->
+	<footer>			
+	</footer>
+	<!-- end of footer -->
 	<!-- External Script for animated background -->
 	<script src="assets/vendor/jquery-1.8.3.min.js"></script>
 	<script src=<?php 

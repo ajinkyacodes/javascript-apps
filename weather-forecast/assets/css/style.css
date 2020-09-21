@@ -1,3 +1,10 @@
+body { background-color: #40e0d0; }
+
+.wrapper {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
 h2 {
   padding: 20px 0;
   color: #3d4c9e;
@@ -32,6 +39,7 @@ h2 {
 .inputdetails button[type="submit"]:hover { background-color: #007777; }
 
 .weatherdetails {
+  box-sizing: border-box;
   padding: 20px;
   display: inline-block;
   position: relative;
@@ -66,13 +74,6 @@ h2 {
 }
 
 @media screen and (max-width: 540px) {
-  body { 
-    overflow-x: hidden; 
-    overflow-y: auto; 
-    margin: 0;
-    padding: 0;
-  }
-
   .weatherdetails { 
     width: 90%; 
     margin-bottom: 100px;
