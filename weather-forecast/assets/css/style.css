@@ -53,6 +53,8 @@ h2 {
 .weather-info { margin-bottom: 50px; }
 .weather-forecast h2 { text-align: center; }
 
+.weather-forecast span { text-align: center; }
+
 @media screen and (max-width: 995px) {
   .inputdetails button[type="submit"]:hover {
     background-color: #005d5d;
@@ -89,8 +91,5 @@ h2 {
 
   .weather-forecast div { margin-bottom: 50px; }
 
-  .weather-forecast span { 
-    display: block;
-    text-align: center;
-  }
+  .weather-forecast span { display: block; }
 }
