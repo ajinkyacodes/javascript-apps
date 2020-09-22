@@ -45,6 +45,14 @@ weatherForecast.send(null);
 weatherForecast.onload = function() {
 	if (weatherForecast.status===200) {
 		fObj = JSON.parse(weatherForecast.responseText);
+		
+		// var pod = fObj.list[0].sys.pod;
+		// console.log("POD = "+pod);
+		// var body = document.getElementsByTagName('body');
+		// if(pod=="n") {
+		// 	body.style.background-color = "#ff0";
+		// }
+		
 		//Current Date
 		var date_raw=fObj.list[0].dt_txt;
 		var date =  new Date(date_raw);
@@ -52,16 +60,8 @@ weatherForecast.onload = function() {
 		date_raw=formatted_date;
 		document.getElementById("r1c1").innerHTML="<strong>(Today)</strong><br/>"+date_raw;
 		var iconcode = fObj.list[0].weather[0].icon;
-		if(iconcode=="10n")
-		{
-		var iconpath = "assets/images/snowy-1.svg";
+		var iconpath = "assets/images/" +iconcode+ ".gif";
 		document.getElementById("r1c2").src = iconpath;
-		}
-		else
-		{
-		var iconpath = "https://openweathermap.org/img/w/" +iconcode+ ".png";
-		document.getElementById("r1c2").src = iconpath;
-		}		
 		document.getElementById("r1c3").innerHTML="Min: "+fObj.list[0].main.temp_min+"&deg;C";
 		document.getElementById("r1c4").innerHTML="Max: "+fObj.list[0].main.temp_max+"&deg;C";
 		
@@ -72,7 +72,7 @@ weatherForecast.onload = function() {
 		date_raw=formatted_date;
 		document.getElementById("r2c1").innerHTML="<strong>(Tomorrow)</strong><br/>"+date_raw;
 		var iconcode = fObj.list[8].weather[0].icon;
-		var iconpath = "https://openweathermap.org/img/w/" +iconcode+ ".png";
+		var iconpath = "assets/images/" +iconcode+ ".gif";
 		document.getElementById("r2c2").src = iconpath;
 		document.getElementById("r2c3").innerHTML="Min: "+fObj.list[8].main.temp_min+"&deg;C";
 		document.getElementById("r2c4").innerHTML="Max: "+fObj.list[8].main.temp_max+"&deg;C";
@@ -84,7 +84,7 @@ weatherForecast.onload = function() {
 		date_raw=formatted_date;
 		document.getElementById("r3c1").innerHTML="<strong>(Day after tomorrow)</strong><br/>"+date_raw;
 		var iconcode = fObj.list[16].weather[0].icon;
-		var iconpath = "https://openweathermap.org/img/w/" +iconcode+ ".png";
+		var iconpath = "assets/images/" +iconcode+ ".gif";
 		document.getElementById("r3c2").src = iconpath;
 		document.getElementById("r3c3").innerHTML="Min: "+fObj.list[16].main.temp_min+"&deg;C";
 		document.getElementById("r3c4").innerHTML="Max: "+fObj.list[16].main.temp_max+"&deg;C";
