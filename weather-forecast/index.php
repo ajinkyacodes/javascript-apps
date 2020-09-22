@@ -44,24 +44,44 @@
 				</div>			
 				<div id="WeatherForecast" class="weather-forecast">
 					<h2>Weather Forecast</h2>
-					<div>
-						<span class="weather-pts" id="r1c1">XXX</span>
-						<span class="weather-pts wptsimg"><img id="r1c2"></span>
-						<span class="weather-pts" id="r1c3">XXX</span>
-						<span class="weather-pts" id="r1c4">XXX</span>
-					</div>
-					<div>
-						<span class="weather-pts" id="r2c1">XXX</span>
-						<span class="weather-pts wptsimg"><img id="r2c2"></span>
-						<span class="weather-pts" id="r2c3">XXX</span>
-						<span class="weather-pts" id="r2c4">XXX</span>
-					</div>
-					<div>
-						<span class="weather-pts" id="r3c1">XXX</span>
-						<span class="weather-pts wptsimg"><img id="r3c2"></span>
-						<span class="weather-pts" id="r3c3">XXX</span>
-						<span class="weather-pts" id="r3c4">XXX</span>
-					</div>
+					<ul class="forecast-ul">
+						<li>
+							<div class="forecast-date">
+								<span class="weather-pts" id="r1c1">XXX</span>
+							</div>
+							<div class="forecast-icon">
+								<span class="weather-pts wptsimg"><img id="r1c2"></span>
+							</div>
+							<div class="forecast-temp">
+								<span class="weather-pts" id="r1c3">XXX</span>
+								<span class="weather-pts" id="r1c4">XXX</span>
+							</div>
+						</li>
+						<li>
+							<div class="forecast-date">
+								<span class="weather-pts" id="r2c1">XXX</span>
+							</div>
+							<div class="forecast-icon">
+								<span class="weather-pts wptsimg"><img id="r2c2"></span>
+							</div>
+							<div class="forecast-temp">
+								<span class="weather-pts" id="r2c3">XXX</span>
+								<span class="weather-pts" id="r2c4">XXX</span>
+							</div>
+						</li>
+						<li>
+							<div class="forecast-date">
+								<span class="weather-pts" id="r3c1">XXX</span>
+							</div>
+							<div class="forecast-icon">
+								<span class="weather-pts wptsimg"><img id="r3c2"></span>
+							</div>
+							<div class="forecast-temp">
+								<span class="weather-pts" id="r3c3">XXX</span>
+								<span class="weather-pts" id="r3c4">XXX</span>
+							</div>
+						</li>
+					</ul>					
 				</div>
 			</div>
 		</div>
