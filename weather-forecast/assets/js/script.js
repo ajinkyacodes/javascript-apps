@@ -28,7 +28,6 @@ weatherConditions.send(null);
 weatherConditions.onload = function() {
 	if (weatherConditions.status===200) {
 		cObj = JSON.parse(weatherConditions.responseText);
-		//console.log(cObj);
 		document.getElementById("location").innerHTML="Location: "+cObj.name;
 		document.getElementById("weather").innerHTML="Weather Condition: "+cObj.weather[0].description;
 		document.getElementById("temperature").innerHTML="Temperature: "+cObj.main.temp+" &deg;C";
@@ -46,13 +45,12 @@ weatherForecast.send(null);
 weatherForecast.onload = function() {
 	if (weatherForecast.status===200) {
 		fObj = JSON.parse(weatherForecast.responseText);
-		// console.log(fObj);
 		//Current Date
 		var date_raw=fObj.list[0].dt_txt;
 		var date =  new Date(date_raw);
       	var formatted_date = date.toDateString();
 		date_raw=formatted_date;
-		document.getElementById("r1c1").innerHTML="(Today)<br/>"+date_raw;
+		document.getElementById("r1c1").innerHTML="<strong>(Today)</strong><br/>"+date_raw;
 		var iconcode = fObj.list[0].weather[0].icon;
 		if(iconcode=="10n")
 		{
@@ -63,10 +61,7 @@ weatherForecast.onload = function() {
 		{
 		var iconpath = "https://openweathermap.org/img/w/" +iconcode+ ".png";
 		document.getElementById("r1c2").src = iconpath;
-		}
-		// var iconpath = "http://openweathermap.org/img/w/" +iconcode+ ".png";
-		// var iconpath = "http://www.animatedimages.org/data/media/278/animated-sun-image-0013.gif";
-		// document.getElementById("r1c2").src = iconpath;
+		}		
 		document.getElementById("r1c3").innerHTML="Min: "+fObj.list[0].main.temp_min+"&deg;C";
 		document.getElementById("r1c4").innerHTML="Max: "+fObj.list[0].main.temp_max+"&deg;C";
 		
@@ -75,7 +70,7 @@ weatherForecast.onload = function() {
 		var date =  new Date(date_raw);
       	var formatted_date = date.toDateString();
 		date_raw=formatted_date;
-		document.getElementById("r2c1").innerHTML="(Tomorrow)<br/>"+date_raw;
+		document.getElementById("r2c1").innerHTML="<strong>(Tomorrow)</strong><br/>"+date_raw;
 		var iconcode = fObj.list[8].weather[0].icon;
 		var iconpath = "https://openweathermap.org/img/w/" +iconcode+ ".png";
 		document.getElementById("r2c2").src = iconpath;
@@ -87,7 +82,7 @@ weatherForecast.onload = function() {
 		var date =  new Date(date_raw);
       	var formatted_date = date.toDateString();
 		date_raw=formatted_date;
-		document.getElementById("r3c1").innerHTML="(Day after tomorrow)<br/>"+date_raw;
+		document.getElementById("r3c1").innerHTML="<strong>(Day after tomorrow)</strong><br/>"+date_raw;
 		var iconcode = fObj.list[16].weather[0].icon;
 		var iconpath = "https://openweathermap.org/img/w/" +iconcode+ ".png";
 		document.getElementById("r3c2").src = iconpath;
