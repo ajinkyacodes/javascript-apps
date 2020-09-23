@@ -46,13 +46,15 @@ weatherForecast.onload = function() {
 	if (weatherForecast.status===200) {
 		fObj = JSON.parse(weatherForecast.responseText);
 		
-		var pod = fObj.list[0].sys.pod;
-		console.log("POD = "+pod);
+		var pod = fObj.list[0].sys.pod;		
 		var body = document.getElementsByTagName('body');
 		if(pod=="n") {
-			document.body.style.backgroundColor = "#000";
+			document.body.style.backgroundColor = "#00041d";
+			$(".weatherdetails").css("background-color", "rgba(255,255,255,0.1)");
+			$("p, span").css("color", "#fff");
 		} else if(pod=="d") {
 			document.body.style.backgroundColor = "#40e0d0";
+			$("body").css("background-color", "#669acc");
 		} 
 		
 		//Current Date
