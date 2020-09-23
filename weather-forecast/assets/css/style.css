@@ -1,4 +1,4 @@
-body { background-color: #40e0d0; }
+body { background-color: #669acc; }
 
 .wrapper {
   max-width: 1400px;
@@ -40,6 +40,8 @@ h2 {
 
 .inputdetails button[type="submit"]:hover { background-color: #5d6fd4; }
 
+.weather-desc { text-transform: capitalize; }
+
 .weatherdetails {
   width: 540px;
   box-sizing: border-box;
@@ -49,7 +51,7 @@ h2 {
   position: relative;
   left: 50%;
   transform: translateX(-50%);
-  background-color: rgba(255,255,255,0.5);
+  background-color: rgba(255,255,255,0.9);
 }
 
 .weather-pts { display: block; }
@@ -62,7 +64,10 @@ h2 {
 .weather-info { margin-bottom: 50px; }
 .weather-forecast h2 { text-align: center; }
 
-.weather-forecast span { text-align: center; }
+.weather-forecast span { 
+  line-height: 1.4;
+  text-align: center; 
+}
 
 .forecast-ul { padding-left: 0; }
 
