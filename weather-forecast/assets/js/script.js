@@ -54,7 +54,7 @@ weatherForecast.onload = function() {
 			$("p, span").css("color", "#fff");
 		} else if(pod=="d") {
 			$("body").css("background-color", "#669acc"); 
-			$(".weatherdetails").css("background-color", "rgba(255,255,255,0.9)");
+			$(".weatherdetails").css("background-color", "rgba(255,255,255,0.5)");
 			$("p, span").css("color", "#000");
 		} 
 		
