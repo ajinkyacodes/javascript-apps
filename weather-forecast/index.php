@@ -38,7 +38,7 @@
 				<div id="WeatherInfo" class="weather-info">
 					<h2>Weather Information</h2>
 					<p id="location">City, Country</p>
-					<p id="weather">Cloudy</p>
+					<p id="weather" class="weather-description">Cloudy</p>
 					<p id="temperature">31 &deg;</p>
 					<p id="desc">Description</p>
 				</div>			

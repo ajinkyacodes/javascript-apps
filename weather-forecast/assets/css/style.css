@@ -61,7 +61,13 @@ h2 {
   height: auto;
 }
 
-.weather-info { margin-bottom: 50px; }
+.weather-info { 
+  margin-bottom: 50px; 
+  text-align: center;
+}
+
+.weather-info .weather-description { text-transform: capitalize; }
+
 .weather-forecast h2 { text-align: center; }
 
 .weather-forecast span { 
@@ -81,8 +87,10 @@ h2 {
 }
 
 .forecast-ul li .forecast-date {
-  flex-basis: 35%;  
+  flex-basis: 35%;
 }
+
+.forecast-ul li .forecast-date span { line-height: 1.8; }
 
 .forecast-ul li .forecast-icon {
   flex-basis: 25%;  
@@ -111,6 +119,8 @@ h2 {
     width: 90%; 
     margin-bottom: 100px;
   }
+
+  .forecast-ul li .forecast-date { margin-bottom: 10px; }
 
   .inputdetails input[type="search"],
   .inputdetails button[type="submit"] {
