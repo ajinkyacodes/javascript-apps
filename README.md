@@ -33,5 +33,5 @@ This is a basic conventional calculator built using JavaScript.
 - HTML
 
 ### ABOUT ME
-My name is Ajinkya. I am a Laravel Developer. You can visit my website [ajinkyacodes.com](https://ajinkyacodes.com) for more info.
+My name is Ajinkya. I am a Full-stack Developer. You can visit my website [ajinkyacodes.com](https://ajinkyacodes.com) for more info.
 
