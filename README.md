@@ -26,6 +26,12 @@ This app shows the current weather and weather forecast of the inputted city, co
 - CSS
 - HTML
 
+## JS Unconventional Calculator
+This is a basic conventional calculator built using JavaScript.
+- JavaScript
+- CSS
+- HTML
+
 ### ABOUT ME
 My name is Ajinkya. I am a Laravel Developer. You can visit my website [ajinkyacodes.com](https://ajinkyacodes.com) for more info.
 
