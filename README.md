@@ -27,7 +27,7 @@ This app shows the current weather and weather forecast of the inputted city, co
 - HTML
 
 ## JS Unconventional Calculator
-This is a basic conventional calculator built using JavaScript.
+This is a basic unconventional calculator built using JavaScript.
 - JavaScript
 - CSS
 - HTML
