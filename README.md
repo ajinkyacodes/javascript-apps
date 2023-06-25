@@ -38,6 +38,12 @@ This is a small game prototype built using JavaScript.
 - CSS
 - HTML
 
+## Rock, Paper, Scissors Game
+This is a small rock, paper, scissors game built using JavaScript.
+- JavaScript
+- CSS
+- HTML
+
 ### ABOUT ME
 My name is Ajinkya. I am a Full-stack Developer. You can visit my website [ajinkyacodes.com](https://ajinkyacodes.com) for more info.
 
