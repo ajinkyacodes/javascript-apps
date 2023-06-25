@@ -1,3 +1,5 @@
+'use strict';
+
 const startGameBtn = document.getElementById('start-game-btn');
 const pChoiceText = document.getElementById('player-choice-text');
 const cChoiceText = document.getElementById('computer-choice-text');
@@ -15,16 +17,16 @@ const GAME_TEXT = 'Rock, Paper, Scissors';
 
 let gameIsRunning = false;
 
-const getPlayerChoice = function() {
+const getPlayerChoice = () => {
     const selection = prompt(`${ROCK}, ${PAPER} or ${SCISSORS}?`, '').toUpperCase();
     if(selection !== ROCK && selection !== PAPER && selection !== SCISSORS) {
         alert(`Invalid Choice! We chose ${DEFAULT_USER_CHOICE} for you.`);
         return DEFAULT_USER_CHOICE;
-    }
+    } 
     return selection;
 }
 
-const getComputerChoice = function() {
+const getComputerChoice = () => {
     const randomValue = Math.random();
     if(randomValue < 0.34) {
         return ROCK;
@@ -37,17 +39,9 @@ const getComputerChoice = function() {
 
 const DEFAULT_USER_CHOICE = getComputerChoice();
 
-const getWinner = function(cChoice, pChoice) {
-    if(cChoice === pChoice) {
-        return RESULT_DRAW;
-    } else if((cChoice === ROCK && pChoice == PAPER) || (cChoice === PAPER && pChoice === SCISSORS) || (pChoice === SCISSORS && pChoice === ROCK)) {
-        return RESULT_PLAYER_WINS;
-    } else {
-        return RESULT_COMPUTER_WINS;
-    }
-}
+const getWinner = (cChoice, pChoice) => cChoice === pChoice ? RESULT_DRAW : (cChoice === ROCK && pChoice == PAPER) || (cChoice === PAPER && pChoice === SCISSORS) || (pChoice === SCISSORS && pChoice === ROCK) ? RESULT_PLAYER_WINS :RESULT_COMPUTER_WINS;
 
-startGameBtn.addEventListener('click', function(){
+startGameBtn.addEventListener('click', () => {
     console.clear();
     gameIsRunning = true;
     console.log('Game is starting...');
