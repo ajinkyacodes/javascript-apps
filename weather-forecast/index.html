@@ -15,11 +15,7 @@
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="assets/vendor/font/fontawesome-all.css">
 	<!-- Default style-sheet is for 'media' type screen (color computer display).  -->
-	<link rel="stylesheet" media="screen" href=<?php 
-	$cssfile = "assets/css/style.css";
-	$timestamp = "?".time();
-	echo $cssfile.$timestamp;
-	?>>
+	<link rel="stylesheet" media="screen" href="assets/css/style.css">
 </head>
 <body id="weather-background" class="default-weather">
 	<!-- Start of the header -->
@@ -93,10 +89,6 @@
 	<!-- end of footer -->
 	<!-- External Script for animated background -->
 	<script src="assets/vendor/jquery-1.8.3.min.js"></script>
-	<script src=<?php 
-	$jsfile = "assets/js/script.js";
-	$timestamp = "?".time();
-	echo $jsfile.$timestamp;
-	?>></script>
+	<script src="assets/js/script.js"></script>
 </body>
 </html>

@@ -7,9 +7,13 @@ var inpcity="Mumbai, India";
 loadWeather();
 
 var temptxt=document.getElementById("inpcity");
-temptxt.addEventListener("keyup",function(){
-	inpcity=this.value;
-});
+
+function weatherCity() {
+	inpcity=temptxt.value;
+}
+
+temptxt.addEventListener("keyup",weatherCity);
+
 var citytextbtn=document.getElementById("citytextbtn");
 citytextbtn.addEventListener("click", function(){
 	if(inpcity!=''){
