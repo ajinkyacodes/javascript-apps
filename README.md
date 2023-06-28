@@ -23,6 +23,9 @@ This app generates a password fulfilling the conditions set like lowercase, uppe
 
 # Basic Apps
 
+## [Netflix Navigation](https://ajinkyacodes.github.io/javascript-apps/netflix-navigation)
+This is a mobile navbar similar to what is used in Netflix.
+
 ## [Unconventional Calculator](https://ajinkyacodes.github.io/javascript-apps/unconventional-calculator)
 This is a basic unconventional calculator for arithmetic operations.
 
