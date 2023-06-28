@@ -27,6 +27,11 @@ This is a small game prototype built using JavaScript.
 This is a small rock, paper, scissors game built using JavaScript.
 - JavaScript, CSS, HTML
 
+## [Drink Water](https://ajinkyacodes.github.io/mini-apps/drink-water)
+This small app tracks how much water we drank and how much is remaining.
+- JavaScript, CSS, HTML
+
+
 ### ABOUT ME
 My name is Ajinkya. I am a Full-stack Developer. You can visit my website [ajinkyacodes.com](https://ajinkyacodes.com) for more info.
 
