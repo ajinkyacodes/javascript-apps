@@ -14,7 +14,12 @@ This small app tracks how much water we drank and how much is remaining.
 This is a small rock, paper, scissors game.
 
 ## [Monster Attack Game](https://ajinkyacodes.github.io/javascript-apps/monster-attack-game)
-This is a small game prototype in which monster is attacked by you by clicking butons like attack and strong attack.
+This is a small game prototype in which a monster is attacked by you by clicking buttons like attack and strong attack.
+
+# Advanced Apps
+
+## [Password Generator](https://ajinkyacodes.github.io/javascript-apps/password-generator)
+This app generates a password fulfilling the conditions set like lowercase, uppercase, numbers, symbols, and length of the password.
 
 # Basic Apps
 
@@ -25,7 +30,7 @@ This is a basic unconventional calculator for arithmetic operations.
 This is a random joke generator app. It shuffles jokes with different categories.
 
 ## [Weather Forecast](https://ajinkyacodes.github.io/javascript-apps/weather-forecast)
-This app shows the current weather and weather forecast of the inputted city, country.
+This app shows the current weather and weather forecast of the inputted City, Country.
 
 
 ### ABOUT ME
