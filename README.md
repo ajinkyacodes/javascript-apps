@@ -23,6 +23,9 @@ This app generates a password fulfilling the conditions set like lowercase, uppe
 
 # Basic Apps
 
+## [Rotating Navigation](https://ajinkyacodes.github.io/javascript-apps/rotating-navigation)
+After clicking on the navbar icon the webpage rotates and gives you a different look.
+
 ## [Netflix Navigation](https://ajinkyacodes.github.io/javascript-apps/netflix-navigation)
 This is a mobile navbar similar to what is used in Netflix.
 
