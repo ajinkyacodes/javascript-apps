@@ -93,6 +93,8 @@ main {
     box-shadow: 0 4px 5px rgba(0,0,0,0.2);
 }
 
+.movie:hover .overview { transform: translateY(0); }
+
 .movie img { width: 100%; }
 
 .movie-info {
@@ -108,8 +110,6 @@ main {
     margin: 0; 
     font-family: 'Rowdies', cursive;
 }
-
-.overview h3 { font-family: 'Rowdies', cursive; }
 
 .movie-info span {
     padding: 0.25rem 0.5rem 0.5rem;
@@ -127,13 +127,19 @@ main {
     max-height: 100%;
     padding: 2rem;
     position: absolute;
-    left: 0;
-    bottom: 0;
+    top: 0;
     right: 0;
+    bottom: 0;
+    left: 0;
     background-color: #fff;
     overflow-y: auto;
     transform: translateY(101%);
     transition: transform 0.3s ease-in;
 }
 
-.movie:hover .overview { transform: translateY(0); }
+.overview h3 { 
+    font-family: 'Rowdies', cursive;
+    font-size: 22px;
+}
+
+.overview p { font-size: 15px; }
