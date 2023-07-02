@@ -5,7 +5,7 @@ This GitHub repo contains all JavaScript small functionality tasks collected tog
 
 # Showcase Apps
 
-## [Movie App](https://ajinkyacodes.github.io/javascript-apps/movie-app)
+## [Movies App](https://ajinkyacodes.github.io/javascript-apps/movies-app)
 This app shows the movies basic data like poster, ratings and overview. You can also search some of the movies.
 
 ## [Drink Water](https://ajinkyacodes.github.io/javascript-apps/drink-water)
