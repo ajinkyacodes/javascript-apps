@@ -13,10 +13,10 @@ This small app tracks how much water we drank and how much is remaining.
 
 # Games
 
-## [Rock, Paper, Scissors Game](https://ajinkyacodes.github.io/javascript-apps/rock-paper-scissors-game)
+## [Rock, Paper, Scissors Game (Concept)](https://ajinkyacodes.github.io/javascript-apps/rock-paper-scissors-game)
 This is a small rock, paper, scissors game.
 
-## [Monster Attack Game](https://ajinkyacodes.github.io/javascript-apps/monster-attack-game)
+## [Monster Attack Game (Concept)](https://ajinkyacodes.github.io/javascript-apps/monster-attack-game)
 This is a small game prototype in which a monster is attacked by you by clicking buttons like attack and strong attack.
 
 # Advanced Apps
