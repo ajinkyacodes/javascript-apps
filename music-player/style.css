@@ -1,19 +1,126 @@
-/* Images created by: https://unsplash.com/@pawel_czerwinski */
-
+/* Importing Google Font */
 @import url("https://fonts.googleapis.com/css?family=Spartan:400,700&display=swap");
 
-html {
-  box-sizing: border-box;
-}
+html { box-sizing: border-box; }
 
 body {
-  margin: 0;
   min-height: 100vh;
-  background: #c9ced3;
+  margin: 0;
   display: flex;
   justify-content: center;
   align-items: center;
+  background: #c9ced3;
   font-family: Spartan, sans-serif;
   font-size: 12px;
 }
 
+.player-container {
+  width: 400px;
+  height: 500px;
+  border-radius: 20px;
+  background: #e7e7e7;
+  box-shadow: 0 15px 30px 5px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease-in-out;
+}
+
+.img-container {
+  width: 300px;
+  height: 300px;
+  position: relative;
+  top: -5%;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: all 0.3s ease-in-out;
+}
+
+.img-container img {
+  height: 100%;
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 5px 30px 5px rgba(0, 0, 0, 0.5);
+  object-fit: cover;
+}
+
+h2 {
+  margin: 0;
+  font-size: 24px;
+  text-align: center;
+}
+
+h3 {
+  margin: 5px 0 0;
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
+}
+
+/* Progress */
+.progress-container {
+  width: 90%;
+  height: 4px;
+  border-radius: 5px;
+  margin: 40px 20px;
+  background: #fff;
+  cursor: pointer;
+}
+
+.progress {
+  width: 0%;
+  height: 100%;
+  border-radius: 5px;
+  background: #242323;
+  transition: width 0.1s linear;
+}
+
+.duration-wrapper {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  top: -25px;
+  font-size: 12px;
+}
+
+/* Controls */
+.player-controls {
+  width: 200px;
+  position: relative;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.fas {
+  margin-right: 30px;
+  color: rgb(129, 129, 129);
+  cursor: pointer;
+  font-size: 30px;
+  user-select: none;
+}
+
+.fas:last-child { margin-right: 0; }
+.fas:hover { filter: brightness(70%); }
+
+.main-button {
+  position: relative;
+  top: 3px;
+  font-size: 40px;
+}
+
+/* Media Query for Mobile Responsive */
+
+@media screen and (max-width:480px) {
+  .player-container {
+    width: 300px;
+    height: 450px;
+  }
+
+  .img-container {
+    width: 250px;
+    height: 250px;
+  }
+
+  h2 { font-size: 20px; }
+  h3 { font-size: 12px; }
+  .duration-wrapper { font-size: 10px; }
+}
