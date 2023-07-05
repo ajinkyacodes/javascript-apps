@@ -14,14 +14,6 @@ This is a music player web app with basic functionalities like play, pause, next
 ## [Drink Water](https://ajinkyacodes.github.io/javascript-apps/drink-water)
 This small app tracks how much water we drank and how much is remaining.
 
-# Games
-
-## [Rock, Paper, Scissors Game (Concept)](https://ajinkyacodes.github.io/javascript-apps/rock-paper-scissors-game)
-This is a small rock, paper, scissors game.
-
-## [Monster Attack Game (Concept)](https://ajinkyacodes.github.io/javascript-apps/monster-attack-game)
-This is a small game prototype in which a monster is attacked by you by clicking buttons like attack and strong attack.
-
 # Advanced Apps
 
 ## [Password Generator](https://ajinkyacodes.github.io/javascript-apps/password-generator)
@@ -35,15 +27,22 @@ After clicking on the navbar icon the webpage rotates and gives you a different 
 ## [Netflix Navigation](https://ajinkyacodes.github.io/javascript-apps/netflix-navigation)
 This is a mobile navbar similar to what is used in Netflix.
 
-## [Unconventional Calculator](https://ajinkyacodes.github.io/javascript-apps/unconventional-calculator)
-This is a basic unconventional calculator for arithmetic operations.
-
 ## [Random Jokes](https://ajinkyacodes.github.io/javascript-apps/random-jokes/)
 This is a random joke generator app. It shuffles jokes with different categories.
 
 ## [Weather Forecast](https://ajinkyacodes.github.io/javascript-apps/weather-forecast)
 This app shows the current weather and weather forecast of the inputted City, Country.
 
+# Concepts
+
+## [Rock, Paper, Scissors Game (Concept)](https://ajinkyacodes.github.io/javascript-apps/rock-paper-scissors-game)
+This is a small rock, paper, scissors game.
+
+## [Monster Attack Game (Concept)](https://ajinkyacodes.github.io/javascript-apps/monster-attack-game)
+This is a small game prototype in which a monster is attacked by you by clicking buttons like attack and strong attack.
+
+## [Unconventional Calculator](https://ajinkyacodes.github.io/javascript-apps/unconventional-calculator)
+This is a basic unconventional calculator for arithmetic operations.
 
 ### ABOUT ME
 My name is Ajinkya. I am a Full-stack Developer. You can visit my website [ajinkyacodes.com](https://ajinkyacodes.com) for more info.
