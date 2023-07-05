@@ -27,7 +27,7 @@ body {
   width: 300px;
   height: 300px;
   position: relative;
-  top: -5%;
+  top: -7%;
   left: 50%;
   transform: translateX(-50%);
   transition: all 0.3s ease-in-out;
@@ -39,12 +39,14 @@ body {
   border-radius: 20px;
   box-shadow: 0 5px 30px 5px rgba(0, 0, 0, 0.5);
   object-fit: cover;
+  pointer-events: none;
 }
 
 h2 {
   margin: 0;
   font-size: 24px;
   text-align: center;
+  transition: all 0.3s ease-in-out;
 }
 
 h3 {
@@ -52,6 +54,7 @@ h3 {
   font-size: 16px;
   font-weight: 400;
   text-align: center;
+  transition: all 0.3s ease-in-out;
 }
 
 /* Progress */
@@ -59,7 +62,7 @@ h3 {
   width: 90%;
   height: 4px;
   border-radius: 5px;
-  margin: 40px 20px;
+  margin: 40px auto;
   background: #fff;
   cursor: pointer;
 }
@@ -88,6 +91,7 @@ h3 {
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
+  transition: all 0.3s ease-in-out;
 }
 
 .fas {
@@ -115,12 +119,17 @@ h3 {
     height: 450px;
   }
 
+  .player-controls { top: 0; }
+
   .img-container {
-    width: 250px;
-    height: 250px;
+    width: 230px;
+    height: 230px;
+    top: -8%;
   }
 
   h2 { font-size: 20px; }
   h3 { font-size: 12px; }
   .duration-wrapper { font-size: 10px; }
+
+  .fas:hover { filter: brightness(100%); }
 }
