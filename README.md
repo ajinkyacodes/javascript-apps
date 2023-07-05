@@ -8,6 +8,9 @@ This GitHub repo contains all JavaScript small functionality tasks collected tog
 ## [Movies App](https://ajinkyacodes.github.io/javascript-apps/movies-app)
 This app shows the movies basic data like poster, ratings and overview. You can also search some of the movies.
 
+## [Music Player](https://ajinkyacodes.github.io/javascript-apps/music-player)
+This is a music player web app with basic functionalities like play, pause, next song, previous song & progress bar.
+
 ## [Drink Water](https://ajinkyacodes.github.io/javascript-apps/drink-water)
 This small app tracks how much water we drank and how much is remaining.
 
