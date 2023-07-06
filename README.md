@@ -6,10 +6,13 @@ This GitHub repo contains all JavaScript small functionality tasks collected tog
 # Showcase Apps
 
 ## [Movies App](https://ajinkyacodes.github.io/javascript-apps/movies-app)
-This app shows the movies basic data like poster, ratings and overview. You can also search some of the movies.
+This app shows the movie's basic data like posters, ratings, and overview. You can also search some of the movies.
 
 ## [Music Player](https://ajinkyacodes.github.io/javascript-apps/music-player)
 This is a music player web app with basic functionalities like play, pause, next song, previous song & progress bar.
+
+## [Light/Dark Mode](https://ajinkyacodes.github.io/javascript-apps/light-dark-mode)
+This is a light/dark mode that you can use on your website.
 
 ## [Drink Water](https://ajinkyacodes.github.io/javascript-apps/drink-water)
 This small app tracks how much water we drank and how much is remaining.
