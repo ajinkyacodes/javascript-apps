@@ -5,6 +5,10 @@ const image1 = document.getElementById('image1');
 const image2 = document.getElementById('image2');
 const image3 = document.getElementById('image3');
 const textBox = document.getElementById('text-box');
+const open_btn = document.querySelector('.open-btn');
+const close_btn = document.querySelector('.close-btn');
+const navbar = document.querySelectorAll('.nav');
+const navLink = document.querySelectorAll('.nav-link');
 
 // Dark or Light Images
 function imageMode(color) {
@@ -31,7 +35,6 @@ function lightMode() {
     toggleIcon.children[1].classList.replace('fa-moon', 'fa-sun');
     imageMode('light');
     localStorage.setItem('theme', 'light');
-
 }
 
 // Switch Theme Dynamically
@@ -57,3 +60,13 @@ if(currentTheme){
         darkMode();
     }
 }
+
+
+// Navbar Styling
+open_btn.addEventListener('click', () => {
+    navbar.forEach(nav_el => nav_el.classList.add('visible'));
+});
+
+close_btn.addEventListener('click', () => {
+    navbar.forEach(nav_el => nav_el.classList.remove('visible'));
+});
