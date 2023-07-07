@@ -6,7 +6,7 @@ This GitHub repo contains all JavaScript small functionality tasks collected tog
 # Showcase Apps
 
 ## [Movies App](https://ajinkyacodes.github.io/javascript-apps/movies-app)
-This app shows the movie's basic data like posters, ratings, and overview. You can also search some of the movies.
+This app shows the movie's basic data like posters, ratings, and overviews. You can also search some of the movies.
 
 ## [Music Player](https://ajinkyacodes.github.io/javascript-apps/music-player)
 This is a music player web app with basic functionalities like play, pause, next song, previous song & progress bar.
@@ -29,6 +29,9 @@ After clicking on the navbar icon the webpage rotates and gives you a different 
 
 ## [Netflix Navigation](https://ajinkyacodes.github.io/javascript-apps/netflix-navigation)
 This is a mobile navbar similar to what is used in Netflix.
+
+## [Infinite Scroll](https://ajinkyacodes.github.io/javascript-apps/infinite-scroll)
+A basic random photos loading app with infinite scroll.
 
 ## [Random Jokes](https://ajinkyacodes.github.io/javascript-apps/random-jokes/)
 This is a random joke generator app. It shuffles jokes with different categories.
