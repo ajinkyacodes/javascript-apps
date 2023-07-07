@@ -9,6 +9,7 @@ const open_btn = document.querySelector('.open-btn');
 const close_btn = document.querySelector('.close-btn');
 const navbar = document.querySelectorAll('.nav');
 const navLink = document.querySelectorAll('.nav-link');
+const body =document.querySelector('body');
 
 // Dark or Light Images
 function imageMode(color) {
@@ -19,8 +20,8 @@ function imageMode(color) {
 
 // Dark Mode Styles
 function darkMode() {
-    nav.style.backgroundColor = 'rgb(0 0 0 / 50%)';
-    textBox.style.backgroundColor = 'rgb(255 255 255 / 50%)';
+    nav.style.backgroundColor = 'rgb(0 0 0 / 90%)';
+    textBox.style.backgroundColor = 'rgb(255 255 255 / 90%)';
     toggleIcon.children[0].textContent = 'Dark Mode';
     toggleIcon.children[1].classList.replace('fa-sun', 'fa-moon');
     imageMode('dark');
@@ -29,8 +30,8 @@ function darkMode() {
 
 // Light Mode Styles
 function lightMode() {
-    nav.style.backgroundColor = 'rgb(255 255 255 / 50%)';
-    textBox.style.backgroundColor = 'rgb(0 0 0 / 50%)';
+    nav.style.backgroundColor = 'rgb(255 255 255 / 90%)';
+    textBox.style.backgroundColor = 'rgb(0 0 0 / 90%)';
     toggleIcon.children[0].textContent = 'Light Mode';
     toggleIcon.children[1].classList.replace('fa-moon', 'fa-sun');
     imageMode('light');
@@ -64,9 +65,11 @@ if(currentTheme){
 
 // Navbar Styling
 open_btn.addEventListener('click', () => {
+    body.style.overflow = 'hidden';
     navbar.forEach(nav_el => nav_el.classList.add('visible'));
 });
 
 close_btn.addEventListener('click', () => {
+    body.style.overflow = 'auto';
     navbar.forEach(nav_el => nav_el.classList.remove('visible'));
 });

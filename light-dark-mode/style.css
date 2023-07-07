@@ -79,7 +79,7 @@ font-family: 'Oswald', sans-serif;
     padding: 25px;
     position: fixed;
     z-index: 10;
-    background: rgb(255 255 255 / 50%);
+    background: rgb(255 255 255 / 90%);
     font-family: 'Oswald', sans-serif;
     font-size: 24px;
     letter-spacing: 3px;
@@ -304,11 +304,16 @@ font-family: 'Oswald', sans-serif;
     }
     
     .open-btn { display: block; }
-    .nav.visible { display: block; }
     .nav.visible .close-btn { display: block; }
+    .nav.visible .nav-btn.open-btn { display: none; }
+
+    .open-btn,
+    .close-btn,
+    .open-btn .fas,
+    .close-btn .fas { margin-right: 0; }
 
     .nav.visible {
-      width: 50%;
+      width: 60%;
       height: 100vh;
       position: fixed;
       top: 0;
@@ -325,7 +330,7 @@ font-family: 'Oswald', sans-serif;
     }
 
     .nav a:first-of-type { margin-top: 100px; }
-    .nav.visible a:hover { border-bottom: none; }
+    .nav.visible a:hover { border-bottom: 3px solid transparent; }
 
     .nav-btn.open-btn,
     .nav.visible .close-btn {
@@ -339,7 +344,7 @@ font-family: 'Oswald', sans-serif;
 
     .theme-switch-wrapper {
       position: absolute;
-      top: 70px;
+      top: 80px;
       left: 20px;
       text-align: center;
     }
@@ -349,9 +354,19 @@ font-family: 'Oswald', sans-serif;
   }
 
   @media screen and (max-width:767px) {
+    h1 { font-size: 32px; }
+    h2 { font-size: 16px; }
+    p { font-size: 14px; }
+
     .about-container .image-container {
       margin-bottom: 20px;
       flex-basis: 80%;
+      margin-right: 0;
+    }
+
+    .about-container .image-container img {
+      width: 100%;
+      height: auto;
     }
 
     nav { font-size: 16px; }
@@ -362,6 +377,7 @@ font-family: 'Oswald', sans-serif;
     }
 
     .theme-switch-wrapper span {
+      margin-right: 0;
       font-size: 14px;
       vertical-align: sub;
     }
@@ -377,5 +393,19 @@ font-family: 'Oswald', sans-serif;
     .theme-switch-wrapper .fas,
     .slider::before { font-size: 16px; }
 
-    .text-box { width: 80%; }
+    #projects button {
+      min-width: 70px;
+      height: 30px;
+      font-size: 14px;
+    }
+
+    .text-box { 
+      width: 70%;
+      padding: 20px; 
+    }
+
+    .social-icons .fab { 
+      margin: 10px;
+      font-size: 28px; 
+    }
   }
