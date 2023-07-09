@@ -86,7 +86,7 @@ clearBtn.addEventListener('click', resetAll);
 const switchBtn = document.getElementById('toggle-theme-btn');
 const selectedTheme = document.getElementById('theme-select');
 
-selectedTheme.addEventListener('click', ()=> {
+selectedTheme.addEventListener('change', ()=> {
     if(selectedTheme.value === 'light') {
         localStorage.setItem('theme', 'light');
         switchBtn.children[0].classList.replace('fa-moon', 'fa-sun');

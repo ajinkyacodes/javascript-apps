@@ -133,7 +133,7 @@ body {
     padding: 25px;
     margin: 0;
     font-size: 40px;
-    font-weight: 400;
+    font-weight: 700;
     overflow-x: auto;
 }
 
@@ -154,7 +154,7 @@ button {
     color: var(--font-color);
     cursor: pointer;
     font-size: 20px;
-    font-weight: 100;
+    font-weight: 700;
 }
 
 button:hover { filter: var(--button-hover-brightness); }
