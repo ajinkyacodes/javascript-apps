@@ -81,3 +81,12 @@ function resetAll() {
 
 // Event Listener
 clearBtn.addEventListener('click', resetAll);
+
+
+// Theme Toggle
+const switchBtn = document.getElementById('toggle-theme-btn');
+const theme1 = document.getElementById("theme");
+
+switchBtn.addEventListener('click', () => {
+    theme1.toggleAttribute('disabled');
+});

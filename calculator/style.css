@@ -18,14 +18,25 @@ body {
 ::-webkit-scrollbar-thumb { background: #888; border-radius: 5px;}
 ::-webkit-scrollbar-thumb:hover { background: #555; }
 
+.toggle-theme-btn {
+    padding: 10px;
+    margin-bottom: 10px;
+    display: inline-block;
+    background: #000;
+    color: #fff;
+    font-size: 12px;
+    text-decoration: none;
+}
+
 .calculator {
     width: 400px;
     border-radius: 12px;
-    background: #fff;
+    background: #454545;
     box-shadow: 0 5px 30px -5px rgba(0,0,0,0.6);
 }
 
 .calculator-display {
+    border: 20px solid #454545;
     border-radius: 10px 10px 0 0;
     margin: 0;
     display: flex;
@@ -45,9 +56,9 @@ body {
 
 /* Buttons */
 .calculator-buttons {
-    padding: 10px;
+    padding: 15px;
     display: grid;
-    grid-gap: 10px;
+    grid-gap: 15px;
     grid-template-columns: repeat(4,1fr);
 }
 
@@ -90,15 +101,11 @@ button:focus { outline: none; }
         margin: 0 auto;
     }
 
+    .calculator-display { border: 15px solid #454545; }
     .calculator-display h1 { font-size: 22px; }
 
-    .calculator-buttons {
-        padding: 5px;
-        grid-gap: 5px;
-    }
-
     button {
-        min-height: 40px;
+        min-height: 45px;
         font-size: 16px;
     }
 
