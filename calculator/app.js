@@ -85,8 +85,12 @@ clearBtn.addEventListener('click', resetAll);
 
 // Theme Toggle
 const switchBtn = document.getElementById('toggle-theme-btn');
-const theme1 = document.getElementById("theme");
+const themeDark = document.getElementById("theme-dark");
 
 switchBtn.addEventListener('click', () => {
-    theme1.toggleAttribute('disabled');
+    if(themeDark.getAttribute('disabled') === 'true') {
+        themeDark.disabled = '';
+    } else {
+        themeDark.setAttribute('disabled','true');
+    }
 });

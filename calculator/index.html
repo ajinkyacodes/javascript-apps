@@ -7,13 +7,16 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
     <link rel="icon" href="favicon.png" type="image/gif" sizes="16x16">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" id="theme" href="theme.css" disabled>
+    <link rel="stylesheet" id="theme-dark" href="themes/theme-dark.css" disabled="true">
+    <link rel="stylesheet" id="theme-blue" href="themes/theme-blue.css" disabled="true">
+    <link rel="stylesheet" id="theme-gray" href="themes/theme-gray.css" disabled="true">
+    <link rel="stylesheet" id="theme-light" href="themes/theme-light.css" disabled="true">
 </head>
 <body>
     <!-- Calculator -->
     <div class="calculator">
         <!-- Theme Button -->
-        <a href="#" id="toggle-theme-btn" class="toggle-theme-btn"><i class="fas fa-brush"></i></a>
+        <a id="toggle-theme-btn" class="toggle-theme-btn" title="Change Theme"><i class="fas fa-brush"></i></a>
         <!-- Display -->
         <div class="calculator-display">
             <h1>0</h1>
@@ -35,7 +38,7 @@
             <button value="3">3</button>
             <button class="decimal" value=".">.</button>
             <button value="0">0</button>
-            <button class="clear" id="clear-btn" value="+">C</button>
+            <button class="clear" id="clear-btn" value="+">AC</button>
             <button class="equal-sign operator" value="=">=</button>
         </div>
     </div>

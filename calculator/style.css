@@ -6,9 +6,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #8e9eab;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #f5f5f5, #eef2f3);  /*Chrome 10-25, Safari 5.1-6*/
-    background: linear-gradient(to right, #f5f5f5, #eef2f3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #fff;
     font-family: sans-serif;
 }
 
@@ -24,6 +22,7 @@ body {
     display: inline-block;
     background: #000;
     color: #fff;
+    cursor: pointer;
     font-size: 12px;
     text-decoration: none;
 }
@@ -31,19 +30,19 @@ body {
 .calculator {
     width: 400px;
     border-radius: 12px;
-    background: #454545;
+    background: #f5f5f5;
     box-shadow: 0 5px 30px -5px rgba(0,0,0,0.6);
 }
 
 .calculator-display {
-    border: 20px solid #454545;
-    border-radius: 10px 10px 0 0;
+    border: 20px solid #f5f5f5;
+    border-radius: 25px;
     margin: 0;
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    background: #000;
-    color: #fff;
+    background: #dadada;
+    color: #000;
 }
 
 .calculator-display h1 {
@@ -66,7 +65,8 @@ button {
     min-height: 50px;
     border: none;
     border-radius: 5px;
-    background-color: #c7c7c7;
+    background-color: #fff;
+    box-shadow: 2px 5px 3px #dfdfdf;
     cursor: pointer;
     font-size: 20px;
     font-weight: 100;
@@ -77,18 +77,20 @@ button:active { transform: translateY(1px); }
 button:focus { outline: none; }
 
 .operator {
-    background: #808080;
-    color: #fff;
+    background: #fff;
+    color: #4b29b3;
     font-size: 50px;
 }
 
 .clear {
-    background-color: #ff2828;
-    color: #fff;
+    font-weight: 700;
+    background-color: #fff;
+    color: #4b29b3;
 }
 
 .equal-sign {
-    background: rgb(13,206,87);
+    background: #4b29b3;
+    color: #fff;
     grid-column: -2;
     grid-row: 2 / span 4;
 }
@@ -97,11 +99,11 @@ button:focus { outline: none; }
 
 @media screen and (max-width:480px) {
     .calculator {
-        width: 90%;
+        width: 85%;
         margin: 0 auto;
     }
 
-    .calculator-display { border: 15px solid #454545; }
+    .calculator-display { border: 15px solid #f5f5f5;}
     .calculator-display h1 { font-size: 22px; }
 
     button {
