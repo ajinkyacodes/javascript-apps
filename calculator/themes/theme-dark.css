@@ -1,15 +1,16 @@
 body { background: #000;}
+
+.toggle-theme-btn { color: #fff; }
+
 .calculator { 
     background: #000; 
-    /* border: 3px solid #1d1d1d; */
-    box-shadow: 2px 2px 20px 1px rgba(255, 255, 255, 0.6);
+    border: 3px solid #1d1d1d;
 }
 
 .calculator-display {
     border: 20px solid #000;
     background: #1d1d1d;
     color: #fff;
-    /* box-shadow: 5px 1px 3px 5px #1d1d1d; */
 }
 
 button {

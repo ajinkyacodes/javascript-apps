@@ -89,8 +89,22 @@ const themeDark = document.getElementById("theme-dark");
 
 switchBtn.addEventListener('click', () => {
     if(themeDark.getAttribute('disabled') === 'true') {
+        localStorage.setItem('theme', 'dark');
+        switchBtn.children[0].classList.replace('fa-sun', 'fa-moon');
         themeDark.disabled = '';
     } else {
+        localStorage.setItem('theme', 'light');
+        switchBtn.children[0].classList.replace('fa-moon', 'fa-sun');
         themeDark.setAttribute('disabled','true');
     }
 });
+
+// Check Local Storage For Theme
+const currentTheme = localStorage.getItem('theme');
+if(currentTheme){
+    document.documentElement.setAttribute('data-theme', currentTheme);
+    if(currentTheme === 'dark'){
+        switchBtn.children[0].classList.replace('fa-sun', 'fa-moon');
+        themeDark.disabled = '';
+    }
+}
