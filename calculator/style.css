@@ -1,15 +1,15 @@
-* {
-    box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
 body {
-    font-family: sans-serif;
-    margin: 0;
     min-height: 100vh;
+    margin: 0;
     display: flex;
-    justify-content: center;
     align-items: center;
-    background: linear-gradient(to right, #2C5364, #203A43, #0F2027);
+    justify-content: center;
+    background: #8e9eab;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #f5f5f5, #eef2f3);  /*Chrome 10-25, Safari 5.1-6*/
+    background: linear-gradient(to right, #f5f5f5, #eef2f3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    font-family: sans-serif;
 }
 
 /* Custom Scrollbar */
@@ -19,25 +19,25 @@ body {
 ::-webkit-scrollbar-thumb:hover { background: #555; }
 
 .calculator {
-    background: #fff;
     width: 400px;
     border-radius: 12px;
+    background: #fff;
     box-shadow: 0 5px 30px -5px rgba(0,0,0,0.6);
 }
 
 .calculator-display {
     border-radius: 10px 10px 0 0;
-    background: #000;
-    color: #fff;
     margin: 0;
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    background: #000;
+    color: #fff;
 }
 
 .calculator-display h1 {
-    margin: 0;
     padding: 25px;
+    margin: 0;
     font-size: 40px;
     font-weight: 400;
     overflow-x: auto;
@@ -45,33 +45,25 @@ body {
 
 /* Buttons */
 .calculator-buttons {
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    grid-gap: 10px;
     padding: 10px;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(4,1fr);
 }
 
 button {
     min-height: 50px;
-    font-size: 20px;
-    font-weight: 100;
     border: none;
     border-radius: 5px;
-    cursor: pointer;
     background-color: #c7c7c7;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 100;
 }
 
-button:hover {
-    filter: brightness(90%);
-}
-
-button:active {
-    transform: translateY(1px);
-}
-
-button:focus {
-    outline: none;
-}
+button:hover { filter: brightness(90%); }
+button:active { transform: translateY(1px); }
+button:focus { outline: none; }
 
 .operator {
     background: #808080;
@@ -85,9 +77,9 @@ button:focus {
 }
 
 .equal-sign {
+    background: rgb(13,206,87);
     grid-column: -2;
     grid-row: 2 / span 4;
-    background: rgb(13,206,87);
 }
 
 /* Media Query */
@@ -98,13 +90,11 @@ button:focus {
         margin: 0 auto;
     }
 
-    .calculator-display h1 {
-        font-size: 22px;
-    }
+    .calculator-display h1 { font-size: 22px; }
 
     .calculator-buttons {
-        grid-gap: 5px;
         padding: 5px;
+        grid-gap: 5px;
     }
 
     button {
@@ -112,7 +102,5 @@ button:focus {
         font-size: 16px;
     }
 
-    .operator {
-        font-size: 30px;
-    }
+    .operator { font-size: 30px; }
 }
