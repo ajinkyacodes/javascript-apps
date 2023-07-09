@@ -17,6 +17,9 @@ This is a light/dark mode that you can use on your website.
 ## [Drink Water](https://ajinkyacodes.github.io/javascript-apps/drink-water)
 This small app tracks how much water we drank and how much is remaining.
 
+## [Calculator](https://ajinkyacodes.github.io/javascript-apps/calculator)
+This is a basic calculator app for arithmetic operations.
+
 # Advanced Apps
 
 ## [Password Generator](https://ajinkyacodes.github.io/javascript-apps/password-generator)
