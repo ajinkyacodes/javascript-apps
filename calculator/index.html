@@ -7,16 +7,19 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
     <link rel="icon" href="favicon.png" type="image/gif" sizes="16x16">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" id="theme-dark" href="themes/theme-dark.css" disabled="true">
-    <link rel="stylesheet" id="theme-blue" href="themes/theme-blue.css" disabled="true">
-    <link rel="stylesheet" id="theme-gray" href="themes/theme-gray.css" disabled="true">
-    <link rel="stylesheet" id="theme-light" href="themes/theme-light.css" disabled="true">
 </head>
 <body>
     <!-- Calculator -->
     <div class="calculator">
         <!-- Theme Button -->
-        <a id="toggle-theme-btn" class="toggle-theme-btn" title="Change Theme"><i class="fas fa-sun"></i></a>
+        <a id="toggle-theme-btn" class="toggle-theme-btn"><i class="fas fa-sun"></i></a>
+        <select name="themes" id="theme-select" class="theme-select">
+            <option disabled>Select</option>
+            <option value="light" selected>Light</option>
+            <option value="dark">Dark</option>
+            <option value="green">Green</option>
+            <option value="gray">Gray</option>
+          </select>
         <!-- Display -->
         <div class="calculator-display">
             <h1>0</h1>

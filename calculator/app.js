@@ -82,20 +82,27 @@ function resetAll() {
 // Event Listener
 clearBtn.addEventListener('click', resetAll);
 
-
-// Theme Toggle
+// Select Theme Functionality
 const switchBtn = document.getElementById('toggle-theme-btn');
-const themeDark = document.getElementById("theme-dark");
+const selectedTheme = document.getElementById('theme-select');
 
-switchBtn.addEventListener('click', () => {
-    if(themeDark.getAttribute('disabled') === 'true') {
-        localStorage.setItem('theme', 'dark');
-        switchBtn.children[0].classList.replace('fa-sun', 'fa-moon');
-        themeDark.disabled = '';
-    } else {
+selectedTheme.addEventListener('click', ()=> {
+    if(selectedTheme.value === 'light') {
         localStorage.setItem('theme', 'light');
         switchBtn.children[0].classList.replace('fa-moon', 'fa-sun');
-        themeDark.setAttribute('disabled','true');
+        document.documentElement.setAttribute('data-theme', 'light');
+    } else if(selectedTheme.value === 'dark') {
+        localStorage.setItem('theme', 'dark');
+        switchBtn.children[0].classList.replace('fa-sun', 'fa-moon');
+        document.documentElement.setAttribute('data-theme', 'dark');
+    } else if(selectedTheme.value === 'green') {
+        localStorage.setItem('theme', 'green');
+        switchBtn.children[0].classList.replace('fa-sun', 'fa-moon');
+        document.documentElement.setAttribute('data-theme', 'green');
+    } else if(selectedTheme.value === 'gray') {
+        localStorage.setItem('theme', 'gray');
+        switchBtn.children[0].classList.replace('fa-sun', 'fa-moon');
+        document.documentElement.setAttribute('data-theme', 'gray');
     }
 });
 
@@ -103,8 +110,21 @@ switchBtn.addEventListener('click', () => {
 const currentTheme = localStorage.getItem('theme');
 if(currentTheme){
     document.documentElement.setAttribute('data-theme', currentTheme);
-    if(currentTheme === 'dark'){
+    if(currentTheme === 'light'){
+        selectedTheme.value = 'light';
+        switchBtn.children[0].classList.replace('fa-moon', 'fa-sun');
+        document.documentElement.setAttribute('data-theme', 'light');
+    } else if(currentTheme === 'dark'){
+        selectedTheme.value = 'dark';
         switchBtn.children[0].classList.replace('fa-sun', 'fa-moon');
-        themeDark.disabled = '';
+        document.documentElement.setAttribute('data-theme', 'dark');
+    } else if(currentTheme === 'green'){
+        selectedTheme.value = 'green';
+        switchBtn.children[0].classList.replace('fa-sun', 'fa-moon');
+        document.documentElement.setAttribute('data-theme', 'green');
+    } else if(currentTheme === 'gray'){
+        selectedTheme.value = 'gray';
+        switchBtn.children[0].classList.replace('fa-sun', 'fa-moon');
+        document.documentElement.setAttribute('data-theme', 'gray');
     }
 }
