@@ -12,8 +12,7 @@
 	<!-- Adding jQuery Weather Animation Links  -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" href="assets/vendor/font/fontawesome-all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"/>
 	<!-- Default style-sheet is for 'media' type screen (color computer display).  -->
 	<link rel="stylesheet" media="screen" href="assets/css/style.css">
 </head>
@@ -27,16 +26,15 @@
 		<div class="wrapper">
 			<div class="inputdetails">
 				<form id="weatherInfoForm" method="GET">
-					<input type="search" id="inpcity" placeholder="City, Country"><button type="submit" id="citytextbtn">Weather Info</button>
+					<input type="search" id="inpcity" placeholder="City, Country"><button type="submit" id="citytextbtn"><i class="fas fa-search-location"></i></button>
 				</form>
 			</div>
 			<div class="weatherdetails">
 				<div id="WeatherInfo" class="weather-info">
-					<h2>Weather Information</h2>
-					<p id="location">City, Country</p>
+					<p id="location" class="location">City, Country</p>
+					<p id="temperature" class="temperature">31 &deg;</p>
 					<p id="weather" class="weather-description">Cloudy</p>
-					<p id="temperature">31 &deg;</p>
-					<p id="desc">Description</p>
+					<p id="desc" class="desc">Description</p>
 				</div>			
 				<div id="WeatherForecast" class="weather-forecast">
 					<h2>Weather Forecast</h2>
@@ -50,7 +48,6 @@
 							</div>
 							<div class="forecast-temp">
 								<span class="weather-pts" id="r1c3">XXX</span>
-								<span class="weather-pts" id="r1c4">XXX</span>
 							</div>
 						</li>
 						<li>
@@ -62,7 +59,6 @@
 							</div>
 							<div class="forecast-temp">
 								<span class="weather-pts" id="r2c3">XXX</span>
-								<span class="weather-pts" id="r2c4">XXX</span>
 							</div>
 						</li>
 						<li>
@@ -74,7 +70,6 @@
 							</div>
 							<div class="forecast-temp">
 								<span class="weather-pts" id="r3c3">XXX</span>
-								<span class="weather-pts" id="r3c4">XXX</span>
 							</div>
 						</li>
 					</ul>					
