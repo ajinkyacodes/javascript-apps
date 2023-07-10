@@ -155,11 +155,19 @@ button {
     cursor: pointer;
     font-size: 20px;
     font-weight: 700;
+    /* To prevent highlight color */
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 button:hover { filter: var(--button-hover-brightness); }
 button:active { transform: translateY(1px); }
-button:focus { outline: none; }
+button:focus { outline: none!important;}
 
 .operator {
     background: var(--operator-background);
@@ -174,8 +182,8 @@ button:focus { outline: none; }
 }
 
 .equal-sign {
-    background: var(--highlight-color);
-    color: var(--equal-sign-color);
+    background: var(--operator-background);
+    color: var(--highlight-color);
     grid-column: -2;
     grid-row: 2 / span 4;
 }

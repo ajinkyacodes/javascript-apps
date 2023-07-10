@@ -1,6 +1,8 @@
 const calculatorDisplay = document.querySelector('h1');
 const inputBtns = document.querySelectorAll('button');
 const clearBtn = document.getElementById('clear-btn');
+const switchBtn = document.getElementById('toggle-theme-btn');
+const selectedTheme = document.getElementById('theme-select');
 
 let firstValue = 0;
 let operatorValue = '';
@@ -79,52 +81,35 @@ function resetAll() {
     calculatorDisplay.textContent = '0';
 }
 
-// Event Listener
-clearBtn.addEventListener('click', resetAll);
-
-// Select Theme Functionality
-const switchBtn = document.getElementById('toggle-theme-btn');
-const selectedTheme = document.getElementById('theme-select');
-
-selectedTheme.addEventListener('change', ()=> {
-    if(selectedTheme.value === 'light') {
+// Change Theme Functionality
+function switchTheme(theme) {
+    if(theme === 'light'){
+        selectedTheme.value = 'light';
         localStorage.setItem('theme', 'light');
         switchBtn.children[0].classList.replace('fa-moon', 'fa-sun');
         document.documentElement.setAttribute('data-theme', 'light');
-    } else if(selectedTheme.value === 'dark') {
+    } else if(theme === 'dark'){
+        selectedTheme.value = 'dark';
         localStorage.setItem('theme', 'dark');
         switchBtn.children[0].classList.replace('fa-sun', 'fa-moon');
         document.documentElement.setAttribute('data-theme', 'dark');
-    } else if(selectedTheme.value === 'green') {
+    } else if(theme === 'green'){
+        selectedTheme.value = 'green';
         localStorage.setItem('theme', 'green');
         switchBtn.children[0].classList.replace('fa-sun', 'fa-moon');
         document.documentElement.setAttribute('data-theme', 'green');
-    } else if(selectedTheme.value === 'gray') {
+    } else if(theme === 'gray'){
+        selectedTheme.value = 'gray';
         localStorage.setItem('theme', 'gray');
         switchBtn.children[0].classList.replace('fa-sun', 'fa-moon');
         document.documentElement.setAttribute('data-theme', 'gray');
     }
-});
+}
 
 // Check Local Storage For Theme
 const currentTheme = localStorage.getItem('theme');
-if(currentTheme){
-    document.documentElement.setAttribute('data-theme', currentTheme);
-    if(currentTheme === 'light'){
-        selectedTheme.value = 'light';
-        switchBtn.children[0].classList.replace('fa-moon', 'fa-sun');
-        document.documentElement.setAttribute('data-theme', 'light');
-    } else if(currentTheme === 'dark'){
-        selectedTheme.value = 'dark';
-        switchBtn.children[0].classList.replace('fa-sun', 'fa-moon');
-        document.documentElement.setAttribute('data-theme', 'dark');
-    } else if(currentTheme === 'green'){
-        selectedTheme.value = 'green';
-        switchBtn.children[0].classList.replace('fa-sun', 'fa-moon');
-        document.documentElement.setAttribute('data-theme', 'green');
-    } else if(currentTheme === 'gray'){
-        selectedTheme.value = 'gray';
-        switchBtn.children[0].classList.replace('fa-sun', 'fa-moon');
-        document.documentElement.setAttribute('data-theme', 'gray');
-    }
-}
+if(currentTheme) switchTheme(currentTheme);
+
+// Event Listener
+clearBtn.addEventListener('click', resetAll);
+selectedTheme.addEventListener('change', ()=> switchTheme(selectedTheme.value));
