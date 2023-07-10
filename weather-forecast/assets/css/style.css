@@ -53,7 +53,7 @@ p { font-family: 'Rowdies', sans-serif; }
 span { font-family: 'Righteous', sans-serif; }
 
 .inputdetails {
-  padding: 100px 0 20px;
+  margin: 100px auto 20px;
   text-align: center;
 }
 
@@ -178,4 +178,57 @@ span { font-family: 'Righteous', sans-serif; }
   -ms-flex-preferred-size: 40%;
   flex-basis: 40%;
   font-size: 50px;
+}
+
+@media screen and (max-width: 995px) {
+  .wrapper {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .weatherdetails { display: block; }
+  .weather-info { margin-top: 30px; }
+}
+
+@media screen and (max-width: 767px) {
+  .inputdetails { margin-top: 50px; }
+}
+
+@media screen and (max-width: 600px) {
+  .weatherdetails { 
+    width: 90%;
+    min-width: auto;
+    margin-bottom: 100px;
+  }
+
+  .forecast-ul li .forecast-date { margin-bottom: 10px; }
+
+  .inputdetails {
+    width: 80%;
+    margin: 100px auto 20px;
+  }
+
+  .inputdetails input[type="search"] {
+    border-radius: 25px;
+    display: block;
+    margin: 0 auto;
+    font-size: 16px;
+    text-align: center  ;
+  }
+
+  .inputdetails button[type="submit"] { display: none; }
+  .weather-forecast h2 { font-size: 40px; }
+
+  .forecast-ul li { 
+    margin-bottom: 80px;
+    display: block; 
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .location { font-size: 30px; }
+  .weather-info .temperature { font-size: 60px; }
+  .weather-info .weather-description { font-size: 18px; }
+  .weather-info .desc { font-size: 16px; }
+  .weather-forecast h2 { font-size: 30px; }
 }
