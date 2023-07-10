@@ -34,6 +34,12 @@ body.light p,
 body.light span { color: #000; }
 body.light .location { color: #3d4c9e; }
 
+/* Custom Scrollbar */
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: #f1f1f1; }
+::-webkit-scrollbar-thumb { background: #888; border-radius: 25px;}
+::-webkit-scrollbar-thumb:hover { background: #555; }
+
 .wrapper {
   max-width: 1400px;
   margin: 0 auto;
@@ -53,26 +59,29 @@ p { font-family: 'Rowdies', sans-serif; }
 span { font-family: 'Righteous', sans-serif; }
 
 .inputdetails {
-  margin: 100px auto 20px;
+  margin: 50px auto 20px;
   text-align: center;
 }
 
 .inputdetails input[type="search"] {
-  padding: 5px 10px;
+  padding: 10px 20px;
   border:none;
+  border-radius: 15px 0 0 15px;
   outline:none;
   font-size: 30px;
 }
 
 .inputdetails button[type="submit"] {
-  padding: 5px 10px;
+  padding: 10px 20px;
   border: none;
+  border-radius: 0 15px 15px 0;
   outline:none;
   font-size: 30px;
   font-weight: 700;
   -webkit-transition: 0.3 linear all;
   -o-transition: 0.3 linear all;
   transition: 0.3 linear all;
+  text-align: center;
 }
 
 .inputdetails button[type="submit"]:hover { background-color: #5d6fd4; }
@@ -209,11 +218,10 @@ span { font-family: 'Righteous', sans-serif; }
   }
 
   .inputdetails input[type="search"] {
-    border-radius: 25px;
+    border-radius: 15px;
     display: block;
     margin: 0 auto;
     font-size: 16px;
-    text-align: center  ;
   }
 
   .inputdetails button[type="submit"] { display: none; }

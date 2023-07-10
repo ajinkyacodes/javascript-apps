@@ -87,4 +87,5 @@ function loadWeather(){
 			document.getElementById("r3c3").innerHTML=Math.floor(fObj.list[16].main.temp_min)+"&deg; C";
 		} //end if
 	} //end function
+	temptxt.value=''; // Clear input field
 }
