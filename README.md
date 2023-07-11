@@ -1,7 +1,6 @@
 # JavaScript Apps
 
-This GitHub repo contains all JavaScript small functionality tasks collected together. These tasks are created using the following programming languages:
-- JavaScript, jQuery, CSS, HTML
+This GitHub repository contains all JavaScript small functionality tasks collected together.
 
 # Showcase Apps
 
@@ -11,19 +10,25 @@ This app shows the movie's basic data like posters, ratings, and overviews. You 
 ## [Music Player](https://ajinkyacodes.github.io/javascript-apps/music-player)
 This is a music player web app with basic functionalities like play, pause, next song, previous song & progress bar.
 
-## [Light/Dark Mode](https://ajinkyacodes.github.io/javascript-apps/light-dark-mode)
-This is a light/dark mode that you can use on your website.
+## [Calculator](https://ajinkyacodes.github.io/javascript-apps/calculator)
+This is a basic calculator app for arithmetic operations.
 
 ## [Drink Water](https://ajinkyacodes.github.io/javascript-apps/drink-water)
 This small app tracks how much water we drank and how much is remaining.
 
-## [Calculator](https://ajinkyacodes.github.io/javascript-apps/calculator)
-This is a basic calculator app for arithmetic operations.
+## [Weather Forecast](https://ajinkyacodes.github.io/javascript-apps/weather-forecast)
+This app shows the current weather and weather forecast of the inputted City, Country.
+
+## [Random Jokes](https://ajinkyacodes.github.io/javascript-apps/random-jokes/)
+This is a random joke generator app. It shuffles jokes with different categories.
 
 # Advanced Apps
 
 ## [Password Generator](https://ajinkyacodes.github.io/javascript-apps/password-generator)
 This app generates a password fulfilling the conditions set like lowercase, uppercase, numbers, symbols, and length of the password.
+
+## [Light/Dark Mode](https://ajinkyacodes.github.io/javascript-apps/light-dark-mode)
+This is a light/dark mode that you can use on your website.
 
 # Basic Apps
 
@@ -35,12 +40,6 @@ This is a mobile navbar similar to what is used in Netflix.
 
 ## [Infinite Scroll](https://ajinkyacodes.github.io/javascript-apps/infinite-scroll)
 A basic random photos loading app with infinite scroll.
-
-## [Random Jokes](https://ajinkyacodes.github.io/javascript-apps/random-jokes/)
-This is a random joke generator app. It shuffles jokes with different categories.
-
-## [Weather Forecast](https://ajinkyacodes.github.io/javascript-apps/weather-forecast)
-This app shows the current weather and weather forecast of the inputted City, Country.
 
 # Concepts
 
