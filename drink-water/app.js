@@ -2,6 +2,7 @@ const smallCups = document.querySelectorAll('.cup-small');
 const litres = document.getElementById('litres');
 const percentage = document.getElementById('percentage');
 const remained = document.getElementById('remained');
+const goalText = document.querySelector('h3');
 
 updateBigCup();
 
@@ -45,5 +46,11 @@ function updateBigCup() {
     } else {
         remained.style.visibility = 'visible';
         litres.innerText = `${2 - (250 * fullCups / 1000)}L`;
+    }
+    
+    if(percentage.style.height === '330px') {
+        goalText.textContent = 'GOAL Achieved';
+    } else {
+        goalText.textContent = 'Goal: 2 Litres';
     }
 }

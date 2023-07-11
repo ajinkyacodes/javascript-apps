@@ -9,11 +9,14 @@
 * { box-sizing: border-box; }
 
 body {
-    margin-bottom: 40px;
+    height: 100vh;
+    min-height: 900px;
+    margin: 0;
     display: flex;
     align-items: center;
+    justify-content: center;
     flex-direction: column;
-    background-color: #3494e4;
+    background-color: #001323;
     color: #fff;
     font-family: 'Montserrat', sans-serif;
 }
@@ -48,7 +51,7 @@ h3 {
     cursor: pointer;
     font-size: 14px;
     text-align: center;
-    transition: 0.3s ease;
+    transition: all 0.3s ease-in-out;
 }
 
 .cup.cup-small.full {
@@ -61,6 +64,7 @@ h3 {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    justify-content: center;
 }
 
 .remained {
@@ -93,6 +97,10 @@ h3 {
 }
 
 .text {
-    margin: 0 0 5px;
+    margin: 0 0 10px;
     text-align: center;
+}
+
+@media screen and (max-width:995px) {
+    body { height: 900px; }
 }
