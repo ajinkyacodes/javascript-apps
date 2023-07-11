@@ -81,7 +81,7 @@
 
 .cf:after { clear: both; }
 
-.cf { *zoom: 1; }
+.cf { zoom: 1; }
 
  /* ======= Your styling goes below ======= */
 
