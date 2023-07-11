@@ -63,7 +63,7 @@ function loadWeather(){
 			//Current Date
 			let date_raw=fObj.list[0].dt_txt;
 			let date =  new Date(date_raw);
-			let formatted_date = date.toLocaleDateString('en-GB', {day: '2-digit', month: 'short', year: 'numeric'}).replace(/ /g, ' ');
+			let formatted_date = date.toLocaleDateString('en-GB', {day: '2-digit', month: 'long', year: 'numeric'}).replace(/ /g, ' ');
 			let formatted_weekday = date.toLocaleDateString('en-GB', {weekday: 'long'});
 			document.getElementById("r1c1").innerHTML="<strong>"+formatted_weekday+"</strong><br/>"+formatted_date;
 			let iconcode = fObj.list[0].weather[0].icon;
@@ -74,7 +74,7 @@ function loadWeather(){
 			//After One Day 
 			date_raw=fObj.list[8].dt_txt;
 			date =  new Date(date_raw);
-			formatted_date = date.toLocaleDateString('en-GB', {day: '2-digit', month: 'short', year: 'numeric'}).replace(/ /g, ' ');
+			formatted_date = date.toLocaleDateString('en-GB', {day: '2-digit', month: 'long', year: 'numeric'}).replace(/ /g, ' ');
 			formatted_weekday = date.toLocaleDateString('en-GB', {weekday: 'long'});
 			document.getElementById("r2c1").innerHTML="<strong>"+formatted_weekday+"</strong><br/>"+formatted_date;
 			iconcode = fObj.list[8].weather[0].icon;
@@ -85,7 +85,7 @@ function loadWeather(){
 			//After Two Days 
 			date_raw=fObj.list[16].dt_txt;
 			date =  new Date(date_raw);
-			formatted_date = date.toLocaleDateString('en-GB', {day: '2-digit', month: 'short', year: 'numeric'}).replace(/ /g, ' ');
+			formatted_date = date.toLocaleDateString('en-GB', {day: '2-digit', month: 'long', year: 'numeric'}).replace(/ /g, ' ');
 			formatted_weekday = date.toLocaleDateString('en-GB', {weekday: 'long'});
 			document.getElementById("r3c1").innerHTML="<strong>"+formatted_weekday+"</strong><br/>"+formatted_date;
 			iconcode = fObj.list[16].weather[0].icon;

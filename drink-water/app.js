@@ -49,7 +49,7 @@ function updateBigCup() {
     }
     
     if(percentage.style.height === '330px') {
-        goalText.textContent = 'GOAL Achieved';
+        goalText.textContent = 'Goal Achieved';
     } else {
         goalText.textContent = 'Goal: 2 Litres';
     }
