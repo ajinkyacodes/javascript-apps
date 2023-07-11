@@ -13,6 +13,8 @@ body {
     overflow-x: hidden;
 }
 
+.scroll-lock { overflow: hidden!important; }
+
 .container {
     width: 100vw;
     min-height: 100vh;

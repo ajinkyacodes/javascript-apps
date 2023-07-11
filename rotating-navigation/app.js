@@ -4,13 +4,11 @@ const container = document.querySelector('.container');
 const body = document.querySelector('body');
 
 open.addEventListener('click', () => {
-    body.style.overflow = 'hidden';
+    body.classList.add('scroll-lock');
     container.classList.add('show-nav');
 });
 
-
 close.addEventListener('click', () => {
-    body.style.overflow = 'auto';
+    body.classList.remove('scroll-lock');
     container.classList.remove('show-nav');
 });
-
