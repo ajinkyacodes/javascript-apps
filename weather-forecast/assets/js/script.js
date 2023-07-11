@@ -26,10 +26,18 @@ function loadWeather(){
 	weatherConditions.responseType='text';
 	weatherConditions.send(null);
 
+	// To display full country name
+	function countryName(code) {
+		let regionNames = new Intl.DisplayNames(['en'], {type: 'region'});
+		country_name = regionNames.of(code);
+		return country_name;
+	}
+
 	weatherConditions.onload = function() {
 		if (weatherConditions.status===200) {
 			cObj = JSON.parse(weatherConditions.responseText);
-			document.getElementById("location").innerHTML='<i class="fas fa-map-marker-alt"></i> '+cObj.name;
+			document.title = `Weather Forecast | ${cObj.name}, ${countryName(cObj.sys.country)}`;
+			document.getElementById("location").innerHTML='<i class="fas fa-map-marker-alt"></i> '+cObj.name+', '+cObj.sys.country;
 			document.getElementById("temperature").innerHTML=Math.floor(cObj.main.temp)+"&deg; C";
 			document.getElementById("weather").innerHTML=cObj.weather[0].description;
 			document.getElementById("desc").innerHTML='<i class="fas fa-wind"></i> '+cObj.wind.speed+" m/s";
@@ -44,13 +52,12 @@ function loadWeather(){
 	weatherForecast.onload = function() {
 		if (weatherForecast.status===200) {
 			fObj = JSON.parse(weatherForecast.responseText);
-			
 			let pod = fObj.list[0].sys.pod;		
 			let body = document.getElementsByTagName('body');
 			if(pod=="n") {
-				$("body").addClass('dark');
+				$("body").addClass('dark').removeClass('light');
 			} else if(pod=="d") {
-				$("body").addClass('light');
+				$("body").addClass('light').removeClass('dark');
 			} 
 			
 			//Current Date

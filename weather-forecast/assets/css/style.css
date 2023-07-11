@@ -76,6 +76,7 @@ span { font-family: 'Righteous', sans-serif; }
   border: none;
   border-radius: 0 15px 15px 0;
   outline:none;
+  cursor: pointer;
   font-size: 30px;
   font-weight: 700;
   -webkit-transition: 0.3 linear all;
@@ -109,7 +110,7 @@ span { font-family: 'Righteous', sans-serif; }
 
 .weather-info { 
   text-align: center;
-  flex-basis: 30%;
+  flex-basis: 35%;
 }
 
 .weather-info .weather-description { text-transform: capitalize; }
@@ -205,7 +206,7 @@ span { font-family: 'Righteous', sans-serif; }
 
 @media screen and (max-width: 600px) {
   .weatherdetails { 
-    width: 95%;
+    width: 100%;
     min-width: auto;
     margin-bottom: 100px;
   }
@@ -214,13 +215,11 @@ span { font-family: 'Righteous', sans-serif; }
   .inputdetails { width: 80%;}
 
   .inputdetails input[type="search"] {
-    border-radius: 15px;
-    display: block;
     margin: 0 auto;
     font-size: 16px;
   }
 
-  .inputdetails button[type="submit"] { display: none; }
+  .inputdetails button[type="submit"] { font-size: 16px;}
   .weather-forecast h2 { font-size: 40px; }
 
   .forecast-ul li { 
@@ -232,7 +231,14 @@ span { font-family: 'Righteous', sans-serif; }
 }
 
 @media screen and (max-width: 480px) {
-  .location { font-size: 30px; }
+  .inputdetails input[type="search"] {
+    width: 60%;
+    padding: 5px 10px;
+    font-size: 14px;
+  }
+
+  .inputdetails button[type="submit"] { padding: 5px 10px; }
+  .weather-info .location { font-size: 30px; }
   .weather-info .temperature { font-size: 60px; }
   .weather-info .weather-description { font-size: 18px; }
   .weather-info .desc { font-size: 16px; }
