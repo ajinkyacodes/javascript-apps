@@ -231,13 +231,15 @@ span { font-family: 'Righteous', sans-serif; }
 }
 
 @media screen and (max-width: 480px) {
-  .inputdetails input[type="search"] {
-    width: 60%;
+  .inputdetails input[type="search"] { width: 60%; }
+
+  .inputdetails input[type="search"], 
+  .inputdetails button[type="submit"] {
     padding: 5px 10px;
     font-size: 14px;
   }
 
-  .inputdetails button[type="submit"] { padding: 5px 10px; }
+  .weather-forecast img { display: block; }
   .weather-info .location { font-size: 30px; }
   .weather-info .temperature { font-size: 60px; }
   .weather-info .weather-description { font-size: 18px; }
