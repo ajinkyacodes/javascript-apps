@@ -1,9 +1,11 @@
 const main = document.querySelector('main');
 const voicesSelect = document.getElementById('voices');
 const textarea = document.getElementById('text');
-const readBtn = document.getElementById('read');
 const toggleBtn = document.getElementById('toggle');
 const closeBtn = document.getElementById('close');
+const readBtn = document.getElementById('read');
+const clearBtn = document.getElementById('clear');
+const stopVoice = document.getElementById('stop-voice-btn');
 
 const data = [
   {
@@ -115,6 +117,9 @@ function createBox(item) {
   main.appendChild(box);
 }
 
+// SpeechSynthesis: speaking property
+const synth = window.speechSynthesis;
+
 // Init speech synth
 const message = new SpeechSynthesisUtterance();
 
@@ -152,6 +157,16 @@ function setVoice(e) {
 // Voices changed
 speechSynthesis.addEventListener('voiceschanged', getVoices);
 
+// Stop voice
+function cancelVoice() {
+  synth.cancel(message);
+}
+
+// Clear Text Button
+function clearText() {
+  textarea.value = '';
+}
+
 // Toggle text box
 toggleBtn.addEventListener('click', () =>
   document.getElementById('text-box').classList.toggle('show')
@@ -170,5 +185,12 @@ readBtn.addEventListener('click', () => {
   setTextMessage(textarea.value);
   speakText();
 });
+
+// To clear the text
+clearBtn.addEventListener('click', clearText);
+
+// To Cancel the voice
+stopVoice.addEventListener('click', cancelVoice);
+
 
 getVoices();

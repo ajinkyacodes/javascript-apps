@@ -19,7 +19,11 @@
         <h3>Choose Voice</h3>
         <select id="voices"></select>
         <textarea id="text" placeholder="Enter text to read..."></textarea>
-        <button class="btn" id="read">Read Text</button>
+        <div class="btn-container">
+          <button class="btn" id="read">Read</button>
+          <button class="btn clear-text-btn" id="clear" title="Clear Text">Clear</button>
+          <button class="btn stop-voice-btn hide" id="stop-voice-btn" title="Stop Voice">Stop</button>
+        </div>
       </div>
       <main></main>
     </div>
