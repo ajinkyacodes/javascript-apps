@@ -43,6 +43,9 @@ A basic random photos loading app with infinite scroll.
 
 # Concepts
 
+## [Text To Voice (Concept)](https://ajinkyacodes.github.io/javascript-apps/text-voice)
+This app converts text to voice. You can select multiple voice formats according to your preference.
+
 ## [Rock, Paper, Scissors Game (Concept)](https://ajinkyacodes.github.io/javascript-apps/rock-paper-scissors-game)
 This is a small rock, paper, scissors game.
 
