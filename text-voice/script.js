@@ -1,3 +1,4 @@
+const voicesSelect = document.getElementById('voices');
 const textarea = document.getElementById('text');
 const readBtn = document.getElementById('read');
 const clearBtn = document.getElementById('clear');
@@ -8,6 +9,22 @@ const synth = window.speechSynthesis;
 
 // Init speech synth
 const message = new SpeechSynthesisUtterance();
+
+// Store voices
+let voices = [];
+
+function getVoices() {
+  voices = speechSynthesis.getVoices();
+
+  voices.forEach(voice => {
+    const option = document.createElement('option');
+
+    option.value = voice.name;
+    option.innerText = `${voice.name} ${voice.lang}`;
+
+    voicesSelect.appendChild(option);
+  });
+}
 
 // Set text
 function setTextMessage(text) {
@@ -20,9 +37,12 @@ function speakText() {
 }
 
 // Set voice
-function setVoice() {
-  message.voice = "Google US English";
+function setVoice(e) {
+  message.voice = voices.find(voice => voice.name === e.target.value);
 }
+
+// Voices changed
+speechSynthesis.addEventListener('voiceschanged', getVoices);
 
 // Stop voice
 function cancelVoice() {
@@ -33,6 +53,9 @@ function cancelVoice() {
 function clearText() {
   textarea.value = '';
 }
+
+// Change voice
+voicesSelect.addEventListener('change', setVoice);
 
 // Read text button
 readBtn.addEventListener('click', () => {
@@ -45,3 +68,5 @@ clearBtn.addEventListener('click', clearText);
 
 // To Cancel the voice
 stopVoice.addEventListener('click', cancelVoice);
+
+getVoices();

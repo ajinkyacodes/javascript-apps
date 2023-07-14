@@ -1,8 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Lato');
 
-* {
-  box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
 /* Custom Scrollbar */
 ::-webkit-scrollbar { width: 7px; height: 7px; }
@@ -11,10 +9,10 @@
 ::-webkit-scrollbar-thumb:hover { background: #9000ff; }
 
 body {
-  background: #d6def0;
-  font-family: 'Lato', sans-serif;
   min-height: 100vh;
   margin: 0;
+  background: #d6def0;
+  font-family: 'Lato', sans-serif;
 }
 
 h1 {
@@ -24,8 +22,8 @@ h1 {
 
 .container {
   max-width: 1400px;
-  margin: 0 auto;
   padding: 20px;
+  margin: 0 auto;
 }
 
 .text-box {
@@ -35,13 +33,23 @@ h1 {
   display: block;
 }
 
+.text-box select {
+  width: 100%;
+  height: 30px;
+  border: 0;
+  margin-bottom: 10px;
+  background-color: #9000ff;
+  color: #fff;
+  font-size: 12px;
+}
+
 .text-box textarea {
-  padding: 10px;
   width: 100%!important;
   min-height: 200px;
+  padding: 10px;
   font-size: 18px;
-  resize: vertical;
   border-color: #ccc;
+  resize: vertical;
 }
 
 .text-box textarea:focus-visible {
@@ -56,22 +64,17 @@ h1 {
 
 .btn {
   padding: 10px 20px;
-  border-radius: 10px;
-  background-color: #000;
   border: none;
+  border-radius: 10px;
   outline: none;
-  color: #fff;
   margin: 20px auto 0;
+  background-color: #000;
+  color: #fff;
   cursor: pointer;
 }
 
-.btn.read-text-btn {
-  background-color: #9000ff;
-}
-
-.btn.clear-text-btn {
-  background-color: #1f0087;
-}
+.btn.read-text-btn { background-color: #9000ff; }
+.btn.clear-text-btn { background-color: #1f0087; }
 
 /* Mobile Responsive Styling */
 
@@ -80,4 +83,6 @@ h1 {
     width: 100%;
     display: block; 
   }
+
+  .text-box textarea { font-size: 16px; }
 }
