@@ -13,6 +13,9 @@ This is a music player web app with basic functionalities like play, pause, next
 ## [Calculator](https://ajinkyacodes.github.io/javascript-apps/calculator)
 This is a basic calculator app for arithmetic operations.
 
+## [Text Reader](https://ajinkyacodes.github.io/javascript-apps/text-reader)
+This app converts text to voice. You can select available voice formats according to your preference.
+
 ## [Drink Water](https://ajinkyacodes.github.io/javascript-apps/drink-water)
 This small app tracks how much water we drank and how much is remaining.
 
