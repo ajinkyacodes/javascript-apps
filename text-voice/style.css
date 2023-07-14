@@ -5,7 +5,7 @@
 }
 
 body {
-  background: #fcfcfc;
+  background: #d6def0;
   font-family: 'Lato', sans-serif;
   min-height: 100vh;
   margin: 0;
@@ -20,4 +20,45 @@ h1 {
   max-width: 1400px;
   margin: 0 auto;
   padding: 20px;
+}
+
+.text-box {
+  width: 90%;
+  max-width: 700px;
+  margin: 0 auto;
+  display: block;
+}
+
+.text-box textarea {
+  padding: 10px;
+  width: 100%!important;
+  min-height: 200px;
+  font-size: 18px;
+  resize: vertical;
+  border-color: #ccc;
+}
+
+.text-box textarea:focus-visible {
+  border-color: transparent;
+  outline: none;
+}
+
+.btn-container {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.btn {
+  padding: 10px 20px;
+  border-radius: 10px;
+  background-color: #000;
+  border: none;
+  outline: none;
+  color: #fff;
+  margin: 20px auto 0;
+  cursor: pointer;
+}
+
+.btn.read-text-btn {
+  background-color: #9000ff;
 }
