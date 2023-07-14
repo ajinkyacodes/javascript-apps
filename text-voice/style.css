@@ -72,3 +72,12 @@ h1 {
 .btn.clear-text-btn {
   background-color: #1f0087;
 }
+
+/* Mobile Responsive Styling */
+
+@media screen and (max-width:480px) {
+  .btn { 
+    width: 100%;
+    display: block; 
+  }
+}
