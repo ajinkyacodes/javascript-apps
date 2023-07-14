@@ -4,6 +4,12 @@
   box-sizing: border-box;
 }
 
+/* Custom Scrollbar */
+::-webkit-scrollbar { width: 7px; height: 7px; }
+::-webkit-scrollbar-track { background: #f1f1f1; }
+::-webkit-scrollbar-thumb { background: #9000ff; border-radius: 25px;}
+::-webkit-scrollbar-thumb:hover { background: #9000ff; }
+
 body {
   background: #d6def0;
   font-family: 'Lato', sans-serif;
