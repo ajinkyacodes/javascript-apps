@@ -1,5 +1,6 @@
 const textarea = document.getElementById('text');
 const readBtn = document.getElementById('read');
+const clearBtn = document.getElementById('clear');
 const stopVoice = document.getElementById('stop-voice-btn');
 
 // SpeechSynthesis: speaking property
@@ -28,12 +29,19 @@ function cancelVoice() {
   synth.cancel(message);
 }
 
+// Clear Text Button
+function clearText() {
+  textarea.value = '';
+}
+
 // Read text button
 readBtn.addEventListener('click', () => {
   setTextMessage(textarea.value);
   speakText();
 });
 
-stopVoice.addEventListener('click', () => {
-  cancelVoice();
-});
+// To clear the text
+clearBtn.addEventListener('click', clearText);
+
+// To Cancel the voice
+stopVoice.addEventListener('click', cancelVoice);
