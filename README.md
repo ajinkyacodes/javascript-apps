@@ -35,6 +35,9 @@ This is a light/dark mode that you can use on your website.
 
 # Basic Apps
 
+## [New Year Countdown](https://ajinkyacodes.github.io/javascript-apps/new-year-countdown)
+A basic countdown for the upcoming new year.
+
 ## [Rotating Navigation](https://ajinkyacodes.github.io/javascript-apps/rotating-navigation)
 After clicking on the navbar icon the webpage rotates and gives you a different look.
 
