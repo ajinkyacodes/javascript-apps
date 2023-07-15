@@ -33,7 +33,7 @@ body::after {
 body * { z-index: 1; }
 
 h1 {
-  margin: -80px 0 40px;
+  margin: -80px auto 40px;
   font-size: 60px;
 }
 
@@ -62,9 +62,19 @@ h1 {
 
 .time h2 { margin: 0 0 5px; }
 
-@media (max-width: 480px) {
+@media (max-width: 995px) {
+  .year { font-size: 150px; }
+}
+
+@media (max-width: 767px) {
+  h1 { width: 90%; }
+  .countdown { transform: scale(1.8); }
+}
+
+@media (max-width: 540px) {
   h1 { font-size: 45px; }
   .time { margin: 5px; }
+  .countdown { transform: scale(2); }
 
   .time h2 {
     margin: 0;
