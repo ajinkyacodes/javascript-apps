@@ -1,4 +1,5 @@
 const statusDisplay = document.querySelector('.game-status');
+const cell = document.querySelectorAll('.cell');
 
 let gameActive = true;
 let currentPlayer = "X";
@@ -43,6 +44,7 @@ function handleResultValidation() {
         }
         if (a === b && b === c) {
             roundWon = true;
+            highlightBoxes(winCondition)
             break;
         }
     }
@@ -63,6 +65,12 @@ function handleResultValidation() {
     handlePlayerChange();
 }
 
+function highlightBoxes(indexes) {
+    indexes.forEach(i => {
+        cell[i].classList.add('winbox-highlight');
+    });
+}
+
 function handleCellClick(clickedCellEvent) {
     const clickedCell = clickedCellEvent.target;
     const clickedCellIndex = parseInt(clickedCell.getAttribute('data-cell-index'));
@@ -80,8 +88,9 @@ function handleRestartGame() {
     currentPlayer = "X";
     gameState = ["", "", "", "", "", "", "", "", ""];
     statusDisplay.innerHTML = currentPlayerTurn();
-    document.querySelectorAll('.cell').forEach(cell => cell.innerHTML = "");
+    cell.forEach(cell => cell.classList.remove('winbox-highlight'));
+    cell.forEach(cell => cell.innerHTML = "");
 }
 
-document.querySelectorAll('.cell').forEach(cell => cell.addEventListener('click', handleCellClick));
+cell.forEach(cell => cell.addEventListener('click', handleCellClick));
 document.querySelector('.game-restart').addEventListener('click', handleRestartGame);
