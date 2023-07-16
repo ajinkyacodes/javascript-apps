@@ -25,7 +25,7 @@ font-family: 'Roboto', sans-serif;
 
 [data-theme="dark"] {
     --body-background: #000;
-    --primary-color: #fff;
+    --primary-color: #f5f5f5;
     --secondary-color: #6b6b6b;
     --highlight-color: #353535;
 }
@@ -59,31 +59,31 @@ font-family: 'Roboto', sans-serif;
 }
 
 [data-theme="rose-light"] {
-    --body-background: #ffcccc;
+    --body-background: #faecec;
     --primary-color: 	#ff1452;
-    --secondary-color: #b44545;
-    --highlight-color: #f9a6a6;
+    --secondary-color: #f5a0a0;
+    --highlight-color: #f6b7b7;
 }
 
 [data-theme="rose-dark"] {
-    --body-background: #ff1452;
+    --body-background: #b1002f;
     --primary-color: 	#ffcccc;
     --secondary-color: #f9a6a6;
-    --highlight-color: #ff0000;
+    --highlight-color: #cf2e2e;
 }
 
 [data-theme="blue-light"] {
-    --body-background: #ccccff;
-    --primary-color: 	#2f14ff;
-    --secondary-color: #5245b4;
+    --body-background: #f6f6ff;
+    --primary-color: 	#0a0054;
+    --secondary-color: #231497;
     --highlight-color: #a6bbf9;
 }
 
 [data-theme="blue-dark"] {
-    --body-background: #2f14ff;
-    --primary-color: 	#ccccff;
-    --secondary-color: #a6bbf9;
-    --highlight-color: #5245b4;
+    --body-background: #0a0054;
+    --primary-color: 	#f6f6ff;
+    --secondary-color: #92adfc;
+    --highlight-color: #231497;
 }
 
 /* Custom Scrollbar */
@@ -93,7 +93,8 @@ font-family: 'Roboto', sans-serif;
 ::-webkit-scrollbar-thumb:hover { background: var(--primary-color); }
 
 body {
-    height: 100vh;
+    min-height: 100vh;
+    margin: 0;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -114,6 +115,7 @@ body {
     background: var(--body-background);
     color: var(--primary-color);
     cursor: pointer;
+    font-family: 'Roboto', sans-serif;
     font-size: 12px;
 }
 
@@ -153,6 +155,7 @@ section { text-align: center; }
     background-color: var(--body-background);
     color: var(--primary-color);
     cursor: pointer;
+    font-family: 'Roboto', sans-serif;
     font-size: 16px;
     font-weight: 700;
     transition: all 0.2s ease-in-out;
@@ -165,12 +168,16 @@ section { text-align: center; }
 }
 
 @media screen and (max-width:480px) {
-    body { display: block; }
-
     .game-title { 
         margin: 50px 0 20px;
         font-size: 32px; 
     }
+
+    .game-restart { font-size: 14px; }
     
-    .game-restart:hover { background-color: var(--primary-color); }
+    .game-restart:hover { 
+        border: 2px solid var(--primary-color);
+        background-color: var(--body-background);
+        color: var(--primary-color);
+    }
 }
