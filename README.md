@@ -35,6 +35,9 @@ This is a light/dark mode that you can use on your website.
 
 # Basic Apps
 
+## [Tic Tac Toe (Basic)](https://ajinkyacodes.github.io/javascript-apps/tic-tac-toe-basic)
+A basic tic-tac-toe game with X & O.
+
 ## [New Year Countdown](https://ajinkyacodes.github.io/javascript-apps/new-year-countdown)
 A basic countdown for the upcoming new year.
 
