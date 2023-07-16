@@ -8,20 +8,113 @@ font-family: 'Righteous', cursive;
 font-family: 'Roboto', sans-serif;
 */
 
+/* Theme Colors */
+:root {
+    --body-background: #f5f5f5;
+    --primary-color: #000;
+    --secondary-color: #3e3e3e;
+    --highlight-color: #d3d3d3;
+}
+
+[data-theme="light"] {
+    --body-background: #f5f5f5;
+    --primary-color: #000;
+    --secondary-color: #3e3e3e;
+    --highlight-color: #d3d3d3;
+}
+
+[data-theme="dark"] {
+    --body-background: #000;
+    --primary-color: #fff;
+    --secondary-color: #6b6b6b;
+    --highlight-color: #353535;
+}
+
+[data-theme="purple-light"] {
+    --body-background: #fff;
+    --primary-color: #990097;
+    --secondary-color: #f705ff;
+    --highlight-color: #ff8afd;
+}
+
+[data-theme="purple-dark"] {
+    --body-background: #990097;
+    --primary-color: #fff;
+    --secondary-color: #ff8afd;
+    --highlight-color: #f705ff;
+}
+
+[data-theme="coffee-light"] {
+    --body-background: #fff2cc;
+    --primary-color: #401e11;
+    --secondary-color: #b46545;
+    --highlight-color: #f9aa8a;
+}
+
+[data-theme="coffee-dark"] {
+    --body-background: #401e11;
+    --primary-color: #fff2cc;
+    --secondary-color: #b46545;
+    --highlight-color: #a33002;
+}
+
+[data-theme="rose-light"] {
+    --body-background: #ffcccc;
+    --primary-color: 	#ff1452;
+    --secondary-color: #b44545;
+    --highlight-color: #f9a6a6;
+}
+
+[data-theme="rose-dark"] {
+    --body-background: #ff1452;
+    --primary-color: 	#ffcccc;
+    --secondary-color: #f9a6a6;
+    --highlight-color: #ff0000;
+}
+
+[data-theme="blue-light"] {
+    --body-background: #ccccff;
+    --primary-color: 	#2f14ff;
+    --secondary-color: #5245b4;
+    --highlight-color: #a6bbf9;
+}
+
+[data-theme="blue-dark"] {
+    --body-background: #2f14ff;
+    --primary-color: 	#ccccff;
+    --secondary-color: #a6bbf9;
+    --highlight-color: #5245b4;
+}
+
 /* Custom Scrollbar */
 ::-webkit-scrollbar { width: 7px; height: 7px; }
-::-webkit-scrollbar-track { background: #f1f1f1; }
-::-webkit-scrollbar-thumb { background: #5a5a5a; border-radius: 25px;}
-::-webkit-scrollbar-thumb:hover { background: #1d1d1d; }
-
+::-webkit-scrollbar-track { background: var(--body-background); }
+::-webkit-scrollbar-thumb { background: var(--secondary-color); border-radius: 25px;}
+::-webkit-scrollbar-thumb:hover { background: var(--primary-color); }
 
 body {
-    font-family: 'Roboto', sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--body-background);
+    color: var(--primary-color);
+    font-family: 'Roboto', sans-serif;
+}
+
+.theme-select {
+    border: none;
+    outline: none;
+    padding: 5px 10px;
+    border: 1px solid var(--primary-color);
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: var(--body-background);
+    color: var(--primary-color);
+    cursor: pointer;
+    font-size: 12px;
 }
 
 section { text-align: center; }
@@ -43,32 +136,41 @@ section { text-align: center; }
     font-family: "Permanent Market", cursive;
     width: 100px;
     height: 100px;
-    box-shadow: 0 0 0 1px #333333;
-    border: 1px solid #333333;
+    box-shadow: 0 0 0 1px var(--secondary-color);
+    border: 1px solid var(--secondary-color);
     cursor: pointer;
     line-height: 100px;
     font-size: 60px;
 }
 
-.winbox-highlight { background-color: #d3d3d3; }
+.winbox-highlight { background-color: var(--highlight-color); }
 
 .game-restart {
     padding: 10px 20px;
-    border: none;
+    border: 2px solid var(--primary-color);
     border-radius: 5px;
     outline: none;
-    background-color: #000;
-    color: #fff;
+    background-color: var(--body-background);
+    color: var(--primary-color);
     cursor: pointer;
     font-size: 16px;
     font-weight: 700;
     transition: all 0.2s ease-in-out;
 }
 
-.game-restart:hover { background-color: #3e3e3e; }
+.game-restart:hover { 
+    border: 2px solid var(--body-background); 
+    color: var(--body-background);
+    background-color: var(--primary-color);
+}
 
 @media screen and (max-width:480px) {
     body { display: block; }
-    .game-title { font-size: 32px; }
-    .game-restart:hover { background-color: #000; }
+
+    .game-title { 
+        margin: 50px 0 20px;
+        font-size: 32px; 
+    }
+    
+    .game-restart:hover { background-color: var(--primary-color); }
 }
