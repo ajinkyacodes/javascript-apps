@@ -48,6 +48,11 @@ function generateID() {
   return Math.floor(Math.random() * 100000000);
 }
 
+// International Currency Number Format
+function formatAmount(amount) {
+    return Intl.NumberFormat('en-IN').format(amount);
+}
+
 // Add transactions to DOM list
 function addTransactionDOM(transaction) {
   // Get sign
@@ -59,7 +64,7 @@ function addTransactionDOM(transaction) {
   item.classList.add(transaction.amount < 0 ? 'minus' : 'plus');
 
   item.innerHTML = `
-    ${transaction.text} <span>${sign}${Math.abs(transaction.amount)}</span>
+    ${transaction.text} <span>${sign}${formatAmount(Math.abs(transaction.amount))}</span>
     <button class="delete-btn" onclick="removeTransaction(${transaction.id})">x</button>
   `;
 
@@ -79,9 +84,9 @@ function updateValues() {
 
   const expense = (amounts.filter(item => item < 0).reduce((acc, item) => (acc += item), 0) * -1 ).toFixed(0);
 
-  balance.innerText = `${total}`;
-  money_plus.innerText = `${income}`;
-  money_minus.innerText = `${expense}`;
+  balance.innerText = formatAmount(total);
+  money_plus.innerText = formatAmount(income);
+  money_minus.innerText = formatAmount(expense);
 }
 
 // Remove transaction by ID
