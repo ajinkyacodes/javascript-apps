@@ -177,6 +177,17 @@ input[type='number']:focus {
 
 .list li:hover .delete-btn { opacity: 1; }
 
+.print-btn {
+	padding: 5px 10px;
+	border: none;
+	outline: none;
+	border-radius: 25px;
+	font-size: 12px;
+	background-color: var(--body-background);
+	color: var(--light-color);
+	cursor: pointer;
+}
+
 /* Responsive Styling */
 
 @media screen and (max-width:995px) {
@@ -185,4 +196,27 @@ input[type='number']:focus {
 
 @media screen and (max-width:480px) {
 	.container { width: 300px; }
+}
+
+@media print {
+	@page { margin: 30px; }
+
+	.print-hide,
+	#form { display: none; }
+
+	h1 { color: var(--dark-color); }
+
+	.inc-exp-container {
+		box-shadow: unset;
+    border: 1px solid var(--border-color);
+	}
+
+	.list li {
+		box-shadow: unset;
+    border: 1px solid var(--border-color);
+		color: var(--dark-color);
+	}
+
+	li.plus:before { content: '(CR)'; }
+	li.minus:before { content: '(DR)'; }
 }
