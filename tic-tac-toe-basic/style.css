@@ -34,14 +34,14 @@ font-family: 'Roboto', sans-serif;
     --body-background: #fff;
     --primary-color: #990097;
     --secondary-color: #f705ff;
-    --highlight-color: #ff8afd;
+    --highlight-color: #f8b3f6;
 }
 
 [data-theme="purple-dark"] {
-    --body-background: #990097;
+    --body-background: #3d1952;
     --primary-color: #fff;
     --secondary-color: #ff8afd;
-    --highlight-color: #f705ff;
+    --highlight-color: #a205a8;
 }
 
 [data-theme="coffee-light"] {
@@ -74,8 +74,8 @@ font-family: 'Roboto', sans-serif;
 
 [data-theme="blue-light"] {
     --body-background: #f6f6ff;
-    --primary-color: 	#0a0054;
-    --secondary-color: #231497;
+    --primary-color: 	#231497; /*#0a0054*/
+    --secondary-color: #4a32fe;
     --highlight-color: #a6bbf9;
 }
 

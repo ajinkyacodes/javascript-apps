@@ -1,5 +1,6 @@
 const statusDisplay = document.querySelector('.game-status');
 const cell = document.querySelectorAll('.cell');
+const selectedTheme = document.getElementById('theme-select');
 
 let gameActive = true;
 let currentPlayer = "X";
@@ -66,19 +67,13 @@ function handleResultValidation() {
 }
 
 function highlightBoxes(indexes) {
-    indexes.forEach(i => {
-        cell[i].classList.add('winbox-highlight');
-    });
+    indexes.forEach(i => cell[i].classList.add('winbox-highlight'));
 }
 
 function handleCellClick(clickedCellEvent) {
     const clickedCell = clickedCellEvent.target;
     const clickedCellIndex = parseInt(clickedCell.getAttribute('data-cell-index'));
-
-    if (gameState[clickedCellIndex] !== "" || !gameActive) {
-        return;
-    }
-
+    if (gameState[clickedCellIndex] !== "" || !gameActive) return;
     handleCellPlayed(clickedCell, clickedCellIndex);
     handleResultValidation();
 }
@@ -92,63 +87,21 @@ function handleRestartGame() {
     cell.forEach(cell => cell.innerHTML = "");
 }
 
-cell.forEach(cell => cell.addEventListener('click', handleCellClick));
-document.querySelector('.game-restart').addEventListener('click', handleRestartGame);
-
-
-// Game Color Theme
-// document.documentElement.setAttribute('data-theme', 'dark');
-
-const selectedTheme = document.getElementById('theme-select');
-
 // Change Theme Functionality
 function switchTheme(theme) {
-    if(theme === 'light'){
-        selectedTheme.value = 'light';
-        localStorage.setItem('theme', 'light');
-        document.documentElement.setAttribute('data-theme', 'light');
-    } else if(theme === 'dark'){
-        selectedTheme.value = 'dark';
-        localStorage.setItem('theme', 'dark');
-        document.documentElement.setAttribute('data-theme', 'dark');
-    } else if(theme === 'purple-light'){
-        selectedTheme.value = 'purple-light';
-        localStorage.setItem('theme', 'purple-light');
-        document.documentElement.setAttribute('data-theme', 'purple-light');
-    } else if(theme === 'purple-dark'){
-        selectedTheme.value = 'purple-dark';
-        localStorage.setItem('theme', 'purple-dark');
-        document.documentElement.setAttribute('data-theme', 'purple-dark');
-    } else if(theme === 'coffee-light'){
-        selectedTheme.value = 'coffee-light';
-        localStorage.setItem('theme', 'coffee-light');
-        document.documentElement.setAttribute('data-theme', 'coffee-light');
-    } else if(theme === 'coffee-dark'){
-        selectedTheme.value = 'coffee-dark';
-        localStorage.setItem('theme', 'coffee-dark');
-        document.documentElement.setAttribute('data-theme', 'coffee-dark');
-    } else if(theme === 'rose-light'){
-        selectedTheme.value = 'rose-light';
-        localStorage.setItem('theme', 'rose-light');
-        document.documentElement.setAttribute('data-theme', 'rose-light');
-    } else if(theme === 'rose-dark'){
-        selectedTheme.value = 'rose-dark';
-        localStorage.setItem('theme', 'rose-dark');
-        document.documentElement.setAttribute('data-theme', 'rose-dark');
-    } else if(theme === 'blue-light'){
-        selectedTheme.value = 'blue-light';
-        localStorage.setItem('theme', 'blue-light');
-        document.documentElement.setAttribute('data-theme', 'blue-light');
-    } else if(theme === 'blue-dark'){
-        selectedTheme.value = 'blue-dark';
-        localStorage.setItem('theme', 'blue-dark');
-        document.documentElement.setAttribute('data-theme', 'blue-dark');
+    const colorThemes = ['light', 'dark', 'purple-light', 'purple-dark', 'coffee-light', 'coffee-dark', 'rose-light', 'rose-dark', 'blue-light','blue-dark'];
+    if(colorThemes.includes(theme)) {
+        selectedTheme.value = theme;
+        localStorage.setItem('ttt-theme', theme);
+        document.documentElement.setAttribute('data-theme', theme);
     }
 }
 
 // Check Local Storage For Theme
-const currentTheme = localStorage.getItem('theme');
+const currentTheme = localStorage.getItem('ttt-theme');
 if(currentTheme) switchTheme(currentTheme);
 
-// Event Listener
+// Event Listeners
+cell.forEach(cell => cell.addEventListener('click', handleCellClick));
+document.querySelector('.game-restart').addEventListener('click', handleRestartGame);
 selectedTheme.addEventListener('change', ()=> switchTheme(selectedTheme.value));
