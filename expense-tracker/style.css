@@ -2,6 +2,14 @@
 
 :root {
 	--box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+	--body-background: #6e54f5;
+	--container-background:#ebe7ff;
+	--dark-color: #000;
+	--light-color: #fff;
+	--income-color: #2ecc71;
+	--expense-color: #c0392b;
+	--history-text-color: #333;
+	--border-color: #bbb;
 }
 
 * { box-sizing: border-box; }
@@ -13,22 +21,23 @@ body {
 	align-items: center;
 	flex-direction: column;
 	justify-content: center;
-	background-color: #6e54f5;
+	background-color: var(--body-background);
 	font-family: 'Lato', sans-serif;
 }
 
 .container {
-	width: 450px;
+	width: 600px;
 	padding: 20px;
 	border-radius: 10px;
 	margin: 30px auto;
-	background-color: #ebe7ff;
+	background-color: var(--container-background);
+	transition: all 0.3s ease-in-out;
 }
 
 h1 {
 	margin: 30px auto 0;
 	font-size: 32px;
-	color: #fff;
+	color: var(--light-color);
 	letter-spacing: 1px;
 }
 
@@ -40,7 +49,7 @@ h2 {
 
 h3 {
 	padding-bottom: 10px;
-	border-bottom: 1px solid #bbb;
+	border-bottom: 1px solid var(--border-color);
 	margin: 40px 0 10px;
 }
 
@@ -54,7 +63,7 @@ h4 {
 	margin: 20px 0;
 	display: flex;
 	justify-content: space-between;
-	background-color: #fff;
+	background-color: var(--light-color);
 	box-shadow: var(--box-shadow);
 }
 
@@ -63,7 +72,7 @@ h4 {
 	text-align: center;
 }
 
-.inc-exp-container>div:first-of-type { border-right: 1px solid #dedede; }
+.inc-exp-container>div:first-of-type { border-right: 1px solid var(--border-color); }
 
 .balance {
 	padding: 0;
@@ -80,8 +89,8 @@ h4 {
 	letter-spacing: 1px;
 }
 
-.money.plus { color: #2ecc71; }
-.money.minus { color: #c0392b; }
+.money.plus { color: var(--income-color); }
+.money.minus { color: var(--expense-color); }
 
 label {
 	margin: 10px 0;
@@ -92,7 +101,7 @@ input[type='text'],
 input[type='number'] {
 	width: 100%;
 	padding: 10px;
-	border: 1px solid #dedede;
+	border: 1px solid var(--border-color);
 	border-radius: 2px;
 	display: block;
 	font-size: 16px;
@@ -100,7 +109,7 @@ input[type='number'] {
 
 input[type='text']:focus,
 input[type='number']:focus {
-	border: none;
+	border: 1px solid var(--border-color);
 	outline: none;
 }
 
@@ -110,9 +119,9 @@ input[type='number']:focus {
 	border: 0;
 	margin: 10px 0 30px;
 	display: block;
-	background-color: #9c88ff;
+	background-color: var(--body-background);
 	box-shadow: var(--box-shadow);
-	color: #fff;
+	color: var(--light-color);
 	cursor: pointer;
 	font-size: 16px;
 }
@@ -135,13 +144,13 @@ input[type='number']:focus {
 	display: flex;
 	justify-content: space-between;
 	position: relative;
-	background-color: #fff;
+	background-color: var(--light-color);
 	box-shadow: var(--box-shadow);
-	color: #333;
+	color: var(--history-text-color);
 }
 
-.list li.plus { border-right: 5px solid #2ecc71; }
-.list li.minus { border-right: 5px solid #c0392b; }
+.list li.plus { border-right: 5px solid var(--income-color); }
+.list li.minus { border-right: 5px solid var(--expense-color); }
 
 .delete-btn {
 	padding: 2px 5px;
@@ -152,11 +161,21 @@ input[type='number']:focus {
 	left: 0;
 	transform: translate(-100%, -50%);
 	font-size: 20px;
-	background-color: #e74c3c;
-	color: #fff;
+	background-color: var(--expense-color);
+	color: var(--light-color);
 	opacity: 0;
 	line-height: 20px;
 	transition: opacity 0.3s ease;
 }
 
 .list li:hover .delete-btn { opacity: 1; }
+
+/* Responsive Styling */
+
+@media screen and (max-width:995px) {
+	.container { width: 450px; }
+}
+
+@media screen and (max-width:480px) {
+	.container { width: 300px; }
+}
