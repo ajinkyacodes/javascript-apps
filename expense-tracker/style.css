@@ -201,7 +201,10 @@ input[type='number']:focus {
 @media print {
 	@page { margin: 30px; }
 
-	body { display: block; }
+	body { 
+		align-items: start;
+		justify-content: flex-start;
+	}
 
 	.print-hide,
 	#form { display: none; }
