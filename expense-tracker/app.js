@@ -1,3 +1,5 @@
+let currency;
+const selectedCurrency = document.getElementById('currency-select');
 const balance = document.getElementById('balance');
 const money_plus = document.getElementById('money-plus');
 const money_minus = document.getElementById('money-minus');
@@ -48,15 +50,31 @@ function generateID() {
   return Math.floor(Math.random() * 100000000);
 }
 
+// Check Local Storage For Currency
+const currentCurrency = localStorage.getItem('et-currency');
+currentCurrency ? currency=currentCurrency : currency = 'USD';
+selectedCurrency.value = currency;
+
 // International Currency Number Format
 function formatAmount(amount) {
-    return Intl.NumberFormat('en-IN').format(amount);
+    localStorage.setItem('et-currency',currency);
+    if(currency === 'USD') {
+        return '$'+Intl.NumberFormat('en-US').format(amount);
+    } else if(currency === 'EUR') {
+        return '€'+Intl.NumberFormat('en-EU').format(amount);
+    }  else if(currency === 'GBP') {
+        return '£'+Intl.NumberFormat('en-GB').format(amount);
+    } else if(currency === 'INR') {
+        return '₹'+Intl.NumberFormat('en-IN').format(amount);
+    } else if(currency === 'NONE') {
+        return Intl.NumberFormat('en-IN').format(amount);
+    }
 }
 
 // Add transactions to DOM list
 function addTransactionDOM(transaction) {
   // Get sign
-  const sign = transaction.amount < 0 ? '-' : '+';
+  const sign = transaction.amount < 0 ? (currency === 'NONE' ? '−' : '') : (currency === 'NONE' ? '+' : ''); // '−' : '+'
 
   const item = document.createElement('li');
 
@@ -111,5 +129,10 @@ function init() {
 }
 
 init();
+
+selectedCurrency.addEventListener('change', ()=> {
+    currency = selectedCurrency.value;
+    init();
+});
 
 form.addEventListener('submit', addTransaction);

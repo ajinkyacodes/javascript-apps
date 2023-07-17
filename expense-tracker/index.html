@@ -15,7 +15,7 @@
 		<h1>Expense Tracker</h1>
 
 		<div class="container">
-			<h2>Your Balance</h2>
+			<h2 class="balance-text">Balance</h2>
 			<h3 id="balance" class="balance">$0.00</h3>
 
 			<div class="inc-exp-container">
@@ -54,6 +54,13 @@
 				<button class="btn">Add Transaction</button>
 			</form>
 			<button class="print-btn print-hide" onclick="window.print()">Print</button>
+			<select name="currency" id="currency-select" class="currency-select print-hide">
+				<option value="USD" selected>$</option>
+				<option value="EUR">€</option>
+				<option value="GBP">£</option>
+				<option value="INR">₹</option>
+				<option value="NONE">&ndash;</option>
+			</select>
 		</div>
 		<script src="app.js"></script>
 	</body>
