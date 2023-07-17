@@ -201,10 +201,15 @@ input[type='number']:focus {
 @media print {
 	@page { margin: 30px; }
 
+	body { display: block; }
+
 	.print-hide,
 	#form { display: none; }
 
-	h1 { color: var(--dark-color); }
+	h1 {
+		color: var(--dark-color); 
+		text-align: center;
+	}
 
 	.inc-exp-container {
 		box-shadow: unset;
