@@ -27,6 +27,9 @@ This is a random joke generator app. It shuffles jokes with different categories
 
 # Advanced Apps
 
+## [Expense Tracker](https://ajinkyacodes.github.io/javascript-apps/expense-tracker)
+This app tracks your income and expenses by adding the transaction details.
+
 ## [Password Generator](https://ajinkyacodes.github.io/javascript-apps/password-generator)
 This app generates a password fulfilling the conditions set like lowercase, uppercase, numbers, symbols, and length of the password.
 
