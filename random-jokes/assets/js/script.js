@@ -14,14 +14,17 @@ $(document).ready(function () {
             success: function (data) {                                        
             var $container = $(".btn-container");
             // Creating Load More Jokes Button
-            var $loademorebtn = $(`<button id="shuffle" class="loadmorebutton" title="New Joke">New Joke</button>`);
+            var $loademorebtn = $(`<button id="shuffle" class="loadmorebutton" title="New Joke">New</button>`);
             // Creating Read Joke Button
             var $readBtn = $(`<button id="read" class="read-button" title="Read Out Loud"><i class="fas fa-volume-up"></i></button>`);
             // Creating Stop Voice Button
             var $stopBtn = $(`<button id="stop" class="stop-button" title="Stop Voice"><i class="fas fa-stop"></i></button>`);
+            // Creating Stop Voice Button
+            var $copyBtn = $(`<button id="copy" class="copy-button" title="Copy Text"><i class="fas fa-copy"></i></button>`);
             $container.append($loademorebtn);
             $container.append($readBtn);
             $container.append($stopBtn);
+            $container.append($copyBtn);
                         
             jokesdetails();
             
@@ -49,6 +52,12 @@ $(document).ready(function () {
             });
 
             $("#stop").click(cancelVoice);
+
+            $("#copy").click(function(){
+                const jokeText = document.querySelector('.jokedata .j_joke p').innerHTML;
+                navigator.clipboard.writeText(jokeText);
+                alert("Joke coppied to clipboard.");
+            });
 
             function jokesdetails(){                
 
