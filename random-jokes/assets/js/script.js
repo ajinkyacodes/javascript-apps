@@ -36,12 +36,14 @@ $(document).ready(function () {
                 $('.jokedata').addClass('hidden');
                 $('.read-button').addClass('hidden');
                 $('.stop-button').addClass('hidden');
+                $('.copy-button').addClass('hidden');
                 setTimeout(function(){                    
                     jokesdetails();
                     $('.bottomload').addClass('hidden loader').removeClass('bottomload');  
                     $($loademorebtn).addClass('loademorebtn').removeClass('hidden');
                     $('.read-button').removeClass('hidden');
                     $('.stop-button').removeClass('hidden');
+                    $('.copy-button').removeClass('hidden');
                 }, 2000);
             });
 
