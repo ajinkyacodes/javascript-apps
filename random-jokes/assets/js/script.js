@@ -57,14 +57,12 @@ $(document).ready(function () {
 
             $("#copy").click(function(){
                 const jokeText = document.querySelector('.jokedata .j_joke p').innerHTML;
-                // navigator.clipboard.writeText(jokeText);
                 const textarea = document.createElement('textarea');
                 textarea.value = jokeText;
                 document.body.appendChild(textarea)
                 textarea.select();
                 document.execCommand('copy');
                 textarea.remove();
-                alert("Text coppied to clipboard.");
             });
 
             function jokesdetails(){                
