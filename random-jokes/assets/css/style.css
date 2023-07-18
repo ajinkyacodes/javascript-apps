@@ -207,16 +207,23 @@ figure.random-jokes-icon img {
   }
 }
 
+.btn-container {
+  margin: 0 auto 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .loadmorebutton {
   padding: 10px 20px;
   border: none;
   border-radius: 25px;
   outline: none;
-  margin-bottom: 30px;
+  /* margin: 0 auto 30px; */
   display: block;
-  position: relative;
+  /* position: relative;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-50%); */
   background-color: #482c22;
   color: #fff;
   font-size: 14px;

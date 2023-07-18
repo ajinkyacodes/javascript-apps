@@ -15,7 +15,7 @@ $(document).ready(function () {
             var $loademorebtn = document.createElement("button");
             $loademorebtn.classList.add('loadmorebutton');
             $loademorebtn.innerHTML='Shuffle';
-            var $container = $(".container");
+            var $container = $(".btn-container");
             $container.append($loademorebtn);
                         
             jokesdetails();
