@@ -214,16 +214,13 @@ figure.random-jokes-icon img {
   align-items: center;
 }
 
-.loadmorebutton {
+button {
   padding: 10px 20px;
   border: none;
   border-radius: 25px;
   outline: none;
-  /* margin: 0 auto 30px; */
+  margin: 0 5px;
   display: block;
-  /* position: relative;
-  left: 50%;
-  transform: translateX(-50%); */
   background-color: #482c22;
   color: #fff;
   font-size: 14px;
@@ -233,7 +230,7 @@ figure.random-jokes-icon img {
   transition: all .3s linear;
 }
 
-.loadmorebutton:hover {
+button:hover {
   background-color: #795548;
 }
 
@@ -282,6 +279,10 @@ figure.random-jokes-icon img {
   .bottomload {
     top: 54%;
     transform: translate(-54%,-50%);
+  }
+
+  button:hover {
+    background-color: #482c22;
   }
 }
 

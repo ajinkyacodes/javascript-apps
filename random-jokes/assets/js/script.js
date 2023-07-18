@@ -1,7 +1,7 @@
 // Reference URL: 'https://raw.githubusercontent.com/taivop/joke-dataset/master/stupidstuff.json'
 // Find Local File at: 'assets/vendor/stupidstuff.json'
 
-$(document).ready(function () {      
+$(document).ready(function () { 
     
     $.ajax({
 
@@ -12,27 +12,43 @@ $(document).ready(function () {
             dataType: 'json',        
 
             success: function (data) {                                        
-            var $loademorebtn = document.createElement("button");
-            $loademorebtn.classList.add('loadmorebutton');
-            $loademorebtn.innerHTML='Shuffle';
             var $container = $(".btn-container");
+            // Creating Load More Jokes Button
+            var $loademorebtn = $(`<button id="shuffle" class="loadmorebutton">Shuffle</button>`);
+            // Creating Read Joke Button
+            var $readBtn = $(`<button id="read" class="read-button">Read</button>`);
+            // Creating Stop Voice Button
+            var $stopBtn = $(`<button id="stop" class="stop-button">Stop</button>`);
             $container.append($loademorebtn);
+            $container.append($readBtn);
+            $container.append($stopBtn);
                         
             jokesdetails();
             
             $($loademorebtn).click(function() {
-
-                $($loademorebtn).addClass('hidden').removeClass('loademorebtn');    
+                $($loademorebtn).addClass('hidden').removeClass('loademorebtn');
                 $('.loader').removeClass('hidden loader').addClass('bottomload');
                 $('.t_category').addClass('hidden');
                 $('.t_joke').addClass('joketitlefull').html('Joke loading...😀');                 
                 $('.jokedata').addClass('hidden');
+                $('.read-button').addClass('hidden');
+                $('.stop-button').addClass('hidden');
                 setTimeout(function(){                    
                     jokesdetails();
                     $('.bottomload').addClass('hidden loader').removeClass('bottomload');  
                     $($loademorebtn).addClass('loademorebtn').removeClass('hidden');
+                    $('.read-button').removeClass('hidden');
+                    $('.stop-button').removeClass('hidden');
                 }, 2000);
             });
+
+            $("#read").click(function(){
+                const jokeText = document.querySelector('.jokedata .j_joke p').innerHTML;
+                setTextMessage(jokeText);
+                speakText();
+            });
+
+            $("#stop").click(cancelVoice);
 
             function jokesdetails(){                
 
@@ -56,7 +72,7 @@ $(document).ready(function () {
                       <div class="j_category"><span>${$category}</span></div>
                       <div class="j_joke"><p>${$joke}</p></div>
                   </li>`);
-                  
+
                   $loadingstatus = true;
                   if ($loadingstatus == true) {
                       $loader.addClass("hidden");
