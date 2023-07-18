@@ -14,11 +14,11 @@ $(document).ready(function () {
             success: function (data) {                                        
             var $container = $(".btn-container");
             // Creating Load More Jokes Button
-            var $loademorebtn = $(`<button id="shuffle" class="loadmorebutton">Shuffle</button>`);
+            var $loademorebtn = $(`<button id="shuffle" class="loadmorebutton" title="New Joke">New Joke</button>`);
             // Creating Read Joke Button
-            var $readBtn = $(`<button id="read" class="read-button">Read</button>`);
+            var $readBtn = $(`<button id="read" class="read-button" title="Read Out Loud"><i class="fas fa-volume-up"></i></button>`);
             // Creating Stop Voice Button
-            var $stopBtn = $(`<button id="stop" class="stop-button">Stop</button>`);
+            var $stopBtn = $(`<button id="stop" class="stop-button" title="Stop Voice"><i class="fas fa-stop"></i></button>`);
             $container.append($loademorebtn);
             $container.append($readBtn);
             $container.append($stopBtn);
