@@ -19,7 +19,7 @@ function caclulate() {
       const rate = data.rates[currency_two];
 
       rateEl.innerText = `1 ${currency_one} = ${rate} ${currency_two}`;
-      updatedEl.innerText = `Updated on: ${convertTime(data.time_last_updated)}`;
+      updatedEl.innerText = `(Updated: ${convertTime(data.time_last_updated)})`;
 
       amountEl_two.value = (amountEl_one.value * rate).toFixed(2);
     });
@@ -31,6 +31,7 @@ amountEl_one.addEventListener('input', caclulate);
 currencyEl_two.addEventListener('change', caclulate);
 amountEl_two.addEventListener('input', caclulate);
 
+// For swapping the currency rates
 swap.addEventListener('click', () => {
   const temp = currencyEl_one.value;
   currencyEl_one.value = currencyEl_two.value;
@@ -38,6 +39,7 @@ swap.addEventListener('click', () => {
   caclulate();
 });
 
+// Date Format
 function convertTime(timestamp){
   const options = { year: 'numeric', month: 'short', day: 'numeric' };
   let formattedDate  = new Date(timestamp * 1000);
