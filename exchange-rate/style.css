@@ -78,6 +78,10 @@
     font-size: 14px;
     padding: 0 10px;
   }
+
+  .updated {
+    font-size: 12px;
+  }
   
   select:focus,
   input:focus,
