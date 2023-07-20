@@ -1,6 +1,7 @@
 :root { 
   --primary-color: #5fbaa7; 
   --secondary-color: #008064;
+  --highlight-color: #e6fbf7;
   --light-color: #fff;
   --dark-color: #000;
 }
@@ -64,7 +65,8 @@ p {
 }
 
 .currency {
-  padding: 40px 0;
+  /* padding: 40px 0; */
+  margin-top: 40px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -104,6 +106,16 @@ p {
 }
 
 .updated { font-size: 12px; }
+
+.currency-full {
+  padding: 8px 10px;
+  display: inline-block;
+  background-color: var(--highlight-color);
+  font-size: 14px;
+  font-style: italic;
+}
+
+.currency-full.currency-one { margin-bottom: 40px; }
 
 select:focus,
 input:focus,

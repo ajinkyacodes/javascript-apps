@@ -7,6 +7,65 @@ const rateEl = document.getElementById('rate');
 const updatedEl = document.getElementById('updated');
 const swap = document.getElementById('swap');
 
+const currencyCodeOneText = document.querySelector('.currency-full.currency-one');
+const currencyCodeTwoText = document.querySelector('.currency-full.currency-two');
+
+// Currency Codes & Names
+const currencyCodes = {
+  "AED": "Arab Emirates Dirham",
+  "ARS": "Argentine Peso",
+  "AUD": "Australian Dollar",
+  "BGN": "Bulgarian Lev",
+  "BRL": "Brazilian Real",
+  "BSD": "Bahamian Dollar",
+  "CAD": "Canadian Dollar",
+  "CHF": "Swiss Franc",
+  "CLP": "Chilean Peso",
+  "CNY": "Yuan Renminbi",
+  "COP": "Colombian Peso",
+  "CZK": "Czech Koruna",
+  "DKK": "Danish Krone",
+  "DOP": "Dominican Peso",
+  "EGP": "Egyptian Pound",
+  "EUR": "Euro",
+  "FJD": "Fiji Dollar",
+  "GBP": "Pound Sterling",
+  "GTQ": "Guatemalan Quetzal",
+  "HKD": "Hong Kong Dollar",
+  "HRK": "Croatian Kuna",
+  "HUF": "Hungarian Forint",
+  "IDR": "Indonesian Rupiah",
+  "ILS": "Israeli New Shekel",
+  "INR": "Indian Rupee	",
+  "ISK": "Iceland Krona",
+  "JPY": "Japanese Yen",
+  "KRW": "Korean Won",
+  "KZT": "Kazakhstan Tenge",
+  "MXN": "Mexican Nuevo Peso",
+  "MYR": "Malaysian Ringgit",
+  "NOK": "Norwegian Krone",
+  "NZD": "New Zealand Dollar",
+  "PAB": "Panamanian Balboa",
+  "PEN": "Peruvian Nuevo Sol",
+  "PHP": "Philippine Peso",
+  "PKR": "Pakistan Rupee",
+  "PLN": "Polish Zloty",
+  "PYG": "Paraguay Guarani",
+  "RON": "Romanian New Leu",
+  "RUB": "Russian Ruble",
+  "SAR": "Saudi Riyal",
+  "SEK": "Swedish Krona",
+  "SGD": "Singapore Dollar",
+  "THB": "Thai Baht",
+  "TRY": "Turkish Lira",
+  "TWD": "Taiwan Dollar",
+  "UAH": "Ukraine Hryvnia",
+  "USD": "US Dollar",
+  "UYU": "Uruguayan Peso",
+  "VND": "Vietnamese Dong",
+  "ZAR": "South African Rand",
+}
+
 // Fetch exchange rates and update the DOM
 function caclulate() {
   const currency_one = currencyEl_one.value;
@@ -23,6 +82,16 @@ function caclulate() {
 
       amountEl_two.value = (amountEl_one.value * rate).toFixed(2);
     });
+
+    // Displaying Full Name of the selected currency
+    for (var code in currencyCodes) {
+      if (currencyEl_one.value === code) {
+          currencyCodeOneText.innerText = currencyCodes[code];
+      }
+      if (currencyEl_two.value === code) {
+        currencyCodeTwoText.innerText = currencyCodes[code];
+      }
+    }
 }
 
 // Event listeners
