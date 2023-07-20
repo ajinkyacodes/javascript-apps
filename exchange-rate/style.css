@@ -14,8 +14,8 @@
 ::-webkit-scrollbar-thumb:hover { background: var(--dark-color); }
 
 body {
-  height: 100vh;
-  margin: 0;
+  min-height: 100vh;
+  margin: 0 auto;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -110,7 +110,12 @@ input:focus,
 button:focus { outline: 0; }
 
 @media screen and (max-width: 600px) {
-  .wrapper { width: 90%; }
+  body { margin: 20px auto; }
+
+  .wrapper { 
+    width: 90%; 
+    margin: 0 auto;
+  }
 
   .swap-rate-container {
     display: block;
