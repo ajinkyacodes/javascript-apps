@@ -66,6 +66,10 @@ const currencyCodes = {
   "ZAR": "South African Rand",
 }
 
+// Check Local Storage For Selected Currency History
+const currentCurrencyOne = localStorage.getItem('ERC1');
+const currentCurrencyTwo = localStorage.getItem('ERC2');
+
 // Creating Options for Select One
 for (var currency in currencyCodes) {
   const option = document.createElement('option');
@@ -84,10 +88,17 @@ for (var currency in currencyCodes) {
   currencyEl_two.appendChild(option);
 }
 
+// Set Selected Value to Local Storage
+if(currentCurrencyOne) currencyEl_one.value = currentCurrencyOne;
+if(currentCurrencyTwo) currencyEl_two.value = currentCurrencyTwo;
+
 // Fetch exchange rates and update the DOM
 function caclulate() {
   const currency_one = currencyEl_one.value;
   const currency_two = currencyEl_two.value;
+
+  localStorage.setItem('ERC1', currency_one);
+  localStorage.setItem('ERC2', currency_two);
 
   fetch(`https://api.exchangerate-api.com/v4/latest/${currency_one}`)
     .then(res => res.json())
