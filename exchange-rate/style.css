@@ -110,11 +110,9 @@ input:focus,
 button:focus { outline: 0; }
 
 @media screen and (max-width: 600px) {
-  body { margin: 20px auto; }
-
   .wrapper { 
     width: 90%; 
-    margin: 0 auto;
+    margin: 20px auto;
   }
 
   .swap-rate-container {
