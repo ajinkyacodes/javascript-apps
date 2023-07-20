@@ -66,6 +66,24 @@ const currencyCodes = {
   "ZAR": "South African Rand",
 }
 
+// Creating Options for Select One
+for (var currency in currencyCodes) {
+  const option = document.createElement('option');
+  option.value = currency;
+  option.innerText = currency;
+  currencyEl_one.appendChild(option);
+  if(currency === "USD") option.setAttribute('selected', "");
+}
+
+// Creating Options for Select Two
+for (var currency in currencyCodes) {
+  const option = document.createElement('option');
+  option.value = currency;
+  option.innerText = currency;
+  if(currency === "EUR") option.setAttribute('selected', "");
+  currencyEl_two.appendChild(option);
+}
+
 // Fetch exchange rates and update the DOM
 function caclulate() {
   const currency_one = currencyEl_one.value;
@@ -94,12 +112,6 @@ function caclulate() {
     }
 }
 
-// Event listeners
-currencyEl_one.addEventListener('change', caclulate);
-amountEl_one.addEventListener('input', caclulate);
-currencyEl_two.addEventListener('change', caclulate);
-amountEl_two.addEventListener('input', caclulate);
-
 // For swapping the currency rates
 swap.addEventListener('click', () => {
   const temp = currencyEl_one.value;
@@ -114,5 +126,11 @@ function convertTime(timestamp){
   let formattedDate  = new Date(timestamp * 1000);
   return formattedDate.toLocaleDateString("en-US", options);
 } 
+
+// Event listeners
+currencyEl_one.addEventListener('change', caclulate);
+amountEl_one.addEventListener('input', caclulate);
+currencyEl_two.addEventListener('change', caclulate);
+amountEl_two.addEventListener('input', caclulate);
 
 caclulate();
