@@ -122,12 +122,14 @@ function nextSong() {
 // On Load - Select First Song
 loadSong(songs[songIndex]);
 
-// Update Progress Bar & Time
-function updateProgressBar(e) {
-  // Changing body background color according to album cover
+// Changing body background color according to album cover
+image.addEventListener("load", () => {
   const rgb = getAverageRGB(image);
   document.body.style.backgroundColor = "rgb(" + rgb.r + "," + rgb.g + "," + rgb.b + ")";
+});
 
+// Update Progress Bar & Time
+function updateProgressBar(e) {
   if (isPlaying) {
     const { duration, currentTime } = e.srcElement;
     // Update progress bar width
@@ -165,9 +167,9 @@ function setProgressBar(e) {
   music.currentTime = (clickX / width) * duration;
 }
 
-// Fet Album Cover Color
+// Fet Album Cover Color Reference: https://stackoverflow.com/questions/2541481/get-average-color-of-image-via-javascript
 function getAverageRGB(imgEl) {
-  var blockSize = 5, // only visit every 5 pixels
+  let blockSize = 5, // only visit every 5 pixels
     defaultRGB = { r: 0, g: 0, b: 0 }, // for non-supporting envs
     canvas = document.createElement("canvas"),
     context = canvas.getContext && canvas.getContext("2d"),
