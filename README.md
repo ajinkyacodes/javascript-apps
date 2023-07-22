@@ -19,6 +19,9 @@ This is app converts the currency rates with updated exchange rates.
 ## [Text Reader](https://ajinkyacodes.github.io/javascript-apps/text-reader)
 This app converts text to voice. You can select available voice formats according to your preference.
 
+## [Movie Booking](https://ajinkyacodes.github.io/javascript-apps/movie-booking)
+This app shows the latest movie listing and lets you book movie tickets.
+
 ## [Drink Water](https://ajinkyacodes.github.io/javascript-apps/drink-water)
 This small app tracks how much water we drank and how much is remaining.
 
