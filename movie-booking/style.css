@@ -18,8 +18,9 @@ body {
 
 .movie-container select {
   padding: 5px 15px 5px 15px;
-  border: 0;
+  border: none;
   border-radius: 5px;
+  outline: none;
   margin-left: 10px;
   -moz-appearance: none;
   -webkit-appearance: none;
@@ -96,8 +97,24 @@ body {
   margin: 15px 0;
   background-color: #fff;
   box-shadow: 0 3px 10px rgba(255, 255, 255, 0.7);
+  color: #ccc;
   transform: rotateX(-45deg);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 p.text { margin: 5px 0; }
 p.text span { color: #6feaf6; }
+
+/* Responsive Styling */
+
+@media screen and (max-width:480px) {
+  .movie-container label { 
+    margin-bottom: 5px;
+    display: block;
+  }
+
+  .movie-container select { margin-left: 0; } 
+}
