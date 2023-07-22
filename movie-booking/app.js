@@ -15,6 +15,13 @@ let ticketPrice = +movieSelect.value;
 window.addEventListener("load", ()=> {
 	ticketPrice = +movieSelect.value;
 	updateSelectedCount();
+	
+	//Counting Selected Seat Numbers
+	const selectedSeats = document.querySelectorAll('.seat.selected');
+	let seatNumbers = [];
+	for(let i=1; i<selectedSeats.length; i++) {
+		seatNumbers.push(selectedSeats[i].getAttribute('id'));
+	}
 });
 
 // Seat click event
