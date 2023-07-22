@@ -71,7 +71,7 @@ const currentCurrencyOne = localStorage.getItem('ERC1');
 const currentCurrencyTwo = localStorage.getItem('ERC2');
 
 // Creating Options for Select One
-for (var currency in currencyCodes) {
+for (let currency in currencyCodes) {
   const option = document.createElement('option');
   option.value = currency;
   option.innerText = currency;
@@ -80,7 +80,7 @@ for (var currency in currencyCodes) {
 }
 
 // Creating Options for Select Two
-for (var currency in currencyCodes) {
+for (let currency in currencyCodes) {
   const option = document.createElement('option');
   option.value = currency;
   option.innerText = currency;
@@ -113,7 +113,7 @@ function caclulate() {
     });
 
     // Displaying Full Name of the selected currency
-    for (var code in currencyCodes) {
+    for (let code in currencyCodes) {
       if (currencyEl_one.value === code) {
           currencyCodeOneText.innerText = currencyCodes[code];
       }
