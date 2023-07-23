@@ -11,9 +11,9 @@ font-family: 'Tektur', cursive;
   --modal-duration: 1s;
   --primary-color: #242333;
   --secondary-color: #30336b;
+  --cyan-color: #6feaf6;
   --light-color: #fff;
   --dark-color: #000;
-  --cyan-color: #6feaf6;
 }
 
 /* Custom Scrollbar */
@@ -59,20 +59,20 @@ body {
 
 .pick-movie-text {
   font-family: 'Tektur', cursive;
-  text-transform: uppercase;
-  display: block;
-  text-align: center;
   margin-bottom: 10px;
+  display: block;
   font-size: 32px;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 .seat-row { font-size: 12px; }
 
 .seat {
-  height: 12px;
   width: 15px;
-  border-top-left-radius: 10px;
+  height: 12px;
   border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
   margin: 3px;
   background-color: #444451;
   font-size: 8px;
@@ -147,17 +147,15 @@ button {
   cursor: pointer;
 }
 
-.book-btn-container {
-  margin: 20px 0;
-}
+.book-btn-container { margin: 20px 0; }
 
 .book-btn-container .book-btn {
   padding: 5px 12px;
   border: 2px solid var(--light-color);
   border-radius: 5px;
-  font-size: 16px;
   background-color: var(--light-color);
   color: var(--primary-color);
+  font-size: 16px;
   font-weight: 700;
   transition: all 0.3s linear;
 }
@@ -168,42 +166,40 @@ button {
 }
 
 .modal-container {
-  background-color: rgba(0, 0, 0, 0.6);
   display: none;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
   overflow-y: auto;
 }
 
-.modal-container.show-modal {
-  display: block;
-}
+.modal-container.show-modal { display: block; }
 
 .modal {
-  background-color: var(--light-color);
+  width: 90%;
+  max-width: 800px;
+  max-height: 90%;
   border-radius: 10px;
   outline: none;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 90%;
-  max-height: 90%;
-  overflow-y: auto;
-  max-width: 800px;
   animation-name: modalopen;
   animation-duration: var(--modal-duration);
+  background-color: var(--light-color);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   color: var(--dark-color);
+  overflow-y: auto;
 }
 
 .modal-header {
+  padding: 15px;
   background: var(--secondary-color);
   color: var(--light-color);
-  padding: 15px;
 }
 
 .modal-header h3 {
@@ -211,14 +207,12 @@ button {
   font-size: 22px;
 }
 
-.movie-content {
-  padding: 20px;
-}
+.movie-content { padding: 20px; }
 
 .movie-content {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 }
 
 .movie-content .booking-info {
@@ -228,16 +222,12 @@ button {
   margin-top: 20px;
 }
 
-.booking-info .booking-id {
-  margin-top: 10px;
-}
-
-.booking-info .title-info {
-  font-size: 22px;
-}
+.booking-info .booking-id { margin-top: 10px; }
+.booking-info .title-info { font-size: 22px; }
 
 .movie-content figure {
-  max-width: 30%;
+  max-width: 50%;
+  margin: 0 auto;
 }
 
 .movie-content figure img {
@@ -246,27 +236,22 @@ button {
   display: block;
 }
 
-.movie-info {
-  padding: 20px;
-}
-
-.seats-booked-ul {
-  padding-left: 0;
-}
+.movie-info { padding: 20px; }
+.seats-booked-ul { padding-left: 0; }
 
 .seats-booked-ul li {
   padding: 5px 10px;
   margin: 5px;
   display: inline-block;
-  list-style-type: none;
   background-color: var(--secondary-color);
   color: var(--light-color);
+  list-style-type: none;
 }
 
 .movie-content .title {
-  font-size: 32px;
   margin: 20px auto 10px;
   font-family: 'Black Ops One', cursive;
+  font-size: 32px;
   text-transform: uppercase;
 }
 
@@ -276,8 +261,8 @@ button {
 }
 
 .movie-content h5 {
-  font-size: 18px;
   margin: 20px auto 10px;
+  font-size: 18px;
 }
 
 .movie-content .screen-number {
@@ -288,8 +273,8 @@ button {
 }
 
 .movie-content .amount-paid {
-  font-size: 18px;
   margin-top: 20px;
+  font-size: 18px;
 }
 
 
@@ -299,12 +284,12 @@ button {
 }
 
 .close-btn {
-  background: transparent;
-  font-size: 25px;
   position: absolute;
   top: 10px;
   right: 10px;
+  background: transparent;
   color: var(--light-color);
+  font-size: 25px;
 }
 
 @keyframes modalopen {
@@ -319,11 +304,46 @@ button {
 
 /* Responsive Styling */
 
+@media screen and (max-width:995px) {
+  .seat:not(.occupied):hover {
+    cursor: pointer;
+    transform: scale(1);
+  }
+
+  .book-btn-container .book-btn:hover {
+    background-color: var(--light-color);
+    color: var(--primary-color);
+  }
+}
+
+@media screen and (max-width:600px) {
+  .movie-content { display: block; }
+  .movie-content figure { max-width: 80%; }
+}
+
 @media screen and (max-width:480px) {
   .movie-container label { 
     margin-bottom: 5px;
     display: block;
+    font-size: 26px;
   }
 
+  p.text { font-size: 14px; }
+  .book-btn-container .book-btn { font-size: 14px; }
   .movie-container select { margin-left: 0; } 
+  .modal { width: 80%; }
+  .movie-info { padding: 0; }
+  .modal-header h3 { font-size: 18px; }
+  .movie-content .title { font-size: 22px; }
+  .movie-content p { font-size: 14px; }
+  .movie-content h5 { font-size: 16px; }
+  .movie-content .amount-paid { font-size: 16px; }
+  .movie-content .amount-paid span { font-size: 14px; }
+  .booking-info .title-info { font-size: 18px; }
+  .seats-booked-ul li { font-size: 14px; }
+
+  .close-btn {
+    top: 8px;
+    right: 8px;
+  }
 }
