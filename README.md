@@ -11,7 +11,7 @@ This is a music player web app with basic functionalities like play, pause, next
 ## [Calculator](https://ajinkyacodes.github.io/javascript-apps/calculator)
 This is a basic calculator app for arithmetic operations.
 
-## [Exchange Rate](https://ajinkyacodes.github.io/javascript-apps/exchange-rate)
+## [Currency Exchange](https://ajinkyacodes.github.io/javascript-apps/currency-exchange)
 This is app converts the currency rates with updated exchange rates.
 
 ## [Expense Tracker](https://ajinkyacodes.github.io/javascript-apps/expense-tracker)
