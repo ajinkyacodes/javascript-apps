@@ -23,6 +23,7 @@ const amountPaidText = document.querySelector(".movie-content .amount-paid");
 const screenNumber = document.querySelector(".movie-content .screen-number");
 const bookingID = document.getElementById("booking-id");
 const movieRatings = document.getElementById("movie-rantings");
+const titleInfo = document.getElementById("title-info");
 
 populateUI();
 
@@ -161,6 +162,7 @@ function addMovieInfo() {
   released.innerText = dateFormat(singleMovie.release_date);
   movieRatings.innerHTML = `<i class="fas fa-star"></i>${singleMovie.vote_average} (${formatVotes(singleMovie.vote_count)} Votes)`;
   overview.innerText = singleMovie.overview;
+  titleInfo.innerHTML = `<i class="fas fa-ticket-alt"></i> ${singleMovie.title}`;
   seatsUL.innerHTML = "";
   seatNumbers.forEach(sno => {
     const li = document.createElement("li");
