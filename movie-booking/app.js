@@ -20,6 +20,8 @@ const showDate = document.querySelector(".movie-content .show-date-time .date");
 const modalHeader = document.querySelector(".modal-header h3");
 const seatsBookedText = document.querySelector(".seats-booked h5");
 const amountPaidText = document.querySelector(".movie-content .amount-paid");
+const screenNumber = document.querySelector(".movie-content .screen-number");
+const bookingID = document.getElementById("booking-id");
 
 populateUI();
 
@@ -77,6 +79,7 @@ function updateSelectedCount() {
   localStorage.setItem("seat-numbers", JSON.stringify(seatNumbers));
 
   const bookID = Math.floor(Math.random() * 100000000);
+  const screen1to5 = Math.floor(Math.random() * 6) + 1;
   // Book Ticket Text 
   if(selectedSeatsCount===0 || selectedSeatsCount * ticketPrice === 0) {
     open.style.visibility = "hidden";
@@ -84,14 +87,18 @@ function updateSelectedCount() {
   } else if(selectedSeatsCount==1) {
     open.style.visibility = "visible";
     open.innerText = 'Book Ticket';
-    modalHeader.innerHTML = `Ticket Booked <span class="book-id">(${bookID})</span>`;
+    modalHeader.innerHTML = `Ticket Booked`;
     seatsBookedText.innerText = "Seat Booked";
-    amountPaidText.innerHTML = `<p><b>Amount Paid: </b><span>$${selectedSeatsCount * ticketPrice}</span> (tax incl.)</p>`;
+    bookingID.innerText = `BOOKING ID: ${bookID}`;
+    amountPaidText.innerHTML = `<h5>Total Amount: <span>$${selectedSeatsCount * ticketPrice} (tax incl.)</span></h5>`;
+    screenNumber.innerText = `SCREEN${screen1to5}`;
   } else {
     open.innerText = 'Book Tickets';
-    modalHeader.innerHTML = `Tickets Booked <span class="book-id">(${bookID})</span>`;
+    modalHeader.innerHTML = `Tickets Booked`;
     seatsBookedText.innerText = `Seats Booked (${selectedSeatsCount})`;
-    amountPaidText.innerHTML = `<p><b>Amount Paid: </b><span>$${selectedSeatsCount * ticketPrice}</span> (tax incl.)</p>`;
+    bookingID.innerText = `BOOKING ID: ${bookID}`;
+    amountPaidText.innerHTML = `<h5>Total Amount: <span>$${selectedSeatsCount * ticketPrice} (tax incl.)</span></h5>`;
+    screenNumber.innerText = `SCREEN${screen1to5}`;
   }
 }
 
