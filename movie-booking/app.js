@@ -22,6 +22,7 @@ const seatsBookedText = document.querySelector(".seats-booked h5");
 const amountPaidText = document.querySelector(".movie-content .amount-paid");
 const screenNumber = document.querySelector(".movie-content .screen-number");
 const bookingID = document.getElementById("booking-id");
+const movieRatings = document.getElementById("movie-rantings");
 
 populateUI();
 
@@ -158,6 +159,7 @@ function addMovieInfo() {
   infoImage.setAttribute("src",IMG_PATH + singleMovie.poster_path);
   movieTitle.innerText = singleMovie.title;
   released.innerText = dateFormat(singleMovie.release_date);
+  movieRatings.innerHTML = `<i class="fas fa-star"></i>${singleMovie.vote_average} (${formatVotes(singleMovie.vote_count)} Votes)`;
   overview.innerText = singleMovie.overview;
   seatsUL.innerHTML = "";
   seatNumbers.forEach(sno => {
@@ -194,6 +196,22 @@ function tomorrowDate() {
   const today = new Date();
   const tomorrow = new Date(today);
   return dateFormat(tomorrow.setDate(tomorrow.getDate() + 1));
+}
+
+// format votes
+function formatVotes(votes) {
+  if(votes < 1000) {
+    return votes;
+  } else if(votes > 999 && votes < 1000000) {
+    const formattedVotes = Math.abs(votes) > 999 ? Math.sign(votes)*((Math.abs(votes)/1000).toFixed(1)) + 'K' : Math.sign(votes)*Math.abs(votes);
+    return formattedVotes;
+  } else if(votes > 99999 && votes < 1000000000) {
+    const formattedVotes = Math.abs(votes) > 99999 ? Math.sign(votes)*((Math.abs(votes)/1000000).toFixed(1)) + 'M' : Math.sign(votes)*Math.abs(votes);
+    return formattedVotes;
+  } else if(votes > 99999999) {
+    const formattedVotes = Math.abs(votes) > 99999999 ? Math.sign(votes)*((Math.abs(votes)/1000000000).toFixed(1)) + 'B' : Math.sign(votes)*Math.abs(votes);
+    return formattedVotes;
+  }
 }
 
 // Get data from localstorage and populate UI
