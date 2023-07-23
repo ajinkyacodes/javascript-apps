@@ -1,4 +1,11 @@
-@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Lato&family=Tektur&display=swap');
+
+/*
+CSS rules to specify families
+font-family: 'Black Ops One', cursive;
+font-family: 'Lato', sans-serif;
+font-family: 'Tektur', cursive;
+*/
 
 :root {
   --modal-duration: 1s;
@@ -14,7 +21,6 @@
 ::-webkit-scrollbar-track { background: var(--light-color); }
 ::-webkit-scrollbar-thumb { background: var(--primary-color); border-radius: 25px;}
 ::-webkit-scrollbar-thumb:hover { background: var(--secondary-color); }
-
 
 * { box-sizing: border-box; }
 
@@ -49,6 +55,15 @@ body {
 .container {
   margin-bottom: 30px;
   perspective: 1000px;
+}
+
+.pick-movie-text {
+  font-family: 'Tektur', cursive;
+  text-transform: uppercase;
+  display: block;
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 32px;
 }
 
 .seat-row { font-size: 12px; }
@@ -173,12 +188,11 @@ button {
   outline: none;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   position: absolute;
-  overflow: hidden;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 90%;
-  height: 90%;
+  max-height: 90%;
   overflow-y: auto;
   max-width: 800px;
   animation-name: modalopen;
@@ -194,7 +208,6 @@ button {
 
 .modal-header h3 {
   margin: 0;
-  border-bottom: 1px solid #333;
   font-size: 22px;
 }
 
@@ -253,6 +266,8 @@ button {
 .movie-content .title {
   font-size: 32px;
   margin: 20px auto 10px;
+  font-family: 'Black Ops One', cursive;
+  text-transform: uppercase;
 }
 
 .movie-content p {
