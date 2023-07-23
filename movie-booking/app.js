@@ -10,7 +10,16 @@ const modal = document.getElementById('modal');
 const close = document.getElementById('close');
 const open = document.getElementById('open');
 
-const moviesData = [];
+const IMG_PATH = 'https://image.tmdb.org/t/p/w1280';
+const infoImage = document.querySelector(".movie-content img");
+const movieTitle = document.querySelector(".movie-content .movie-info .title");
+const released = document.querySelector(".movie-content .movie-info .released");
+const overview = document.querySelector(".movie-content .movie-info .overview");
+const seatsUL = document.getElementById("seats-booked-ul");
+const showDate = document.querySelector(".movie-content .show-date-time .date");
+const modalHeader = document.querySelector(".modal-header h3");
+const seatsBookedText = document.querySelector(".seats-booked h5");
+const amountPaidText = document.querySelector(".movie-content .amount-paid");
 
 populateUI();
 
@@ -66,6 +75,24 @@ function updateSelectedCount() {
 		seatNumbers.push(selectedSeatNumbers[i].getAttribute('id'));
 	}
   localStorage.setItem("seat-numbers", JSON.stringify(seatNumbers));
+
+  const bookID = Math.floor(Math.random() * 100000000);
+  // Book Ticket Text 
+  if(selectedSeatsCount===0 || selectedSeatsCount * ticketPrice === 0) {
+    open.style.visibility = "hidden";
+    amountPaidText.visibility = "hidden";
+  } else if(selectedSeatsCount==1) {
+    open.style.visibility = "visible";
+    open.innerText = 'Book Ticket';
+    modalHeader.innerHTML = `Ticket Booked <span class="book-id">(${bookID})</span>`;
+    seatsBookedText.innerText = "Seat Booked";
+    amountPaidText.innerHTML = `<p><b>Amount Paid: </b><span>$${selectedSeatsCount * ticketPrice}</span> (tax incl.)</p>`;
+  } else {
+    open.innerText = 'Book Tickets';
+    modalHeader.innerHTML = `Tickets Booked <span class="book-id">(${bookID})</span>`;
+    seatsBookedText.innerText = `Seats Booked (${selectedSeatsCount})`;
+    amountPaidText.innerHTML = `<p><b>Amount Paid: </b><span>$${selectedSeatsCount * ticketPrice}</span> (tax incl.)</p>`;
+  }
 }
 
 // Random Ticket Price Functionality
@@ -117,18 +144,10 @@ function showMovies(movies) {
 
 // Add Movie Info inside modal
 function addMovieInfo() {
-  const IMG_PATH = 'https://image.tmdb.org/t/p/w1280';
-  const infoImage = document.querySelector(".movie-content img");
-  const movieTitle = document.querySelector(".movie-content .movie-info .title");
-  const released = document.querySelector(".movie-content .movie-info .released");
-  const overview = document.querySelector(".movie-content .movie-info .overview");
   const seatNumbers = JSON.parse(localStorage.getItem('seat-numbers'));
-  const seatsUL = document.getElementById("seats-booked-ul");
-  const showDate = document.querySelector(".movie-content .show-date-time .date");
-
   const movieID = movieSelect.options[movieSelect.selectedIndex].getAttribute("id");
   const moviesData = JSON.parse(localStorage.getItem("movies-data"));
-  var singleMovie = moviesData.find(item => item.id == movieID);
+  const singleMovie = moviesData.find(item => item.id == movieID);
   infoImage.setAttribute("src",IMG_PATH + singleMovie.poster_path);
   movieTitle.innerText = singleMovie.title;
   released.innerText = dateFormat(singleMovie.release_date);
