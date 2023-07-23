@@ -6,6 +6,11 @@ const container = document.querySelector(".container");
 const seats = document.querySelectorAll(".row .seat:not(.occupied)");
 const count = document.getElementById("count");
 const total = document.getElementById("total");
+const modal = document.getElementById('modal');
+const close = document.getElementById('close');
+const open = document.getElementById('open');
+
+const moviesData = [];
 
 populateUI();
 
@@ -15,13 +20,6 @@ let ticketPrice = +movieSelect.value;
 window.addEventListener("load", ()=> {
 	ticketPrice = +movieSelect.value;
 	updateSelectedCount();
-	
-	//Counting Selected Seat Numbers
-	const selectedSeats = document.querySelectorAll('.seat.selected');
-	let seatNumbers = [];
-	for(let i=1; i<selectedSeats.length; i++) {
-		seatNumbers.push(selectedSeats[i].getAttribute('id'));
-	}
 });
 
 // Seat click event
@@ -60,6 +58,14 @@ function updateSelectedCount() {
 
   count.innerText = selectedSeatsCount;
   total.innerText = selectedSeatsCount * ticketPrice;
+
+  //Counting Selected Seat Numbers
+	const selectedSeatNumbers = document.querySelectorAll('.seat.selected');
+	let seatNumbers = [];
+	for(let i=1; i<selectedSeatNumbers.length; i++) {
+		seatNumbers.push(selectedSeatNumbers[i].getAttribute('id'));
+	}
+  localStorage.setItem("seat-numbers", JSON.stringify(seatNumbers));
 }
 
 // Random Ticket Price Functionality
@@ -90,18 +96,78 @@ async function getMovies(url) {
 
 // Show Latest Movies in SelectBox
 function showMovies(movies) {
+
+  // moviesData = JSON.stringify(movies);
+ localStorage.setItem('movies-data', JSON.stringify(movies));
+
   movieSelect.innerHTML = "";
 
   let i = 0;
   movies.forEach((movie) => {
-    const { title, poster_path, vote_average, overview, release_date } = movie;
+    const { id, title, poster_path, vote_average, overview, release_date } = movie;
     const price = randomIntFromInterval(10, 15);
     const option = document.createElement("option");
     option.value = ticketFixedPrice[i];
+    option.setAttribute('id', id);
     option.innerText = `${title} ($${ticketFixedPrice[i]})`;
     movieSelect.appendChild(option);
     i++;
   });
+}
+
+// Add Movie Info inside modal
+function addMovieInfo() {
+  const IMG_PATH = 'https://image.tmdb.org/t/p/w1280';
+  const infoImage = document.querySelector(".movie-content img");
+  const movieTitle = document.querySelector(".movie-content .movie-info .title");
+  const released = document.querySelector(".movie-content .movie-info .released");
+  const overview = document.querySelector(".movie-content .movie-info .overview");
+  const seatNumbers = JSON.parse(localStorage.getItem('seat-numbers'));
+  const seatsUL = document.getElementById("seats-booked-ul");
+  const showDate = document.querySelector(".movie-content .show-date-time .date");
+
+  const movieID = movieSelect.options[movieSelect.selectedIndex].getAttribute("id");
+  const moviesData = JSON.parse(localStorage.getItem("movies-data"));
+  var singleMovie = moviesData.find(item => item.id == movieID);
+  infoImage.setAttribute("src",IMG_PATH + singleMovie.poster_path);
+  movieTitle.innerText = singleMovie.title;
+  released.innerText = dateFormat(singleMovie.release_date);
+  overview.innerText = singleMovie.overview;
+  seatsUL.innerHTML = "";
+  seatNumbers.forEach(sno => {
+    const li = document.createElement("li");
+    li.innerText = sno;
+    seatsUL.appendChild(li);
+  });
+  showDate.innerText = tomorrowDate();
+}
+
+// Show modal
+open.addEventListener('click', () => {
+  addMovieInfo();
+  modal.classList.add('show-modal');
+});
+
+// Hide modal
+close.addEventListener('click', () => modal.classList.remove('show-modal'));
+
+// Hide modal on outside click
+window.addEventListener('click', e =>
+  e.target == modal ? modal.classList.remove('show-modal') : false
+);
+
+// Date Format
+function dateFormat(date) {
+  const options = { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric' };
+  let formattedDate  = new Date(date);
+  return formattedDate.toLocaleDateString("en-IN", options);
+}
+
+// Format Tomorrows Date
+function tomorrowDate() {
+  const today = new Date();
+  const tomorrow = new Date(today);
+  return dateFormat(tomorrow.setDate(tomorrow.getDate() + 1));
 }
 
 // Get data from localstorage and populate UI

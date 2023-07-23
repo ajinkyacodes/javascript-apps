@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
 
+:root {
+  --modal-duration: 1s;
+  --primary-color: #30336b;
+  --secondary-color: #be2edd;
+}
+
 * { box-sizing: border-box; }
 
 body {
@@ -107,6 +113,110 @@ body {
 
 p.text { margin: 5px 0; }
 p.text span { color: #6feaf6; }
+
+button {
+  padding: 5px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.modal-container {
+  background-color: rgba(0, 0, 0, 0.6);
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.modal-container.show-modal {
+  display: block;
+}
+
+.modal {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 100%;
+  width: 800px;
+  animation-name: modalopen;
+  animation-duration: var(--modal-duration);
+  color: #000;
+}
+
+.modal-header {
+  background: var(--primary-color);
+  color: #fff;
+  padding: 15px;
+}
+
+.modal-header h3 {
+  margin: 0;
+  border-bottom: 1px solid #333;
+}
+
+.movie-content {
+  padding: 20px;
+}
+
+.movie-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.movie-content figure {
+  max-width: 30%;
+}
+
+.movie-content figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.movie-info {
+  padding: 20px;
+}
+
+.seats-booked-ul {
+  padding-left: 0;
+}
+
+.seats-booked-ul li {
+  padding: 5px 10px;
+  margin: 5px;
+  display: inline-block;
+  list-style-type: none;
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+.close-btn {
+  background: transparent;
+  font-size: 25px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #fff;
+}
+
+@keyframes modalopen {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
 
 /* Responsive Styling */
 
