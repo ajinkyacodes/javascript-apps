@@ -24,6 +24,7 @@ const screenNumber = document.querySelector(".movie-content .screen-number");
 const bookingID = document.getElementById("booking-id");
 const movieRatings = document.getElementById("movie-rantings");
 const titleInfo = document.getElementById("title-info");
+const seatsText = document.querySelector(".text .seats-text");
 
 populateUI();
 
@@ -81,12 +82,14 @@ function updateSelectedCount() {
   localStorage.setItem("seat-numbers", JSON.stringify(seatNumbers));
 
   const bookID = Math.floor(Math.random() * 100000000);
-  const screen1to5 = Math.floor(Math.random() * 6) + 1;
+  const screen1to5 = Math.floor(Math.random() * 5) + 1;
   // Book Ticket Text 
   if(selectedSeatsCount===0 || selectedSeatsCount * ticketPrice === 0) {
+    seatsText.innerText = "seats";
     open.style.visibility = "hidden";
     amountPaidText.visibility = "hidden";
   } else if(selectedSeatsCount==1) {
+    seatsText.innerText = "seat";
     open.style.visibility = "visible";
     open.innerText = 'Book Ticket';
     modalHeader.innerHTML = `Ticket Booked`;
@@ -95,6 +98,7 @@ function updateSelectedCount() {
     amountPaidText.innerHTML = `<h5>Total Amount: <span>$${selectedSeatsCount * ticketPrice} (tax incl.)</span></h5>`;
     screenNumber.innerText = `SCREEN${screen1to5}`;
   } else {
+    seatsText.innerText = "seats";
     open.innerText = 'Book Tickets';
     modalHeader.innerHTML = `Tickets Booked`;
     seatsBookedText.innerText = `Seats Booked (${selectedSeatsCount})`;

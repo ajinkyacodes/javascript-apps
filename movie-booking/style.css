@@ -61,7 +61,7 @@ body {
   font-family: 'Tektur', cursive;
   margin-bottom: 10px;
   display: block;
-  font-size: 32px;
+  font-size: 30px;
   text-align: center;
   text-transform: uppercase;
 }
@@ -139,6 +139,7 @@ body {
 
 p.text { margin: 5px 0; }
 p.text span { color: var(--cyan-color); }
+p.text span.seats-text { color: var(--light-color); }
 
 button {
   padding: 5px;
@@ -227,6 +228,7 @@ button {
 
 .movie-content figure {
   max-width: 50%;
+  padding: 20px;
   margin: 0 auto;
 }
 
@@ -236,7 +238,11 @@ button {
   display: block;
 }
 
-.movie-info { padding: 20px; }
+.movie-info { 
+  width: 50%;
+  padding: 20px; 
+}
+
 .seats-booked-ul { padding-left: 0; }
 
 .seats-booked-ul li {
@@ -249,7 +255,7 @@ button {
 }
 
 .movie-content .title {
-  margin: 20px auto 10px;
+  margin: 0 auto 10px;
   font-family: 'Black Ops One', cursive;
   font-size: 32px;
   text-transform: uppercase;
@@ -318,7 +324,8 @@ button {
 
 @media screen and (max-width:600px) {
   .movie-content { display: block; }
-  .movie-content figure { max-width: 80%; }
+  .movie-content figure { max-width: 100%; }
+  .movie-info { width: 100%; }
 }
 
 @media screen and (max-width:480px) {
@@ -328,13 +335,17 @@ button {
     font-size: 26px;
   }
 
+  .movie-content figure { padding: 0; }
   p.text { font-size: 14px; }
   .book-btn-container .book-btn { font-size: 14px; }
   .movie-container select { margin-left: 0; } 
-  .modal { width: 80%; }
+  .modal { width: 85%; }
   .movie-info { padding: 0; }
   .modal-header h3 { font-size: 18px; }
-  .movie-content .title { font-size: 22px; }
+  .movie-content .title { 
+    font-size: 22px; 
+    margin-top: 20px;
+  }
   .movie-content p { font-size: 14px; }
   .movie-content h5 { font-size: 16px; }
   .movie-content .amount-paid { font-size: 16px; }
