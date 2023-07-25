@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Rock Paper Scissors</title>
+		<link rel="stylesheet"
+			href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+			integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+			crossorigin="anonymous" />
+		<link rel="icon" href="favicon.png" type="image/gif" sizes="16x16">
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<div class="container">
+			<header>
+				<h1>Rock Paper Scissors</h1>
+			</header>
+			<div id="inside">
+				<p id="instruction">Make your move</p>
+				<div class="choice">
+					<div class="select-choice" id="rock">
+						<img class="img-weapon" src="images/rock.png" alt="Selection - rock">
+					</div>
+					<div class="select-choice" id="paper">
+						<img class="img-weapon" src="images/paper.png" alt="Selection - paper">
+					</div>
+					<div class="select-choice" id="scissors">
+						<img class="img-weapon" src="images/scissors.png" alt="Selection - scissors">
+					</div>
+				</div>
+				<div class="result">
+					<p id="message">Who will win the game?</p>
+				</div>
+				<div class="scores">
+					<p class="total-score">Your score: <span id="user-score">0</span></p>
+					<p class="total-score">Computer's score: <span
+							id="computer-score">0</span></p>
+					<button id="reset-button">reset score</button>
+				</div>
+			</div>
+			<footer>
+				<hr>
+				<p><a href="https://github.com/ajinkyacodes" target="_blank">By ajinkyacodes</a></p>
+				<p><a href="https://github.com/ajinkyacodes" target="_blank"><i class="fab fa-github-alt fa-2x" alt="Github icon"></i></a></p>
+			</footer>
+		</div>
+		<script src="app.js"></script>
+	</body>
+</html>
