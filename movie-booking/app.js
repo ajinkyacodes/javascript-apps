@@ -57,8 +57,7 @@ movieSelect.addEventListener("change", (e) => {
 
 // Save selected movie index and price
 function setMovieData(movieIndex, moviePrice) {
-  localStorage.setItem("selectedMovieIndex", movieIndex);
-  localStorage.setItem("selectedMoviePrice", moviePrice);
+  localStorage.setItem("mb-selectedMovieIndex", movieIndex);
 }
 
 // Update total and count
@@ -67,7 +66,7 @@ function updateSelectedCount() {
 
   const seatsIndex = [...selectedSeats].map((seat) => [...seats].indexOf(seat));
 
-  localStorage.setItem("selectedSeats", JSON.stringify(seatsIndex));
+  localStorage.setItem("mb-selectedSeats", JSON.stringify(seatsIndex));
 
   const selectedSeatsCount = selectedSeats.length;
 
@@ -80,7 +79,7 @@ function updateSelectedCount() {
 	for(let i=1; i<selectedSeatNumbers.length; i++) {
 		seatNumbers.push(selectedSeatNumbers[i].getAttribute('id'));
 	}
-  localStorage.setItem("seat-numbers", JSON.stringify(seatNumbers));
+  localStorage.setItem("mb-seat-numbers", JSON.stringify(seatNumbers));
 
   const bookID = Math.floor(Math.random() * 100000000);
   const screen1to5 = Math.floor(Math.random() * 5) + 1;
@@ -149,7 +148,7 @@ async function getMovies(url) {
 function showMovies(movies) {
 
   // moviesData = JSON.stringify(movies);
- localStorage.setItem('movies-data', JSON.stringify(movies));
+ localStorage.setItem("mb-movies-data", JSON.stringify(movies));
 
   movieSelect.innerHTML = "";
 
@@ -168,9 +167,9 @@ function showMovies(movies) {
 
 // Add Movie Info inside modal
 function addMovieInfo() {
-  const seatNumbers = JSON.parse(localStorage.getItem('seat-numbers'));
+  const seatNumbers = JSON.parse(localStorage.getItem("mb-seat-numbers"));
   const movieID = movieSelect.options[movieSelect.selectedIndex].getAttribute("id");
-  const moviesData = JSON.parse(localStorage.getItem("movies-data"));
+  const moviesData = JSON.parse(localStorage.getItem("mb-movies-data"));
   const singleMovie = moviesData.find(item => item.id == movieID);
   infoImage.setAttribute("src",IMG_PATH + singleMovie.poster_path);
   movieTitle.innerText = singleMovie.title;
@@ -236,14 +235,14 @@ function formatVotes(votes) {
 function populateUI() {
   // Get initial movies
   getMovies(API_URL).then(() => {
-    const selectedMovieIndex = localStorage.getItem("selectedMovieIndex");
+    const selectedMovieIndex = localStorage.getItem("mb-selectedMovieIndex");
 
     if (selectedMovieIndex) {
       movieSelect.selectedIndex = selectedMovieIndex;
     }
   });
 
-  const selectedSeats = JSON.parse(localStorage.getItem("selectedSeats"));
+  const selectedSeats = JSON.parse(localStorage.getItem("mb-selectedSeats"));
 
   if (selectedSeats !== null && selectedSeats.length > 0) {
     seats.forEach((seat, index) => {
