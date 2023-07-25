@@ -1,29 +1,29 @@
 const API_KEY = "ef019772f1eb8c9d94c0511ec7aeabe9";
-const API_URL = `https://api.themoviedb.org/3/movie/now_playing?api_key=${API_KEY}&page=1`;
+const API_URL = `https://api.themoviedb.org/3/movie/now_playing?sort_by=popularity.desc&api_key=${API_KEY}&page=1`;
+const IMG_PATH = 'https://image.tmdb.org/t/p/w1280';
 
 const movieSelect = document.getElementById("movie");
-const container = document.querySelector(".container");
-const seats = document.querySelectorAll(".row .seat:not(.occupied)");
 const count = document.getElementById("count");
 const total = document.getElementById("total");
 const modal = document.getElementById('modal');
 const close = document.getElementById('close');
 const open = document.getElementById('open');
+const seatsUL = document.getElementById("seats-booked-ul");
+const bookingID = document.getElementById("booking-id");
+const movieRatings = document.getElementById("movie-rantings");
+const titleInfo = document.getElementById("title-info");
 
-const IMG_PATH = 'https://image.tmdb.org/t/p/w1280';
+const container = document.querySelector(".container");
+const seats = document.querySelectorAll(".row .seat:not(.occupied)");
 const infoImage = document.querySelector(".movie-content img");
 const movieTitle = document.querySelector(".movie-content .movie-info .title");
 const released = document.querySelector(".movie-content .movie-info .released");
 const overview = document.querySelector(".movie-content .movie-info .overview");
-const seatsUL = document.getElementById("seats-booked-ul");
 const showDate = document.querySelector(".movie-content .show-date-time .date");
 const modalHeader = document.querySelector(".modal-header h3");
 const seatsBookedText = document.querySelector(".seats-booked h5");
 const amountPaidText = document.querySelector(".movie-content .amount-paid");
 const screenNumber = document.querySelector(".movie-content .screen-number");
-const bookingID = document.getElementById("booking-id");
-const movieRatings = document.getElementById("movie-rantings");
-const titleInfo = document.getElementById("title-info");
 const seatsText = document.querySelector(".text .seats-text");
 
 populateUI();
@@ -116,22 +116,32 @@ function randomIntFromInterval(min, max) {
 // Fixed Ticket Price
 const ticketFixedPrice = {
   0: 12,
-  1: 14,
+  1: 10,
   2: 12,
   3: 11,
-  4: 12,
-  5: 10,
-  6: 13,
-  7: 12,
+  4: 10,
+  5: 11,
+  6: 12,
+  7: 10,
   8: 11,
-  9: 14,
+  9: 10,
+  10: 12,
+  11: 11,
+  12: 10,
+  13: 11,
+  14: 12,
+  15: 10,
+  16: 12,
+  17: 12,
+  18: 11,
+  19: 10,
 };
 
 // Fetching latest movies data
 async function getMovies(url) {
   const res = await fetch(url);
   const data = await res.json();
-  showMovies(data.results.slice(0, 10));
+  showMovies(data.results);
 }
 
 // Show Latest Movies in SelectBox
