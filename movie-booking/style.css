@@ -66,7 +66,10 @@ body {
   text-transform: uppercase;
 }
 
-.seat-row { font-size: 12px; }
+.seat-row { 
+  font-size: 11px;
+  line-height: 1.8; 
+}
 
 .seat {
   width: 15px;
@@ -75,7 +78,7 @@ body {
   border-top-left-radius: 10px;
   margin: 3px;
   background-color: #444451;
-  font-size: 8px;
+  font-size: 10px;
   text-align: center;
 }
 
@@ -338,7 +341,10 @@ button {
   .movie-content figure { padding: 0; }
   p.text { font-size: 14px; }
   .book-btn-container .book-btn { font-size: 14px; }
-  .movie-container select { margin-left: 0; } 
+  .movie-container select { 
+    max-width: 250px;
+    margin-left: 0; 
+  }
   .modal { width: 85%; }
   .movie-info { padding: 0; }
   .modal-header h3 { font-size: 18px; }

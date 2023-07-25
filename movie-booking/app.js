@@ -20,6 +20,7 @@ const movieTitle = document.querySelector(".movie-content .movie-info .title");
 const released = document.querySelector(".movie-content .movie-info .released");
 const overview = document.querySelector(".movie-content .movie-info .overview");
 const showDate = document.querySelector(".movie-content .show-date-time .date");
+const showTime = document.querySelector(".movie-content .show-date-time .time");
 const modalHeader = document.querySelector(".modal-header h3");
 const seatsBookedText = document.querySelector(".seats-booked h5");
 const amountPaidText = document.querySelector(".movie-content .amount-paid");
@@ -158,7 +159,7 @@ function showMovies(movies) {
     const price = randomIntFromInterval(10, 15);
     const option = document.createElement("option");
     option.value = ticketFixedPrice[i];
-    option.setAttribute('id', id);
+    option.setAttribute('id', id);  
     option.innerText = `${title} ($${ticketFixedPrice[i]})`;
     movieSelect.appendChild(option);
     i++;
@@ -184,6 +185,7 @@ function addMovieInfo() {
     seatsUL.appendChild(li);
   });
   showDate.innerText = tomorrowDate();
+  showTime.innerText = "9 PM";
 }
 
 // Show modal
