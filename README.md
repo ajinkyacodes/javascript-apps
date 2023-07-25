@@ -20,8 +20,11 @@ This app tracks your income and expenses by adding the transaction details.
 ## [Text Reader](https://ajinkyacodes.github.io/javascript-apps/text-reader)
 This app converts text to voice. You can select available voice formats according to your preference.
 
-## [Tic Tac Toe (Basic)](https://ajinkyacodes.github.io/javascript-apps/tic-tac-toe-basic)
-A basic tic-tac-toe game with X & O.
+## [Tic Tac Toe](https://ajinkyacodes.github.io/javascript-apps/tic-tac-toe-basic)
+A basic tic-tac-toe game with X & O. It's a two-player game.
+
+## [Rock Paper Scissors](https://ajinkyacodes.github.io/javascript-apps/rock-paper-scissors)
+A basic rock, paper, scissors game between the computer and you.
 
 ## [Movie Booking](https://ajinkyacodes.github.io/javascript-apps/movie-booking)
 This app shows the latest movie listing and lets you book movie tickets.
