@@ -37,6 +37,7 @@ body {
 }
 
 .movie-container { margin: 20px 0; }
+.movie-container label { transition: all 0.3s linear; }
 
 .movie-container select {
   padding: 5px 15px 5px 15px;
@@ -50,6 +51,7 @@ body {
   background-color: var(--light-color);
   cursor: pointer;
   font-size: 14px;
+  transition: all 0.3s linear;
 }
 
 .container {
@@ -140,7 +142,11 @@ body {
   justify-content: center;
 }
 
-p.text { margin: 5px 0; }
+p.text { 
+  margin: 5px 0; 
+  transition: all 0.3s linear;
+}
+
 p.text span { color: var(--cyan-color); }
 p.text span.seats-text { color: var(--light-color); }
 
