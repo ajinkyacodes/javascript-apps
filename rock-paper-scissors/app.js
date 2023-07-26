@@ -43,6 +43,7 @@ const win = (userChoice, computerChoice) => {
   const randomNumberEmoji = Math.floor(Math.random() * 6);
 
   resultDiv.innerHTML = `${convertToUp(userChoice)} ${randomWin[randomNumber]} ${convertToUp(computerChoice)}. You win! ${winEmojis[randomNumberEmoji]}`;
+  resultDiv.setAttribute("class","result-win");
 
   document.getElementById(userChoice).classList.add('win-border')
   setTimeout(() => document.getElementById(userChoice).classList.remove('win-border'), 600);
@@ -56,7 +57,9 @@ const lose = (userChoice, computerChoice) => {
   const randomNumber = Math.floor(Math.random() * 4);
   const loseEmojis = ["😩", "😾", "💩", "😭", "😡", "🤨", "🤦🏽"];
   const randomNumberEmoji = Math.floor(Math.random() * 7);
+
   resultDiv.innerHTML = `${convertToUp(computerChoice)} ${randomWin[randomNumber]} ${convertToUp(userChoice)}. You lose! ${loseEmojis[randomNumberEmoji]}`;
+  resultDiv.setAttribute("class","result-lose");
 
   document.getElementById(userChoice).classList.add('lose-border');
   setTimeout(() => document.getElementById(userChoice).classList.remove('lose-border'), 600);
@@ -67,7 +70,9 @@ const lose = (userChoice, computerChoice) => {
 const tie = (userChoice, computerChoice) => {
   const tieEmojis = ["🤯", "😱", "🙈", "🧐", "🙀", "🙃"];
   const randomNumberEmoji = Math.floor(Math.random() * 6);
-  resultDiv.innerHTML = `${convertToUp(computerChoice)} matches ${convertToUp(userChoice)}. It's a tie! ${tieEmojis[randomNumberEmoji]}`;
+
+  resultDiv.innerHTML = `${convertToUp(userChoice)} matches ${convertToUp(computerChoice)}. It's a tie! ${tieEmojis[randomNumberEmoji]}`;
+  resultDiv.setAttribute("class","result-tie");
 
   document.getElementById(userChoice).classList.add('tie-border');
   setTimeout(() => document.getElementById(userChoice).classList.remove('tie-border'), 600);
@@ -103,6 +108,8 @@ const resetScores = () => {
   computerScoreSpan.innerHTML = computerScore
   userScore = 0;
   userScoreSpan.innerHTML = userScore;
+  resultDiv.innerHTML = "Who will win the game?";
+  resultDiv.removeAttribute("class");
 };
 
 const main = () => {

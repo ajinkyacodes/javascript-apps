@@ -85,9 +85,27 @@ hr {
 	box-shadow: 5px 7px 8px #888888;
 }
 
-.result {
+.result p {
+	border-radius: 5px;
+	display: inline-block;
+	padding: 5px 10px;
 	font-size: 20px;
 	font-weight: 600;
+}
+
+.result-win {
+	background-color: #186800;
+	color: #fff;
+}
+
+.result-lose {
+	background-color: #dc2864;
+	color: #fff;
+}
+
+.result-tie {
+	background-color: #3e3e3e;
+	color: #fff;
 }
 
 .win-border {
@@ -208,6 +226,10 @@ footer a {
 		max-width: 75px;
 		height: auto
 	}
+
+	.result p {
+		font-size: 16px;
+	}
 }
 
 @media (max-width: 600px) {
@@ -222,6 +244,10 @@ footer a {
 
 	#instruction {
 		font-size: 18px;
+	}
+
+	.result p {
+		font-size: 12px;
 	}
 
 	.score-box .fa-solid {
