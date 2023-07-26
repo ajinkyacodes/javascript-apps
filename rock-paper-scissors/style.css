@@ -107,7 +107,7 @@ hr {
 
 .scores {
 	padding: 5px;
-	background-color: #005a93;
+	background-color: #002b46;
 	border-radius: 25px;
 }
 
@@ -118,10 +118,25 @@ hr {
 	margin: 10px;
 }
 
+.score-box {
+	width: 200px;
+	border-radius: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	align-self: center;
+	margin: 20px auto 0;
+}
+
+.score-box .fa-solid {
+	font-size: 40px;
+	color: #b0e6f9;
+}
+
 #reset-button {
 	background: #fff;
 	border: 2px solid #000;
-	border-radius: 10px;
+	border-radius: 5px;
 	display: inline-block;
 	cursor: pointer;
 	color: #000;
@@ -173,17 +188,14 @@ footer a {
 
 	#rock:hover {
 		background-color: #FFEE88;
-		box-shadow: 5px 7px 8px #888888;
 	}
 	
 	#paper:hover {
 		background-color: #F40076;
-		box-shadow: 5px 7px 8px #888888;
 	}
 	
 	#scissors:hover {
 		background-color: #75C9C8;
-		box-shadow: 5px 7px 8px #888888;
 	}
 }
 
@@ -212,7 +224,11 @@ footer a {
 		font-size: 18px;
 	}
 
-	.scores p {
+	.score-box .fa-solid {
+		font-size: 24px;
+	}
+	
+	.score-box p {
 		font-size: 16px;
 	}
 
@@ -222,7 +238,6 @@ footer a {
 	}
 
 	.select-choice {
-		border: 3px solid #000;
 		padding: 5px;
 		margin: 5px;
 	}
