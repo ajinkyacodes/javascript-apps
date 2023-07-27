@@ -11,12 +11,8 @@ const rockDiv = document.getElementById("rock");
 const paperDiv = document.getElementById("paper");
 const scissorsDiv = document.getElementById("scissors");
 
-var defeatSound = new Audio(
-  "https://praxeds.github.io/theodinproject-rock-paper-scissors/assets/audios/wronganswer-37702.mp3"
-);
-var victorySound = new Audio(
-  "https://praxeds.github.io/theodinproject-rock-paper-scissors/assets/audios/correct-choice-43861.mp3"
-);
+var defeatSound = new Audio("audio/defeat-sound.mp3");
+var victorySound = new Audio("audio/victory-sound.mp3");
 
 // Generating computer choice at random
 const getComputerChoice = () => {
@@ -44,8 +40,8 @@ const convertToUp = (word) => {
 const win = (userChoice, computerChoice) => {
   userScore++;
   userScoreSpan.innerHTML = userScore;
-  const randomWin = ["beats", "smashes", "destroys", "obliterates"];
-  const randomNumber = Math.floor(Math.random() * 4);
+  const randomWin = ["smashes", "destroys"];
+  const randomNumber = Math.floor(Math.random() * 2);
   const winEmojis = ["😁", "💃🏽", "👏🏽", "😅", "😎", "🙌🏽"];
   const randomNumberEmoji = Math.floor(Math.random() * 6);
 
@@ -61,12 +57,10 @@ const win = (userChoice, computerChoice) => {
 const lose = (userChoice, computerChoice) => {
   computerScore++;
   computerScoreSpan.innerHTML = computerScore;
-  const randomWin = ["beaten by", "smashed by", "destroyed by", "obliterated by"];
-  const randomNumber = Math.floor(Math.random() * 4);
-  const loseEmojis = ["😩", "😾", "💩", "😭", "😡", "🤨", "🤦🏽"];
-  const randomNumberEmoji = Math.floor(Math.random() * 7);
+  const loseEmojis = ["😩", "😾", "😭", "😡", "🤨", "🤦🏽"];
+  const randomNumberEmoji = Math.floor(Math.random() * 6);
 
-  resultDiv.innerHTML = `${convertToUp(userChoice)} ${randomWin[randomNumber]} ${convertToUp(computerChoice)}. You lose! ${loseEmojis[randomNumberEmoji]}`;
+  resultDiv.innerHTML = `${convertToUp(userChoice)} beaten by ${convertToUp(computerChoice)}. You lose! ${loseEmojis[randomNumberEmoji]}`;
   resultDiv.setAttribute("class","result-lose");
   defeatSound.play();
 
