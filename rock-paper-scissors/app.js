@@ -11,6 +11,13 @@ const rockDiv = document.getElementById("rock");
 const paperDiv = document.getElementById("paper");
 const scissorsDiv = document.getElementById("scissors");
 
+var defeatSound = new Audio(
+  "https://praxeds.github.io/theodinproject-rock-paper-scissors/assets/audios/wronganswer-37702.mp3"
+);
+var victorySound = new Audio(
+  "https://praxeds.github.io/theodinproject-rock-paper-scissors/assets/audios/correct-choice-43861.mp3"
+);
+
 // Generating computer choice at random
 const getComputerChoice = () => {
   const choiceList = ["rock", "paper", "scissors"];
@@ -44,6 +51,7 @@ const win = (userChoice, computerChoice) => {
 
   resultDiv.innerHTML = `${convertToUp(userChoice)} ${randomWin[randomNumber]} ${convertToUp(computerChoice)}. You win! ${winEmojis[randomNumberEmoji]}`;
   resultDiv.setAttribute("class","result-win");
+  victorySound.play();
 
   document.getElementById(userChoice).classList.add('win-border')
   setTimeout(() => document.getElementById(userChoice).classList.remove('win-border'), 600);
@@ -53,13 +61,14 @@ const win = (userChoice, computerChoice) => {
 const lose = (userChoice, computerChoice) => {
   computerScore++;
   computerScoreSpan.innerHTML = computerScore;
-  const randomWin = ["beats", "smashes", "destroys", "obliterates"];
+  const randomWin = ["beaten by", "smashed by", "destroyed by", "obliterated by"];
   const randomNumber = Math.floor(Math.random() * 4);
   const loseEmojis = ["😩", "😾", "💩", "😭", "😡", "🤨", "🤦🏽"];
   const randomNumberEmoji = Math.floor(Math.random() * 7);
 
-  resultDiv.innerHTML = `${convertToUp(computerChoice)} ${randomWin[randomNumber]} ${convertToUp(userChoice)}. You lose! ${loseEmojis[randomNumberEmoji]}`;
+  resultDiv.innerHTML = `${convertToUp(userChoice)} ${randomWin[randomNumber]} ${convertToUp(computerChoice)}. You lose! ${loseEmojis[randomNumberEmoji]}`;
   resultDiv.setAttribute("class","result-lose");
+  defeatSound.play();
 
   document.getElementById(userChoice).classList.add('lose-border');
   setTimeout(() => document.getElementById(userChoice).classList.remove('lose-border'), 600);

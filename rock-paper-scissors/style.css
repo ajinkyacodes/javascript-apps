@@ -266,6 +266,7 @@ footer a {
 	.select-choice {
 		padding: 5px;
 		margin: 5px;
+		border-width: 3px;
 	}
 
 	#reset-button {
