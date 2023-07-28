@@ -87,15 +87,21 @@ async function main() {
   const genres = await _getGenres(token); // 1: Bollywood
   const playlist = await _getPlaylistByGenre(token, genres[1].id);
   const tracks = await _getTrack(token, playlist[0]["tracks"]["href"]);
-  const allTracks = tracks.items.slice(0, 20); //Selecting Top 20 tracks
+  const allTracks = tracks.items; // slice(0, 20) for selecting Top 20 tracks
 
   // Music
   allTracks.forEach((track) => {
     if (track.track.preview_url !== null) {
+
+      artists = "";
+      track.track.artists.forEach(element => {
+        artists = element.name+', '+artists; 
+      });
+
       songs.push({
         name: track.track.name,
         displayName: track.track.name,
-        artist: track.track.artists[0].name,
+        artist: artists,
         preview: track.track.preview_url,
         album_cover: track.track.album.images[0].url,
         spotifyLink: track.track.uri
@@ -136,7 +142,7 @@ function pauseSong() {
 // Update DOM
 function loadSong(song) {
   title.textContent = song.displayName;
-  artist.textContent = song.artist;
+  artist.textContent = song.artist.slice(0,-2);
   music.src = song.preview;
   image.src = song.album_cover;
   spotifyLink.href = song.spotifyLink;
