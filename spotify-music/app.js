@@ -9,6 +9,7 @@ const durationEl = document.getElementById("duration");
 const prevBtn = document.getElementById("prev");
 const playBtn = document.getElementById("play");
 const nextBtn = document.getElementById("next");
+const spotifyLink = document.getElementById("spotify-link");
 const songs = [];
 
 // Spotify Toeken
@@ -97,6 +98,7 @@ async function main() {
         artist: track.track.artists[0].name,
         preview: track.track.preview_url,
         album_cover: track.track.album.images[0].url,
+        spotifyLink: track.track.uri
       });
     }
   });
@@ -137,6 +139,7 @@ function loadSong(song) {
   artist.textContent = song.artist;
   music.src = song.preview;
   image.src = song.album_cover;
+  spotifyLink.href = song.spotifyLink;
 }
 
 // Current Song
@@ -207,5 +210,6 @@ nextBtn.addEventListener("click", nextSong);
 music.addEventListener("ended", nextSong);
 music.addEventListener("timeupdate", updateProgressBar);
 progressContainer.addEventListener("click", setProgressBar);
+spotifyLink.addEventListener("click", pauseSong);
 
 main();
