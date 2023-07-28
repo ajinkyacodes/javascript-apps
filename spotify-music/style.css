@@ -153,6 +153,13 @@ h3 {
 
   h3 { font-size: 12px; }
   .duration-wrapper { font-size: 10px; }
-
   .fas:hover { filter: brightness(100%); }
+}
+
+@media screen and (max-width:340px) {
+  .img-container {
+    margin: 30px auto;
+    position: unset;
+    transform: none;
+  }
 }
