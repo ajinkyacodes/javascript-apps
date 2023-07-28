@@ -8,6 +8,9 @@ This app shows the movie's basic data like posters, ratings, and overviews. You 
 ## [Music Player](https://ajinkyacodes.github.io/javascript-apps/music-player)
 This is a music player web app with basic functionalities like play, pause, next song, previous song & progress bar.
 
+## [Spotify Music](https://ajinkyacodes.github.io/javascript-apps/spotify-music)
+This is a music player web app with spotify preview songs.
+
 ## [Calculator](https://ajinkyacodes.github.io/javascript-apps/calculator)
 This is a basic calculator app for arithmetic operations.
 
