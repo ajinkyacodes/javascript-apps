@@ -142,7 +142,7 @@ function pauseSong() {
 // Update DOM
 function loadSong(song) {
   title.textContent = song.displayName;
-  artist.textContent = song.artist.slice(0,-2);
+  artist.innerHTML =  `<marquee behavior="scroll" direction="left">${song.artist.slice(0,-2)}</marquee>`;
   music.src = song.preview;
   image.src = song.album_cover;
   spotifyLink.href = song.spotifyLink;
