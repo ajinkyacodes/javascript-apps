@@ -17,6 +17,9 @@ This is a basic calculator app for arithmetic operations.
 ## [Currency Exchange](https://ajinkyacodes.github.io/javascript-apps/currency-exchange)
 This is app converts the currency rates with updated exchange rates.
 
+## [TODO LIST](https://ajinkyacodes.github.io/javascript-apps/todolist)
+This app tracks your todo list tasks.
+
 ## [Expense Tracker](https://ajinkyacodes.github.io/javascript-apps/expense-tracker)
 This app tracks your income and expenses by adding the transaction details.
 
