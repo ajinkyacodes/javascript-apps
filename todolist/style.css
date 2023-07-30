@@ -17,6 +17,11 @@ body {
 	font-family: 'Poppins', sans-serif;
 }
 
+.wrapper {
+	max-width: 1400px;
+	margin: 0 auto;
+}
+
 h1 {
 	color: rgb(179, 131, 226);
 	font-size: 52px;
@@ -70,4 +75,12 @@ form {
 	margin-top: 20px;
 	color: #b5b5b5;
 	font-size: 12px;
+	text-align: center;
+}
+
+@media screen and (max-width: 480px) {
+	.wrapper { width: 90%; }
+	h1 { font-size: 32px; }
+	.input { font-size: 14px; }
+	.todos li { font-size: 14px; }
 }
