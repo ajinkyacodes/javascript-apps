@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spotify Music</title>
-    <link rel="icon" type="image/png" href="favicon.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"/>
-    <link rel="stylesheet" href="style.css">
+    <title>Spotify Playlist</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
+    <link rel="icon" href="favicon.png" type="image/gif" sizes="16x16">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
     <div class="player-container">
@@ -33,13 +33,19 @@
         </div>
     </div>
     <div class="spotify-container">
-        <figure>
-            <a href="https://google.com" id="spotify-link" target="_blank">
-                <img src="images/listen-on-spotify-button.png" alt="Spotify" draggable="false">
+        <div class="playlist-details">
+            <p>Genre: <span class="genre" id="genre"></span></p>
+            <p>Playlist: <span class="playlist-name" id="playlist-name"></span></p>
+        </div>
+        <div class="image-container">
+            <a href="playlist.html" class="playlist-btn-link" title="Select Playlist">
+                <img src="assets/images/playlist.png" alt="Spotify Playlists" draggable="false">
             </a>
-        </figure>
+            <a href="https://google.com" id="spotify-link" class="spotify-link" target="_blank" title="Listnen on Spotify">
+                <img src="assets/images/listen-on-spotify-button.png" alt="Spotify" draggable="false">
+            </a>
+        </div>
     </div>
-    <!-- Script -->
-    <script src="app.js"></script>
+    <script src="assets/js/app.js"></script>
 </body>
 </html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Project</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
+    <link rel="icon" href="favicon.png" type="image/gif" sizes="16x16">
+    <link rel="stylesheet" href="assets/css/playlist.css">
+</head>
+<body>
+    <div class='container'>        
+        <form class="playlist-form">
+            <input type='hidden' id='hidden_token'>
+            <div class="form-control">
+                <label for='Genre'>Genre:</label>
+                <select name='' id='select_genre'>
+                    <option>Select...</option>                    
+                </select>
+            </div>
+            <div class="form-control">
+                <label for='Genre'>Playlists:</label>
+                <select name='' id='select_playlist'>
+                    <option>Select...</option>
+                </select>
+            </div>                  
+            <div class="form-control">
+                <button type='submit' id='btn_submit'>Search</button>
+            </div>          
+        </form>
+    </div>
+    <script src="assets/js/playlist.js"></script>
+</body>
+</html>
