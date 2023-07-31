@@ -176,6 +176,7 @@ const APPController = (function (UICtrl, APICtrl) {
     localStorage.setItem('spotify-genre', JSON.stringify(spotifyGenre))
 
     document.getElementById("btn_submit").innerText = "Go to playlist";
+    document.getElementById("btn_submit").removeAttribute("disabled");
   });
 
   // create submit button click event listener

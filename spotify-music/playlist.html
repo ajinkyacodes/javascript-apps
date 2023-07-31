@@ -9,7 +9,12 @@
     <link rel="stylesheet" href="assets/css/playlist.css">
 </head>
 <body>
-    <div class='container'>        
+    <div class='container'>
+        <div class="spotify-music-container">
+            <figure>
+                <img src="assets/images/spotify.png" alt="Spotify Music">
+            </figure>
+        </div>
         <form class="playlist-form">
             <input type='hidden' id='hidden_token'>
             <div class="form-control">
@@ -24,8 +29,8 @@
                     <option>Select...</option>
                 </select>
             </div>                  
-            <div class="form-control">
-                <button type='submit' id='btn_submit'>Search</button>
+            <div class="button-container">
+                <button type='submit' id='btn_submit' disabled>Search</button>
             </div>          
         </form>
     </div>
