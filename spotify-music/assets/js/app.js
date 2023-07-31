@@ -11,7 +11,8 @@ const playBtn = document.getElementById("play");
 const nextBtn = document.getElementById("next");
 const spotifyLink = document.getElementById("spotify-link");
 const genre = document.getElementById("genre");
-const playistName = document.getElementById("playlist-name");
+const playlistName = document.getElementById("playlist-name");
+const playlistLink = document.getElementById("playlist-link");
 const songs = [];
 
 function main() {
@@ -19,12 +20,14 @@ function main() {
   const spotifySongs = JSON.parse(localStorage.getItem("spotify-songs"));
   if(spotifySongs === null) window.location.href = "playlist.html";
 
-  const spotifyGenre = JSON.parse(localStorage.getItem("spotify-genre"));
-  const spotifyPlaylist = JSON.parse(localStorage.getItem("spotify-playlist"));
+  const spotifyGenre = localStorage.getItem("spotify-genre");
+  const spotifyPlaylist = localStorage.getItem("spotify-playlist");
+  const spotifyPlaylistLink = localStorage.getItem("spotify-playlist-link");
 
-  if(spotifyGenre !== null && spotifyPlaylist !== null) {
+  if(spotifyGenre !== null && spotifyPlaylist !== null && spotifyPlaylistLink !== null) {
     genre.innerText = spotifyGenre;
-    playistName.innerText = spotifyPlaylist;
+    playlistName.innerText = spotifyPlaylist;
+    playlistLink.href = spotifyPlaylistLink;
   } else {
     document.querySelector(".playlist-details").style.display = "none";
   }

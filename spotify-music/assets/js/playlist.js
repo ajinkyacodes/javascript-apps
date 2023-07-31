@@ -118,8 +118,8 @@ const UIController = (function () {
         .insertAdjacentHTML("beforeend", html);
     },
 
-    createPlaylist(text, value) {
-      const html = `<option value="${value}">${text}</option>`;
+    createPlaylist(text, value, link) {
+      const html = `<option value="${value}" link=${link}>${text}</option>`;
       document
         .querySelector(DOMElements.selectPlaylist)
         .insertAdjacentHTML("beforeend", html);
@@ -170,10 +170,10 @@ const APPController = (function (UICtrl, APICtrl) {
     // ge the playlist based on a genre
     const playlist = await APICtrl.getPlaylistByGenre(token, genreId);
     // create a playlist list item for every playlist returned
-    playlist.forEach((p) => UICtrl.createPlaylist(p.name, p.tracks.href));
+    playlist.forEach((p) => UICtrl.createPlaylist(p.name, p.tracks.href, p.uri));
 
     const spotifyGenre = genreSelect.options[genreSelect.selectedIndex].text;
-    localStorage.setItem('spotify-genre', JSON.stringify(spotifyGenre))
+    localStorage.setItem('spotify-genre', spotifyGenre);
 
     document.getElementById("btn_submit").innerText = "Go to playlist";
     document.getElementById("btn_submit").removeAttribute("disabled");
@@ -219,7 +219,10 @@ const APPController = (function (UICtrl, APICtrl) {
     localStorage.setItem("spotify-songs", JSON.stringify(songs));
 
     const spotifyPlaylist = playlistSelect.options[playlistSelect.selectedIndex].text;
-    localStorage.setItem("spotify-playlist", JSON.stringify(spotifyPlaylist));
+    localStorage.setItem("spotify-playlist", spotifyPlaylist);
+
+    const playlistLink = playlistSelect.options[playlistSelect.selectedIndex].getAttribute("link");
+    localStorage.setItem("spotify-playlist-link", playlistLink);
 
     window.location.href = "index.html";
   });

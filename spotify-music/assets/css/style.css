@@ -131,6 +131,16 @@ h3 {
   text-align: center;
 }
 
+.playlist-details a {
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s all linear;
+}
+
+.playlist-details a:hover {
+  color: #ccc;
+}
+
 .spotify-container {
   width: 100%;
   margin: 20px auto;
@@ -189,6 +199,10 @@ h3 {
     width: 100%; 
     max-width: 300px;
     font-size: 12px;
+  }
+
+  .playlist-details a:hover {
+    color: #fff;
   }
 }
 
