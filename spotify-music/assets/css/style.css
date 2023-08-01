@@ -166,13 +166,24 @@ h3 {
 .spotify-container .playlist-btn-link {
   width: 50px;
   height: 50px;
-  margin-right: 20px;
+  margin-right: 10px;
 }
 
 .spotify-container .spotify-link,
 .spotify-container .spotify-link img {
   width: auto;
   height: 50px;
+}
+
+.spotify-container .download-link {
+  margin-right: 10px;
+  padding: 0;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  font-size: 50px;
+  color: #1ed760;
+  vertical-align: top;
 }
 
 /* Media Query for Mobile Responsive */

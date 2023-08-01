@@ -13,6 +13,7 @@ const spotifyLink = document.getElementById("spotify-link");
 const genre = document.getElementById("genre");
 const playlistName = document.getElementById("playlist-name");
 const playlistLink = document.getElementById("playlist-link");
+const downloadLink = document.getElementById("download-link");
 const songs = [];
 
 function main() {
@@ -86,6 +87,7 @@ function loadSong(song) {
   music.src = song.preview;
   image.src = song.album_cover;
   spotifyLink.href = song.spotifyLink;
+  downloadLink.href = song.preview;
 }
 
 // Current Song
