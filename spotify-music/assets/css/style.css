@@ -137,9 +137,7 @@ h3 {
   transition: 0.3s all linear;
 }
 
-.playlist-details a:hover {
-  color: #ccc;
-}
+.playlist-details a:hover { color: #ccc; }
 
 .spotify-container {
   width: 100%;
@@ -152,8 +150,8 @@ h3 {
 }
 
 .spotify-container a {
-  display: inline-block;
   margin: 0 auto;
+  display: inline-block;
 }
 
 .spotify-container img { 
@@ -176,11 +174,11 @@ h3 {
 }
 
 .spotify-container .download-link {
-  margin-right: 10px;
-  padding: 0;
-  display: inline-block;
   width: 50px;
   height: 50px;
+  padding: 0;
+  margin-right: 10px;
+  display: inline-block;
   font-size: 50px;
   color: #1ed760;
   vertical-align: top;
@@ -212,9 +210,7 @@ h3 {
     font-size: 12px;
   }
 
-  .playlist-details a:hover {
-    color: #fff;
-  }
+  .playlist-details a:hover { color: #fff; }
 }
 
 @media screen and (max-width:340px) {
