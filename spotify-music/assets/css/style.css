@@ -200,17 +200,18 @@ h3 {
   .player-container { 
     width: 600px; 
     padding: 20px;
+    margin-top: 30px;
   }
 
   .playlist-details { width: 600px; }
   .player-section { width: 300px; }
   .playlist-details a:hover { color: #fff; }
   .fas:hover { filter: brightness(100%); }
+  .image-container { margin-bottom: 30px; }
 }
 
 @media screen and (max-width:600px) {
   .player-container { 
-    margin-top: 30px;
     width: 350px;
     display: block;
   }
@@ -229,8 +230,6 @@ h3 {
     width: 100%; 
     max-width: 350px;
   }
-
-  .image-container { margin-bottom: 30px; }
 }
 
 @media screen and (max-width:480px) {
