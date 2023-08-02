@@ -22,10 +22,10 @@ body {
 }
 
 .player-container {
-  width: 600px;
+  width: 800px;
   min-height: 300px;
   border-radius: 20px;
-  padding: 20px;
+  padding: 40px;
   background: #e7e7e7;
   box-shadow: 0 15px 30px 5px rgba(0, 0, 0, 0.3);
   transition: all 0.3s ease-in-out;
@@ -40,7 +40,7 @@ body {
   transition: all 0.3s ease-in-out;
 }
 
-.player-section { width: 300px; }
+.player-section { width: 500px; }
 
 .img-container img {
   height: 100%;
@@ -127,7 +127,7 @@ h3 {
 }
 
 .playlist-details {
-  width: 600px;
+  width: 800px;
   padding: 5px 10px;
   border: 1px solid #c5c5c5;
   border-radius: 10px;
@@ -197,6 +197,13 @@ h3 {
 /* Media Query for Mobile Responsive */
 
 @media screen and (max-width:995px) {
+  .player-container { 
+    width: 600px; 
+    padding: 20px;
+  }
+
+  .playlist-details { width: 600px; }
+  .player-section { width: 300px; }
   .playlist-details a:hover { color: #fff; }
   .fas:hover { filter: brightness(100%); }
 }
