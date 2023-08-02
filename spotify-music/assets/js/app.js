@@ -67,7 +67,7 @@ playBtn.addEventListener("click", () => {
 // Play
 function playSong() {
   isPlaying = true;
-  playBtn.classList.replace("fa-play", "fa-pause");
+  playBtn.classList.replace("fa-play-circle", "fa-pause-circle");
   playBtn.setAttribute("title", "Pause");
   music.play();
 }
@@ -75,7 +75,7 @@ function playSong() {
 // Pause
 function pauseSong() {
   isPlaying = false;
-  playBtn.classList.replace("fa-pause", "fa-play");
+  playBtn.classList.replace("fa-pause-circle", "fa-play-circle");
   playBtn.setAttribute("title", "Play");
   music.pause();
 }

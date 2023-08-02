@@ -108,6 +108,12 @@ h3 {
   cursor: pointer;
   font-size: 30px;
   user-select: none;
+  vertical-align: middle;
+}
+
+.fas.fa-play-circle, 
+.fas.fa-pause-circle {
+  font-size: 60px;
 }
 
 .fas:last-child { margin-right: 0; }
