@@ -54,8 +54,14 @@ h1 { font-size: 32px; }
 .image-info figure { width: 300px; }
 .image-info .info { width: 300px; }
 
-.image-info .info a {
+.image-info .info figure {
+    width: 100%;
     display: block;
+}
+
+.image-info .info a {
+    margin: 0 auto;
+    display: inline-block;
     text-decoration: none;
     color: #000;
     text-align: center;
@@ -69,6 +75,24 @@ h1 { font-size: 32px; }
 
 .image-info .info span {
     padding: 10px;
+    display: block;
+}
+
+.web-app-link {
+    display: block;
+    color: #000;
+    text-decoration: none;
+    text-align: center;
+}
+
+.web-app-link img {
+    max-width: 200px;
+    margin: 0 auto;
+    display: block;
+}
+
+.web-app-link span { 
+    margin-top: 10px; 
     display: block;
 }
 
@@ -92,4 +116,6 @@ h1 { font-size: 32px; }
     }
     
     .image-info .info { width: 100%; }
+    .image-info .info p { margin-bottom: 40px; }
+    .image-info .info figure { margin: 0 auto; }
 }
