@@ -29,6 +29,7 @@ function main() {
     genre.innerText = spotifyGenre;
     playlistName.innerText = spotifyPlaylist;
     playlistLink.href = spotifyPlaylistLink;
+    document.title += " | "+spotifyPlaylist;
   } else {
     document.querySelector(".playlist-details").style.display = "none";
   }
