@@ -200,9 +200,9 @@ const APPController = (function (UICtrl, APICtrl) {
     allTracks.forEach((track) => {
       if (track.track.preview_url !== null) {
         artists = "";
-        track.track.artists.forEach((element) => {
-          artists = element.name + ", " + artists;
-        });
+        for(let i=track.track.artists.length-1; i>=0; i-- ) {
+          artists = track.track.artists[i].name + ", " + artists;
+        }
 
         songs.push({
           name: track.track.name,
