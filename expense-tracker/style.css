@@ -215,6 +215,17 @@ input[type='number']:focus {
 	cursor: pointer;
 }
 
+.mobile-apps-info a {
+	display: inline-block;
+	float: right;
+	color: var(--dark-color);
+	text-decoration: none;
+	text-align: center;
+}
+
+.mobile-apps-info figure { margin: 0; }
+.mobile-apps-info img { width: 40px; }
+
 .developer-container p { 
 	margin: 20px auto 0;
 	font-size: 14px;
