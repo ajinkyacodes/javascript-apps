@@ -216,7 +216,11 @@ input[type='number']:focus {
 	cursor: pointer;
 }
 
-.developer-container p { font-size: 14px; }
+.developer-container p { 
+	margin: 20px auto 0;
+	font-size: 14px;
+	/* text-align: center; */
+}
 
 .developer-container a {
 	color: var(--dark-color);
