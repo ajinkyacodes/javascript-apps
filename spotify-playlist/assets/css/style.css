@@ -194,6 +194,17 @@ h3 {
   transition: all 0.3s ease-in-out;
 }
 
+.developer-info {
+  margin: 10px auto 20px;
+  text-align: center;
+}
+
+.developer-info a {
+  color: #fff;
+  font-size: 14px;
+  text-decoration: none;
+}
+
 /* Media Query for Mobile Responsive */
 
 @media screen and (max-width:995px) {
@@ -206,7 +217,7 @@ h3 {
   .playlist-details { width: 600px; }
   .playlist-details a:hover { color: #fff; }
   .fas:hover { filter: brightness(100%); }
-  .image-container { margin-bottom: 30px; }
+  .developer-info { margin: 10px auto 30px }
 }
 
 @media screen and (max-width:600px) {
@@ -271,4 +282,6 @@ h3 {
     height: 40px;
     font-size: 40px;
   }
+
+  .developer-info a { font-size: 12px; }
 }
