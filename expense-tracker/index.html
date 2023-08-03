@@ -58,23 +58,27 @@
 				</div>
 				<button class="btn">Add Transaction</button>
 			</form>
-			<button class="print-btn print-hide" onclick="window.print()">Print</button>
-			<select name="currency" id="currency-select" class="currency-select print-hide">
-				<option value="USD" selected>USD ($)</option>
-				<option value="EUR">EURO (€)</option>
-				<option value="GBP">GBP (£)</option>
-				<option value="INR">INR (₹)</option>
-				<option value="NONE">&ndash;</option>
-			</select>
-			<div class="mobile-apps-info print-hide">
-				<figure>
-					<a href="android/index.html" title="Android App">
-						<img src="android/android-app-logo.png" alt="Expense tracker">
-					</a>
-				</figure>
-			</div>
-			<div class="developer-container print-hide">
-				<p><a href="https://ajinkyacodes.com" target="_blank">&copy; ajinkyacodes</a></p>
+			<div class="footer">
+				<div class="buttons-container">
+					<select name="currency" id="currency-select" class="currency-select print-hide">
+						<option value="USD" selected>USD ($)</option>
+						<option value="EUR">EURO (€)</option>
+						<option value="GBP">GBP (£)</option>
+						<option value="INR">INR (₹)</option>
+						<option value="NONE">&ndash;</option>
+					</select>
+					<button class="print-btn print-hide" onclick="window.print()">Print</button>
+					<div class="mobile-apps-info print-hide">
+						<figure>
+							<a href="android/index.html" title="Android App">
+								<img src="android/android-app-logo.png" alt="Expense tracker">
+							</a>
+						</figure>
+					</div>
+				</div>
+				<div class="developer-container print-hide">
+					<p><a href="https://ajinkyacodes.com" target="_blank">&copy; ajinkyacodes</a></p>
+				</div>
 			</div>
 		</div>
 		<script src="app.js"></script>

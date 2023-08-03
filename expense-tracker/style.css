@@ -69,7 +69,6 @@ h4 {
 	border: 0;
 	outline: 0;
 	border-radius: 25px;
-	margin-bottom: 20px;
 	background-color: var(--body-background);
 	color: var(--light-color);
 	cursor: pointer;
@@ -204,20 +203,30 @@ input[type='number']:focus {
 
 .list li:hover .delete-btn { opacity: 1; }
 
+.footer {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-direction: row-reverse;
+}
+
 .print-btn {
 	padding: 5px 10px;
 	border: none;
 	outline: none;
 	border-radius: 25px;
-	float: right;
 	font-size: 12px;
 	background-color: var(--body-background);
 	color: var(--light-color);
 	cursor: pointer;
 }
 
+.mobile-apps-info {
+	display: inline-block;
+	vertical-align: middle;
+}
+
 .mobile-apps-info a {
-	float: right;
 	color: var(--dark-color);
 	text-decoration: none;
 	text-align: center;
@@ -227,7 +236,7 @@ input[type='number']:focus {
 .mobile-apps-info img { width: 40px; }
 
 .developer-container p { 
-	margin: 20px auto 0;
+	margin: 0 auto;
 	font-size: 14px;
 }
 
@@ -252,6 +261,16 @@ input[type='number']:focus {
 	body { width: 90%; }
 	.inc-exp-container { padding: 10px; }
 	.money { font-size: 16px; }
+}
+
+@media screen and (max-width:340px) {
+	.footer {
+		display: block;
+		margin: 0 auto;
+		text-align: center;
+	}
+
+	.footer .developer-container { margin: 20px auto 0; }
 }
 
 @media print {
