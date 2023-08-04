@@ -75,6 +75,20 @@ form {
 .instructions span { line-height: 1.6; }
 .instructions .mobile { display: none; }
 
+.developer-info p {
+	color: #b5b5b5;
+	font-size: 14px;
+	text-align: center;
+}
+
+.developer-info a {
+	display: block;
+	color: #b5b5b5;
+	font-size: 14px;
+	text-decoration: none;
+	text-align: center;
+}
+
 @media screen and (max-width: 995px) {
 	.wrapper { width: 90%; }
 	.instructions .desktop { display: none; }
@@ -86,4 +100,6 @@ form {
 	h1 { font-size: 32px; }
 	.input { font-size: 14px; }
 	.todos li { font-size: 14px; }
+	.developer-info p { font-size: 12px; }
+	.developer-info a { font-size: 12px; }
 }
