@@ -8,7 +8,7 @@ This app shows the movie's basic data like posters, ratings, and overviews. You 
 ## [Music Player](https://ajinkyacodes.github.io/javascript-apps/music-player)
 This is a music player web app with basic functionalities like play, pause, next song, previous song & progress bar.
 
-## [Spotify Playlist](https://ajinkyacodes.github.io/javascript-apps/spotify-playlist)
+## [Spotify Playlist](https://ajinkyacodes.github.io/javascript-apps/spotify-playlist) [:iphone:](https://ajinkyacodes.github.io/javascript-apps/spotify-playlist/android/)
 This is a music player app with a Spotify playlist search option and preview songs.
 
 ## [Calculator](https://ajinkyacodes.github.io/javascript-apps/calculator)
@@ -20,7 +20,7 @@ This app converts the currency rates with updated exchange rates.
 ## [TODO List](https://ajinkyacodes.github.io/javascript-apps/todolist)
 This app tracks your to-do list tasks.
 
-## [Expense Tracker](https://ajinkyacodes.github.io/javascript-apps/expense-tracker)
+## [Expense Tracker](https://ajinkyacodes.github.io/javascript-apps/expense-tracker) [:iphone:](https://ajinkyacodes.github.io/javascript-apps/expense-tracker/android/)
 This app tracks your income and expenses by adding the transaction details.
 
 ## [Text Reader](https://ajinkyacodes.github.io/javascript-apps/text-reader)
