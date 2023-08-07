@@ -40,7 +40,8 @@ form {
 	border: none;
 	display: block;
 	color: #444;
-	font-size: 16px;
+	font-size: 18px;
+	line-height: 1.6;
 }
 
 .input::placeholder { color: #d5d5d5; }
@@ -57,7 +58,7 @@ form {
 	padding: 10px 12px;
 	border-top: 1px solid #e5e5e5;
 	cursor: pointer;
-	font-size: 16px;
+	font-size: 18px;
 }
 
 .todos li.completed {
@@ -68,7 +69,7 @@ form {
 .instructions {
 	margin-top: 20px;
 	color: #b5b5b5;
-	font-size: 12px;
+	font-size: 16px;
 	text-align: center;
 }
 
@@ -77,14 +78,14 @@ form {
 
 .developer-info p {
 	color: #b5b5b5;
-	font-size: 14px;
+	font-size: 16px;
 	text-align: center;
 }
 
 .developer-info a {
 	display: block;
 	color: #b5b5b5;
-	font-size: 14px;
+	font-size: 16px;
 	text-decoration: none;
 	text-align: center;
 }
@@ -98,8 +99,9 @@ form {
 @media screen and (max-width: 480px) {
 	.wrapper { width: 80%; }
 	h1 { font-size: 32px; }
-	.input { font-size: 14px; }
-	.todos li { font-size: 14px; }
-	.developer-info p { font-size: 12px; }
-	.developer-info a { font-size: 12px; }
+	.input { font-size: 16px; }
+	.todos li { font-size: 16px; }
+	.instructions { font-size: 14px; }
+	.developer-info p { font-size: 14px; }
+	.developer-info a { font-size: 14px; }
 }
