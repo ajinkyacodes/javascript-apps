@@ -81,7 +81,7 @@ span.caret {
   font-size: 14px;
   font-weight: 700;
   text-transform: capitalize;
-  transform: 0.3s all linear;
+  transition: all 0.3s linear;
 }
 
 .playlist-form .button-container button:hover {
@@ -106,7 +106,7 @@ label {
 .btn-success {
   border: none;
   border-radius: 100px;
-  background-color: #3b7d4a im !important;
+  background-color: #3b7d4a!important;
   cursor: pointer;
 }
 
