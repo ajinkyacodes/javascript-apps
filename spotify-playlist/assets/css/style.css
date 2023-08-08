@@ -182,8 +182,6 @@ h3 {
   transition: all 0.3s ease-in-out;
 }
 
-.spotify-container .spotify-link { margin-right: 10px; }
-
 .spotify-container .download-link {
   width: 50px;
   height: 50px;
@@ -194,16 +192,6 @@ h3 {
   color: #1ed760;
   vertical-align: top;
   transition: all 0.3s ease-in-out;
-}
-
-.spotify-container .android-app-link {
-  display: inline-block;
-  vertical-align: top;
-}
-
-.spotify-container .android-app-link img {
-  width: 50px;
-  height: 50px;
 }
 
 .developer-info {
@@ -293,11 +281,6 @@ h3 {
     width: 40px;
     height: 40px;
     font-size: 40px;
-  }
-
-  .spotify-container .android-app-link img {
-    width: 40px;
-    height: 40px;
   }
 
   .developer-info a { font-size: 12px; }

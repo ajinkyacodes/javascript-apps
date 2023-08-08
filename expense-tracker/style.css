@@ -221,20 +221,6 @@ input[type='number']:focus {
 	cursor: pointer;
 }
 
-.mobile-apps-info {
-	display: inline-block;
-	vertical-align: middle;
-}
-
-.mobile-apps-info a {
-	color: var(--dark-color);
-	text-decoration: none;
-	text-align: center;
-}
-
-.mobile-apps-info figure { margin: 0; }
-.mobile-apps-info img { width: 40px; }
-
 .developer-container p { 
 	margin: 0 auto;
 	font-size: 14px;
