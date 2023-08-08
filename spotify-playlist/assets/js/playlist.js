@@ -1,7 +1,9 @@
 const APIController = (function () {
-  // Spotify Toeken
-  const clientId = "48b75718e8954b2584c354edb7016720";
-  const clientSecret = "99ffc3b75ee04b69b9a5a8c19d7b9980";
+
+  // Loading Spotify API keys from ENV.JS file
+  
+  const clientId = ID; //ENV_CLIENT_ID
+  const clientSecret = CS; //ENV_CLIENT_SECRET
 
   // private methods
   const _getToken = async () => {
