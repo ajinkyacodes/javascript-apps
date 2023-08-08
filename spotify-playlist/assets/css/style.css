@@ -1,5 +1,19 @@
-/* Importing Google Font */
-@import url("https://fonts.googleapis.com/css?family=Spartan:400,700&display=swap");
+/* Importing Fonts */
+
+@font-face {
+  font-family: SpartanLight;
+  src: url('../fonts/Spartan/Spartan-Light.ttf');
+}
+
+@font-face {
+  font-family: Spartan;
+  src: url('../fonts/Spartan/Spartan-Medium.ttf');
+}
+
+@font-face {
+  font-family: SpartanBold;
+  src: url('../fonts/Spartan/Spartan-Bold.ttf');
+}
 
 * { box-sizing: border-box; }
 
@@ -56,6 +70,8 @@ h2 {
   line-height: 1.4;
   text-align: center;
   transition: all 0.3s ease-in-out;
+  font-family: SpartanBold, sans-serif;
+  font-weight: 700;
 }
 
 h3 {
@@ -145,6 +161,7 @@ h3 {
 }
 
 .playlist-details a:hover { color: #ccc; }
+.playlist-details span { font-family: SpartanLight, sans-serif; }
 
 .spotify-container {
   width: 100%;
