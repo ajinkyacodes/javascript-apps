@@ -5,7 +5,7 @@ This GitHub repository contains all JavaScript small functionality apps collecte
 ## [Spotify Playlist](https://ajinkyacodes.github.io/javascript-apps/spotify-playlist)
 This is a music player app with a Spotify playlist search option and preview songs.
 
-## [Expense Tracker](https://ajinkyacodes.github.io/javascript-apps/expense-tracker
+## [Expense Tracker](https://ajinkyacodes.github.io/javascript-apps/expense-tracker)
 This app tracks your income and expenses by adding the transaction details.
 
 ## [Movies App](https://ajinkyacodes.github.io/javascript-apps/movies-app)
