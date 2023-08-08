@@ -82,13 +82,14 @@ function pauseSong() {
 }
 
 // Update DOM
-function loadSong(song) {
-  title.textContent = song.displayName;
+function loadSong(song) {  
+  title.textContent =  song.displayName;
   artist.innerHTML =  song.artist.length > 40 ? `<marquee behavior="scroll" direction="left">${song.artist.slice(0,-2)}</marquee>` : song.artist.slice(0,-2);
   music.src = song.preview;
   image.src = song.album_cover;
   spotifyLink.href = song.spotifyLink;
   downloadLink.href = song.preview;
+  songTitleFormat();
 }
 
 // Current Song
@@ -151,6 +152,37 @@ function setProgressBar(e) {
   const clickX = e.offsetX;
   const { duration } = music;
   music.currentTime = (clickX / width) * duration;
+}
+
+// Control Song Title
+function songTitleFormat() {
+  const songFull = title.textContent;
+  const titleStartT = songFull.substring(0,15);
+  const breakerT = "...";
+  const titleEndT = songFull.substring(15);
+  title.innerHTML = `<span id="title-start">${titleStartT}</span><span id="breaker">${breakerT}</span><span id="title-end">${titleEndT}</span>`;  
+
+  const titleStart = document.getElementById("title-start");
+  const breaker = document.getElementById("breaker");
+  const titleEnd = document.getElementById("title-end");
+  
+  breaker.style.display = "none";
+  if(songFull.length > 15) {
+    breaker.style.display = "inline";
+    titleEnd.style.display = "none";
+  } else {
+    titleEnd.style.display = "inline";
+  }
+
+  breaker.addEventListener("click", ()=> {
+    breaker.style.display = "none";
+    titleEnd.style.display = "inline";
+  });
+
+  titleEnd.addEventListener("click", ()=> {
+    breaker.style.display = "inline";
+    titleEnd.style.display = "none";
+  });
 }
 
 // Event Listeners
