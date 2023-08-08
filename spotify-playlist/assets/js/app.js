@@ -153,18 +153,6 @@ function setProgressBar(e) {
   music.currentTime = (clickX / width) * duration;
 }
 
-//Draggable Progress Bar
-$('#progressed').draggable({
-  axis: 'x',
-  containment: "#progress"
-});
-
-$('#progressed').draggable({
-  drag: function() {
-    setProgressBar();
-  }
-});
-
 // Event Listeners
 prevBtn.addEventListener("click", prevSong);
 nextBtn.addEventListener("click", nextSong);
