@@ -304,15 +304,12 @@ h3 marquee { display: block; }
 }
 
 .developer-info {
-  margin: 10px auto 20px;
+  max-width: 100px;
+  margin: 20px auto 20px;
   text-align: center;
 }
 
-.developer-info a {
-  color: var(--primary-color);
-  font-size: 14px;
-  text-decoration: none;
-}
+.developer-info a { display: block; }
 
 /* Media Query for Mobile Responsive */
 
@@ -403,5 +400,4 @@ h3 marquee { display: block; }
   }
 
   .spotify-container .theme-btn i { font-size: 40px; }
-  .developer-info a { font-size: 12px; }
 }

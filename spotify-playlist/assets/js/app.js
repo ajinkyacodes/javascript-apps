@@ -17,6 +17,7 @@ const downloadLink = document.getElementById("download-link");
 const songs = [];
 const themeBtn = document.getElementById("theme-btn");
 const themeIcon = document.querySelector("#theme-btn i");
+const developerInfoImage = document.querySelector("#developer-info img");
 
 function main() {
 
@@ -41,10 +42,12 @@ function main() {
   function switchTheme() {
     const themeLight = themeIcon.classList.contains("fa-sun");
     if(themeLight) {
+      developerInfoImage.src = "assets/images/ajinkyacodes-white.png";
       document.documentElement.setAttribute('data-theme', 'dark');
       themeIcon.classList.replace('fa-sun', 'fa-moon');
       localStorage.setItem('sp-theme', 'dark');
     } else {
+      developerInfoImage.src = "assets/images/ajinkyacodes-black.png";
       document.documentElement.setAttribute('data-theme', 'light');
       themeIcon.classList.replace('fa-moon', 'fa-sun');
       localStorage.setItem('sp-theme', 'light');
