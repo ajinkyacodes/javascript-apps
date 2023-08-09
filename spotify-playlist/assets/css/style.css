@@ -96,6 +96,8 @@ h3 {
   user-select:text;
 }
 
+h3 marquee { display: block; }
+
 /* Progress */
 .progress-container {
   width: 90%;
