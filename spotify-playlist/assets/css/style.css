@@ -291,6 +291,7 @@ h3 marquee { display: block; }
   height: 50px;
   margin-left: 10px;
   display: inline-block;
+  cursor: pointer;
   font-size: 50px;
   vertical-align: top;
 }
@@ -328,6 +329,13 @@ h3 marquee { display: block; }
   .developer-info { margin: 10px auto 30px }
 }
 
+@media screen and (max-width:767px) {
+  h2 { 
+    margin: 30px 20px 20px;
+    font-size: 22px;
+  }
+}
+
 @media screen and (max-width:600px) {
   .player-container { 
     width: 350px;
@@ -338,10 +346,7 @@ h3 marquee { display: block; }
   .img-container { margin: 20px auto 0; }
   .player-section { margin: 20px auto; }
 
-  h2 { 
-    margin: 30px 20px 20px;
-    font-size: 20px;
-  }
+  h2 { font-size: 20px; }
 
   h3 { font-size: 12px; }
 
