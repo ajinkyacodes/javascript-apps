@@ -85,6 +85,8 @@ h2 {
   user-select:text;
 }
 
+h2 marquee { display: block; }
+
 h3 {
   width: 90%;
   margin: 0 auto;

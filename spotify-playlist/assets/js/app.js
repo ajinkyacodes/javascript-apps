@@ -168,6 +168,7 @@ function songTitleFormat() {
   
   breaker.style.display = "none";
   if(songFull.length > 15) {
+    titleStart.style.display = "inline";
     breaker.style.display = "inline";
     titleEnd.style.display = "none";
   } else {
@@ -175,13 +176,7 @@ function songTitleFormat() {
   }
 
   breaker.addEventListener("click", ()=> {
-    breaker.style.display = "none";
-    titleEnd.style.display = "inline";
-  });
-
-  titleEnd.addEventListener("click", ()=> {
-    breaker.style.display = "inline";
-    titleEnd.style.display = "none";
+    title.innerHTML = `<marquee>${songFull}</marquee>`;
   });
 }
 
