@@ -323,7 +323,7 @@ h3 marquee { display: block; }
   .playlist-details { width: 600px; }
   .playlist-details a:hover { color: var(--primary-color); }
   .fas:hover { filter: brightness(100%); }
-  .developer-info { margin: 10px auto 30px }
+  .developer-info { margin: 20px auto 30px }
 }
 
 @media screen and (max-width:767px) {
