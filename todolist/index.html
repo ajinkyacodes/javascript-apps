@@ -2,25 +2,25 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 		<title>TODO List | ajinkyacodes</title>
 		<meta property="og:title" content="TODO List | ajinkyacodes">
 		<meta property="og:description" content="This app tracks your to-do list tasks.">
 		<meta name="keywords" content="ajinkya, codes, ajinkyacodes, ajinkya, gonji, ajinkyagonji, webdeveloper, developer, fullstack, programmer, github, tasks, todo-list">
 		<meta property="og:image" content="https://ajinkyacodes.github.io/javascript-apps/todolist/favicon.png">
-		<meta property="og:url" content="https://ajinkyacodes.github.io/javascript-apps/todolist">
-		<link rel="stylesheet"
-			href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
-			integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
-			crossorigin="anonymous" />
+		<meta property="og:url" content="https://ajinkyacodes.github.io/javascript-apps/todolist">		
+		<link href="assets/vendors/fontawesome/css/all.min.css" rel="stylesheet">
 		<link rel="icon" href="assets/images/favicon.png" type="image/gif" sizes="16x16">
 		<link rel="stylesheet" href="assets/css/style.css">
 	</head>
 	<body>
-		<div class="wrapper">1
-			<h1>TODO List</h1>
+		<div class="wrapper">
+			<h1>
+				TODO List
+				<span id="todo-icon" class="todo-icon fas fa-clipboard-list" title="Change Theme"></span>
+			</h1>
 			<form id="form">
-				<input type="text" class="input" id="input" placeholder="Enter Task" autocomplete="off">
+				<input type="text" class="input" id="input" placeholder="Enter Task..." autocomplete="off">
 				<ul class="todos" id="todos">
 				</ul>
 			</form>
