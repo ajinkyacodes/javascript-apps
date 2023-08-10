@@ -143,6 +143,8 @@ form {
 	user-select: none;
 }
 
+.developer-info img { pointer-events: none;}
+
 @media screen and (max-width: 995px) {
 	.wrapper { width: 90%; }
 	.instructions .desktop { display: none; }
