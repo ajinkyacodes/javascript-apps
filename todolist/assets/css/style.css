@@ -1,6 +1,22 @@
 /*Importing Google Font*/
 @import url('https://fonts.googleapis.com/css?family=Poppins:wght@200;400&display=swap');
 
+@font-face {
+    font-family: Poppins;
+    src: url('../fonts/Poppins/Poppins-Regular.ttf');
+}
+
+/* #ffa36b */
+
+:root {
+    --primary-color: #b383e2;
+    --font-color: #444;
+	--light-font-color: #e5e5e5;
+	--placeholder-font-color: #d5d5d5;
+    --body-background: #f5f5f5;
+    --box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
 * { box-sizing: border-box; }
 
 body {
@@ -10,9 +26,9 @@ body {
 	align-items: center;
 	flex-direction: column;
 	justify-content: center;
-	color: #444;
-	background-color: #f5f5f5;
-	font-family: 'Poppins', sans-serif;
+	color: var(--font-color);
+	background-color: var(--body-background);
+	font-family: Poppins, sans-serif;
 }
 
 .wrapper {
@@ -21,17 +37,22 @@ body {
 }
 
 h1 {
-	color: rgb(179, 131, 226);
+	color: var(--primary-color);
 	font-size: 52px;
 	opacity: 0.8;
 	text-align: center;
+}
+
+img {
+    width: 100%;
+    display: block;
 }
 
 form {
 	width: 400px;
 	max-width: 100%;
 	margin: 0 auto;
-	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+	box-shadow: var(--box-shadow);
 }
 
 .input {
@@ -44,8 +65,8 @@ form {
 	line-height: 1.6;
 }
 
-.input::placeholder { color: #d5d5d5; }
-.input:focus { outline-color: rgb(179, 131, 226); }
+.input::placeholder { color: var(--placeholder-font-color); }
+.input:focus { outline-color: var(--primary-color); }
 
 .todos {
 	margin: 0;
@@ -56,7 +77,7 @@ form {
 
 .todos li {
 	padding: 10px 12px;
-	border-top: 1px solid #e5e5e5;
+	border-top: 1px solid var(--light-font-color);
 	cursor: pointer;
 	font-size: 18px;
 }
@@ -76,19 +97,13 @@ form {
 .instructions span { line-height: 1.6; }
 .instructions .mobile { display: none; }
 
-.developer-info p {
-	color: #b5b5b5;
-	font-size: 16px;
-	text-align: center;
-}
-
-.developer-info a {
-	display: block;
-	color: #b5b5b5;
-	font-size: 16px;
-	text-decoration: none;
-	text-align: center;
-}
+.developer-info {
+    max-width: 100px;
+    margin: 20px auto 20px;
+    text-align: center;
+  }
+  
+.developer-info a { display: block; }
 
 @media screen and (max-width: 995px) {
 	.wrapper { width: 90%; }
@@ -102,6 +117,4 @@ form {
 	.input { font-size: 16px; }
 	.todos li { font-size: 16px; }
 	.instructions { font-size: 14px; }
-	.developer-info p { font-size: 14px; }
-	.developer-info a { font-size: 14px; }
 }
