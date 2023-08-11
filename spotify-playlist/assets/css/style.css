@@ -309,7 +309,19 @@ h3 marquee { display: block; }
   text-align: center;
 }
 
-.developer-info a { display: block; }
+.developer-info a { 
+  display: block; 
+  /* To prevent highlight color */
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.developer-info img { pointer-events: none;}
 
 /* Media Query for Mobile Responsive */
 
