@@ -2,11 +2,32 @@
 
 This GitHub repository contains all JavaScript small functionality apps collected together.
 
-## [Spotify Playlist](https://ajinkyacodes.github.io/javascript-apps/spotify-playlist)
-This is a music player app with a Spotify playlist search option and preview songs.
+## [TODO List](https://ajinkyacodes.github.io/javascript-apps/todolist)
+This app tracks your to-do list tasks.
 
 ## [Expense Tracker](https://ajinkyacodes.github.io/javascript-apps/expense-tracker)
 This app tracks your income and expenses by adding the transaction details.
+
+## [Tic Tac Toe](https://ajinkyacodes.github.io/javascript-apps/tic-tac-toe-basic)
+A basic tic-tac-toe game with X & O. It's a two-player game.
+
+## [Calculator](https://ajinkyacodes.github.io/javascript-apps/calculator)
+This is a basic calculator app for arithmetic operations.
+
+## [Password Generator](https://ajinkyacodes.github.io/javascript-apps/password-generator)
+This app generates a password fulfilling the conditions set like lowercase, uppercase, numbers, symbols, and length of the password.
+
+## [Spotify Playlist](https://ajinkyacodes.github.io/javascript-apps/spotify-playlist)
+This is a music player app with a Spotify playlist search option and preview songs.
+
+## [Random Jokes](https://ajinkyacodes.github.io/javascript-apps/random-jokes/)
+This is a random joke generator app. It shuffles jokes with different categories.
+
+## [Currency Exchange](https://ajinkyacodes.github.io/javascript-apps/currency-exchange)
+This app converts the currency rates with updated exchange rates.
+
+
+
 
 ## [Movies App](https://ajinkyacodes.github.io/javascript-apps/movies-app)
 This app shows the movie's basic data like posters, ratings, and overviews. You can also search some of the movies.
@@ -14,20 +35,8 @@ This app shows the movie's basic data like posters, ratings, and overviews. You 
 ## [Music Player](https://ajinkyacodes.github.io/javascript-apps/music-player)
 This is a music player web app with basic functionalities like play, pause, next song, previous song & progress bar.
 
-## [Calculator](https://ajinkyacodes.github.io/javascript-apps/calculator)
-This is a basic calculator app for arithmetic operations.
-
-## [Currency Exchange](https://ajinkyacodes.github.io/javascript-apps/currency-exchange)
-This app converts the currency rates with updated exchange rates.
-
-## [TODO List](https://ajinkyacodes.github.io/javascript-apps/todolist)
-This app tracks your to-do list tasks.
-
 ## [Text Reader](https://ajinkyacodes.github.io/javascript-apps/text-reader)
 This app converts text to voice. You can select available voice formats according to your preference.
-
-## [Tic Tac Toe](https://ajinkyacodes.github.io/javascript-apps/tic-tac-toe-basic)
-A basic tic-tac-toe game with X & O. It's a two-player game.
 
 ## [Rock Paper Scissors](https://ajinkyacodes.github.io/javascript-apps/rock-paper-scissors)
 A basic rock, paper, scissors game between the computer and you.
@@ -40,12 +49,6 @@ This small app tracks how much water we drank and how much is remaining.
 
 ## [Weather Forecast](https://ajinkyacodes.github.io/javascript-apps/weather-forecast)
 This app shows the current weather and weather forecast of the inputted City, Country.
-
-## [Random Jokes](https://ajinkyacodes.github.io/javascript-apps/random-jokes/)
-This is a random joke generator app. It shuffles jokes with different categories.
-
-## [Password Generator](https://ajinkyacodes.github.io/javascript-apps/password-generator)
-This app generates a password fulfilling the conditions set like lowercase, uppercase, numbers, symbols, and length of the password.
 
 ## [Light/Dark Mode](https://ajinkyacodes.github.io/javascript-apps/light-dark-mode)
 This is a light/dark mode that you can use on your website.
