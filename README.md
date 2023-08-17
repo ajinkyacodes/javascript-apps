@@ -2,40 +2,40 @@
 
 This GitHub repository contains all JavaScript small functionality apps collected together.
 
-## [Movies App](https://ajinkyacodes.github.io/javascript-apps/movies-app)
+## Movies App
 This app shows the movie's basic data like posters, ratings, and overviews. You can also search some of the movies.
 
-## [Music Player](https://ajinkyacodes.github.io/javascript-apps/music-player)
+## Music Player
 This is a music player web app with basic functionalities like play, pause, next song, previous song & progress bar.
 
-## [Movie Booking](https://ajinkyacodes.github.io/javascript-apps/movie-booking)
+## Movie Booking
 This app shows the latest movie listing and lets you book movie tickets.
 
-## [Text Reader](https://ajinkyacodes.github.io/javascript-apps/text-reader)
+## Text Reader
 This app converts text to voice. You can select available voice formats according to your preference.
 
-## [Weather Forecast](https://ajinkyacodes.github.io/javascript-apps/weather-forecast)
+## Weather Forecast
 This app shows the current weather and weather forecast of the inputted City, Country.
 
-## [Rock Paper Scissors](https://ajinkyacodes.github.io/javascript-apps/rock-paper-scissors)
+## Rock Paper Scissors
 A basic rock, paper, scissors game between the computer and you.
 
-## [Drink Water](https://ajinkyacodes.github.io/javascript-apps/drink-water)
+## Drink Water
 This small app tracks how much water we drank and how much is remaining.
 
-## [Light/Dark Mode](https://ajinkyacodes.github.io/javascript-apps/light-dark-mode)
+## Light/Dark Mode
 This is a light/dark mode that you can use on your website.
 
-## [Rotating Navigation](https://ajinkyacodes.github.io/javascript-apps/rotating-navigation)
+## Rotating Navigation
 After clicking on the navbar icon the webpage rotates and gives you a different look.
 
-## [Netflix Navigation](https://ajinkyacodes.github.io/javascript-apps/netflix-navigation)
+## Netflix Navigation
 This is a mobile navbar similar to what is used in Netflix.
 
-## [Infinite Scroll](https://ajinkyacodes.github.io/javascript-apps/infinite-scroll)
+## Infinite Scroll
 A basic random photos loading app with infinite scroll.
 
-## [New Year Countdown](https://ajinkyacodes.github.io/javascript-apps/new-year-countdown)
+## New Year Countdown
 A basic countdown for the upcoming new year.
 
 ### ABOUT ME
