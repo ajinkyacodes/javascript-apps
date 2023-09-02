@@ -11,6 +11,9 @@ This is a music player web app with basic functionalities like play, pause, next
 ## Movie Booking
 This app shows the latest movie listing and lets you book movie tickets.
 
+## Calculator
+This is a basic calculator app for arithmetic operations.
+
 ## Text Reader
 This app converts text to voice. You can select available voice formats according to your preference.
 
