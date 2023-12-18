@@ -1,47 +1,23 @@
 # JavaScript Apps
 
-> This GitHub repository contains all JavaScript small functionality apps collected together.
+> This GitHub repository contains small functionality JavaScript apps collected together.
 
-## Movies App
-> This app shows the movie's basic data like posters, ratings, and overviews. You can also search some of the movies.
+## Applications List
+1.   Movies App [:memo:](https://github.com/ajinkyacodes/javascript-apps/tree/master/movies-app)
+2.   Music Player [:memo:](https://github.com/ajinkyacodes/javascript-apps/tree/master/music-player)
+3.   Movie Booking [:memo:](https://github.com/ajinkyacodes/javascript-apps/tree/master/movie-booking)
+4.   Calculator [:memo:](https://github.com/ajinkyacodes/javascript-apps/tree/master/calculator)
+5.   Text Reader [:memo:](https://github.com/ajinkyacodes/javascript-apps/tree/master/text-reader)
+6.   Weather Forecast [:memo:](https://github.com/ajinkyacodes/javascript-apps/tree/master/weather-forecast)
+7.   Rock Paper Scissors [:memo:](https://github.com/ajinkyacodes/javascript-apps/tree/master/rock-paper-scissors)
+8.   Drink Water [:memo:](https://github.com/ajinkyacodes/javascript-apps/tree/master/drink-water)
+9.   Light/Dark Mode [:memo:](https://github.com/ajinkyacodes/javascript-apps/tree/master/light-dark-mode)
+10.  Rotating Navigation [:memo:](https://github.com/ajinkyacodes/javascript-apps/tree/master/rotating-navigation)
+11.  Netflix Navigation [:memo:](https://github.com/ajinkyacodes/javascript-apps/tree/master/netflix-navigation)
+12.  Infinite Scroll [:memo:](https://github.com/ajinkyacodes/javascript-apps/tree/master/infinite-scroll)
+13.  New Year Countdown [:memo:](https://github.com/ajinkyacodes/javascript-apps/tree/master/new-year-countdown)
 
-## Music Player
-> This is a music player web app with basic functionalities like play, pause, next song, previous song & progress bar.
-
-## Movie Booking
-> This app shows the latest movie listing and lets you book movie tickets.
-
-## Calculator
-> This is a basic calculator app for arithmetic operations.
-
-## Text Reader
-> This app converts text to voice. You can select available voice formats according to your preference.
-
-## Weather Forecast
-> This app shows the current weather and weather forecast of the inputted City, Country.
-
-## Rock Paper Scissors
-> A basic rock, paper, scissors game between the computer and you.
-
-## Drink Water
-> This small app tracks how much water we drank and how much is remaining.
-
-## Light/Dark Mode
-> This is a light/dark mode that you can use on your website.
-
-## Rotating Navigation
-> After clicking on the navbar icon the webpage rotates and gives you a different look.
-
-## Netflix Navigation
-> This is a mobile navbar similar to what is used in Netflix.
-
-## Infinite Scroll
-> A basic random photos loading app with infinite scroll.
-
-## New Year Countdown
-> A basic countdown for the upcoming new year.
-
-## Prerequisite Knowledge
+## Prerequisites
 - HTML
 - CSS
 - JavaScript
