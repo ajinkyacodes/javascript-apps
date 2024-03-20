@@ -73,6 +73,22 @@ const data = [
     text: "I want to code"
   },
   {
+    image: './img/cooking.jpg',
+    text: "I want to cook food"
+  },
+  {
+    image: './img/reading.jpg',
+    text: "I want to read a book"
+  },
+  {
+    image: './img/money.jpg',
+    text: "I want to earn money"
+  },
+  {
+    image: './img/shopping.jpg',
+    text: "I want to go shopping"
+  },
+  {
     image: './img/dance.jpg',
     text: "I want to dance"
   },
